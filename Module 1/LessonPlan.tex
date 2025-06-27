@@ -1,0 +1,129 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\title{Module 1: Measurement and Units}
+\author{Mark Peever \texttt{mpeever@gmail.com}}
+
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\begin{center}
+Psalm 107:23--32
+\end{center}
+
+\section{Overview}
+
+\begin{enumerate}
+\item \textbf{Matter} is anything that has \emph{mass} and takes up space
+\item \textbf{Units of Measurement} make numbers meaningful
+\item \textbf{S. I.} (or \textbf{the metric system}) is designed to make units measurement consistent and simple
+\item \textbf{Unit Conversion} is based on multiplying fractions
+\item \textbf{Significant Figures} are a convention for maintaining precision in measurements
+\item \textbf{Scientific Notation} allows us to represent numbers ``naturally"   
+\end{enumerate}
+
+\section{Scientific Notation}
+We can represent numbers as multiples of factors of 10.
+This is particularly helpful with very large or very small numbers.
+
+The rules for scientific notation are:
+\begin{enumerate}
+\item the first number is between $ 1 $ and $ 10 $
+\item  the power of $ 10 $ is the number of places you move the decimal to the \emph{left}
+\item if you move the decimal to the \emph{right}, then the power of $ 10 $ is negative
+\end{enumerate}
+
+Notice that the metric system is just scientific notation with pretentious names!
+
+\begin{center}
+\begin{tabular}[hbpt]{|l|c|}
+\hline
+Metric Prefix & Scientific Notation Equivalent \\
+\hline
+\emph{mega}  &  $ \times 10^{6} $   \\
+\emph{kilo}      &  $ \times 10^{3} $   \\
+\emph{milli}     &  $ \times 10^{-3} $  \\
+\emph{micro}  &  $ \times 10^{-6} $.  \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item we can write $1000$ as $1 \times 10^{3}$
+\item we can write $256$ as $2.56 \times 10^{2}$
+\item we can write $0.000002341$ as $ 2.341 \times 10^{-6} $
+\end{enumerate}
+
+
+\section{Unit Conversion}
+We use the idea of faction multiplication to convert measurements between units. \textbf{Remember: we can always multiply any number by $1$ without changing it!}
+
+\subsection{Examples}
+ \begin{enumerate}[label=Example \arabic*]
+ \item
+How many yards in a mile?
+
+We begin with what we know:
+\begin{itemize}
+\item $ 1 mile = 5280 ft $
+\item $ 1 yd  = 3 ft $
+ \end{itemize}
+
+\begin{equation} \label{Yards per Mile}
+\boxed{
+\begin{split}
+    1 mile  & = (\frac{1 mile}{1}) (\frac{5280 ft}{1 mile}) ( \frac{1 yd}{3 ft})  \\ \\
+                & = \frac{(1 \xcancel{mile}) (5280 \xcancel{ft}) (1 yd)} {(1 \xcancel{mile}) (3 \xcancel{ft})}  \\ \\
+                & = \frac{5280 yd}{3} \\ \\
+                & = \frac{5280}{3} yd \\ \\
+                & = 1760 yd 
+ \end{split}
+ }
+ \end{equation}
+
+\item
+How many cups are in 5 liters?
+
+We begin with what we know:
+\begin{itemize}
+\item $1 quart = 2 pints $
+\item $ 1 pint = 2 cups $
+\item $ 1 quart = 0.946353 L $ 
+ \end{itemize}
+
+\begin{equation} \label{Cups per 5 L}
+\boxed{
+\begin{split}
+         5 L  & = ( \frac{5 L}{1} ) ( \frac{ 1 qt }{ 0.946353 L} ) ( \frac{ 2 pint} {1 qt } ) ( \frac{2 cup} {1 pint} )   \\ \\
+                & = ( \frac{5 \xcancel{L}}{1} ) ( \frac{ 1 \xcancel{qt} }{ 0.946353 \xcancel{L} } ) ( \frac{ 2 \xcancel{pint}} {1 \xcancel{qt} } ) ( \frac{2 cup} {1 \xcancel{pint}} )  \\ \\
+                & = \frac{5 \cdot 2 \cdot 2 cup}{0.946353} \\ \\
+                & = \frac{5 \cdot 4 \cdot 2 }{0.946353} cup \\ \\
+                & = \frac{20}{0.946353} cup \\ \\
+                & = 21.1338 cup
+ \end{split}
+ }
+ \end{equation}
+
+\end{enumerate}
+
+
+
+
+
+\end{document}  
