@@ -1,8 +1,8 @@
 clean:
-	rm *.aux *.log
+	rm -f *.aux *.log
 
 realclean: clean
-	rm *.pdf *.synctex.gz
+	rm -f *.pdf *.synctex.gz
 
 pdf:
-	pdflatex *.tex
+	pdflatex Notes.tex
