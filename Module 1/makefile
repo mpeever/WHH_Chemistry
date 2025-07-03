@@ -5,4 +5,7 @@ realclean: clean
 	rm -f *.pdf *.synctex.gz
 
 pdf:
-	pdflatex Notes.tex
+	/Library/TeX/texbin/latex Notes
+	/Library/TeX/texbin/bibtex Notes
+	/Library/TeX/texbin/pdflatex Notes
+	/Library/TeX/texbin/pdflatex Notes

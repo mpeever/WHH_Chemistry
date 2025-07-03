@@ -6,6 +6,7 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
+\usepackage{cite}
 
 % numbered examples
 \usepackage{gb4e}
@@ -37,11 +38,76 @@ Psalm 107:23--32
 \item \textbf{Scientific Notation} allows us to represent numbers ``naturally"   
 \end{enumerate}
 
+\section{S. I. Units}
+S. I. (\emph{Syst\`eme Internationale}), is a more formal name for the metric system. The metric system is an attempt to make measurements more standardized and easier to use in mathematical equations than our ``English" or ``Imperial" system.
+
+\begin{itemize}
+\item each physical quantity has a \emph{base unit} for that quantity \cite[p. 5]{wile-chem-2}
+\item each base unit can be scaled up or down through \emph{metric prefixes} that represent powers of $10$ \cite[p. 7]{wile-chem-2}
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}[hbpt]{|l | l| l|}
+\hline
+Metric Base Unit & Physical Quantity & Approximate Size \\
+\hline
+meter     & length    & just over 1 yard (39.37 inches) \\
+gram      & mass     & the mass of a penny \\
+liter         & volume & just over 1 quart \\
+second   & time      & you know how long a second is, don't you? \\
+\hline
+\end{tabular}
+\caption{Common metric base units}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}[hbpt]{|l|l|}
+\hline
+Metric Prefix & Power of $10$ \\
+\hline
+\emph{giga} (G)           & $ 1,000,000,000 $   \\
+\emph{mega} (M)         & $ 1,000,000 $   \\
+\emph{kilo} (k)              & $ 1,000 $   \\
+\emph{hecta} (H)          & $ 100 $   \\
+\emph{deca} (D)           & $ 10 $   \\
+\emph{deci} (d)             & $ 0.1 $   \\
+\emph{centi} (c)            & $ 0.01 $   \\
+\emph{milli}  (m)           & $ 0.001 $  \\
+\emph{micro} ($\mu$)  & $ 0.000001 $  \\
+\emph{pico}  (p)           & $ 0.000000001 $  \\
+\hline
+\end{tabular}
+\caption{Most common metric prefixes}
+\end{table}
+
+
+
 \section{Significant Figures}
 \begin{itemize}
 \item we need a way to communicate uncertainty in our measurements
 \item any number we record contains its own precision claims
+\item when we record any measurements, we need to be careful of our significant figures
 \end{itemize}
+
+\subsection{Rules}
+Per our textbook\cite[p. 21]{wile-chem-2}, a digit is a significant figure if:
+\begin{enumerate}
+\item it is non-zero, or
+\item it is a zero between two significant figures, or
+\item it is a zero to the right of a decimal point
+\end{enumerate}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item $2.80$ has three significant figures
+\item $0.0028$ has two significant figures
+\item $28000$ has two significant figures
+\item $5.56$ has three significant figures
+\item $0.44$ has two significant figures
+\end{enumerate}
 
 
 \section{Scientific Notation}
@@ -54,21 +120,30 @@ Psalm 107:23--32
 \item  the power of $ 10 $ is the number of places you move the decimal to the \emph{left}
 \item if you move the decimal to the \emph{right}, then the power of $ 10 $ is negative
 \end{enumerate}
+\item notice that it's very easy to track significant figures with scientific notation!
 \item notice that the metric system is just scientific notation with pretentious names!
  \end{itemize}
 
-\begin{center}
+\begin{table}
+\centering
 \begin{tabular}[hbpt]{|l|c|}
 \hline
-Pretentious S. I. Name & Scientific Notation Equivalent \\
+Pretentious Name & Scientific Notation Equivalent \\
 \hline
-\emph{mega}  &  $ \times 10^{6} $   \\
-\emph{kilo}      &  $ \times 10^{3} $   \\
-\emph{milli}     &  $ \times 10^{-3} $  \\
-\emph{micro}  &  $ \times 10^{-6} $.  \\
+\emph{giga} (G)  & $ \times 10^{9} $   \\
+\emph{mega} (M)  & $ \times 10^{6} $   \\
+\emph{kilo} (k)      & $ \times 10^{3} $   \\
+\emph{hecta} (H)      & $ \times 10^{2} $   \\
+\emph{deca} (D)      & $ \times 10^{1} $   \\
+\emph{deci} (d)      & $ \times 10^{-1} $   \\
+\emph{centi} (c)     & $ \times 10^{-2} $   \\
+\emph{milli}  (m)    & $ \times 10^{-3} $  \\
+\emph{micro} ($\mu$)  & $ \times 10^{-6} $  \\
+\emph{pico}  (p) & $ \times 10^{-9} $  \\
 \hline
 \end{tabular}
-\end{center}
+\caption{Scientific Notation and Metric Prefixes}
+\end{table}
 
 \subsection{Examples}
 \begin{enumerate}[label=Example \arabic*]
@@ -76,6 +151,7 @@ Pretentious S. I. Name & Scientific Notation Equivalent \\
 \item we can write $256$ as $2.56 \times 10^{2}$
 \item we can write $0.000002341$ as $ 2.341 \times 10^{-6} $
 \end{enumerate}
+
 
 
 \section{Unit Conversion}
@@ -135,5 +211,6 @@ We begin with what we know:
 
 
 
-
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
 \end{document}  
