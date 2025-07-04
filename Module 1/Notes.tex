@@ -32,39 +32,41 @@ Psalm 107:23--32
 \begin{enumerate}
 \item \textbf{Matter} is anything that has \emph{mass} and takes up space
 \item \textbf{Units of Measurement} make numbers meaningful
-\item \textbf{S. I.} (or \textbf{the metric system}) is designed to make units measurement consistent and simple
+\item \textbf{The Metric System} is designed to make units measurement consistent and simple
 \item \textbf{Unit Conversion} is based on multiplying fractions
 \item \textbf{Significant Figures} are a convention for maintaining precision in measurements
 \item \textbf{Scientific Notation} allows us to represent numbers ``naturally"   
 \end{enumerate}
 
-\section{S. I. Units}
-S. I. (\emph{Syst\`eme Internationale}), is a more formal name for the metric system. The metric system is an attempt to make measurements more standardized and easier to use in mathematical equations than our ``English" or ``Imperial" system.
+
+
+\section{The Metric System}
+The metric system is an attempt to make measurements more standardized and easier to use in mathematical equations than our ``English" or ``Imperial" system.
 
 \begin{itemize}
-\item each physical quantity has a \emph{base unit} for that quantity \cite[p. 5]{wile-chem-2}
-\item each base unit can be scaled up or down through \emph{metric prefixes} that represent powers of $10$ \cite[p. 7]{wile-chem-2}
+\item each physical quantity has a \emph{base unit} for that quantity \cite[p. 5]{wile-chem-2} (see Table \ref{table:mbaseunits})
+\item each base unit can be scaled up or down through \emph{metric prefixes} that represent powers of $10$ \cite[p. 7]{wile-chem-2} (see Table \ref{table:mprefixes})
+\item note: don't make the mistake of thinking that \emph{mass} and \emph{weight} are the same thing
 \end{itemize}
 
 \begin{table}
 \centering
-\begin{tabular}[hbpt]{|l | l| l|}
+\begin{tabular}[b]{l | l| l}
 \hline
 Metric Base Unit & Physical Quantity & Approximate Size \\
 \hline
 meter     & length    & just over 1 yard (39.37 inches) \\
-gram      & mass     & the mass of a penny \\
+gram      & mass     & one penny is about 2 grams \\
 liter         & volume & just over 1 quart \\
-second   & time      & you know how long a second is, don't you? \\
-\hline
+second   & time      & about 1 second \\
 \end{tabular}
 \caption{Common metric base units}
+\label{table:mbaseunits}
 \end{table}
-
 
 \begin{table}
 \centering
-\begin{tabular}[hbpt]{|l|l|}
+\begin{tabular}[b]{l|l}
 \hline
 Metric Prefix & Power of $10$ \\
 \hline
@@ -78,11 +80,10 @@ Metric Prefix & Power of $10$ \\
 \emph{milli}  (m)           & $ 0.001 $  \\
 \emph{micro} ($\mu$)  & $ 0.000001 $  \\
 \emph{pico}  (p)           & $ 0.000000001 $  \\
-\hline
 \end{tabular}
 \caption{Most common metric prefixes}
+\label{table:mprefixes}
 \end{table}
-
 
 
 \section{Significant Figures}
@@ -92,7 +93,7 @@ Metric Prefix & Power of $10$ \\
 \item when we record any measurements, we need to be careful of our significant figures
 \end{itemize}
 
-\subsection{Rules}
+\subsection{Rules for Significant Figures}
 Per our textbook\cite[p. 21]{wile-chem-2}, a digit is a significant figure if:
 \begin{enumerate}
 \item it is non-zero, or
@@ -110,23 +111,78 @@ Per our textbook\cite[p. 21]{wile-chem-2}, a digit is a significant figure if:
 \end{enumerate}
 
 
+\subsection{Mathing with Significant Figures}
+\begin{itemize}
+\item when adding or subtracting, round your answer to the same precision as your least precise measurement (\cite[p. 25]{wile-chem-2})
+\item when multiplying or dividing, round your answer to the same number of significant figures as your least precise measurement (\cite[p. 26]{wile-chem-2})
+\end{itemize}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item What is $5.56 mm + 9 mm$?
+\begin{equation} 
+\boxed{
+\begin{split}
+    5.56 mm + 9 mm &= 14.56 mm \\
+                                &= 15 mm \\
+ \end{split}
+ }
+ \end{equation}
+ 
+\item  What is $2.80 cm + 3.6678 cm$?
+\begin{equation} 
+\boxed{
+\begin{split}
+    2.80 cm + 3.6678 cm &= 6.4678 cm \\
+                           &= 6.47 cm \\
+ \end{split}
+ }
+\end{equation}
+
+\item What is $17.000 ft \times 3.001 lb$?
+\begin{equation} 
+\boxed{
+\begin{split}
+    17.000 ft \times 3.001 lb &= 51.017 ft \cdot lb \\
+                                           &= 51.02 ft \cdot lb  \\
+ \end{split}
+ }
+ \end{equation}
+
+\item What is $ 5.243 mol \div 17.32543 L$?
+\begin{equation} 
+\boxed{
+\begin{split}
+        5.243 mol \div 17.32543 L &=  \frac{5.243 mol}{17.32543 L} \\
+                                                  &= 0.30261875 \frac{mol}{L} \\
+                                                  &= 0.3026 \frac{mol}{L} 
+ \end{split}
+ }
+ \end{equation}
+
+\end{enumerate}
+
+
+
+
+
 \section{Scientific Notation}
 \begin{itemize}
-\item we can represent numbers as multiples of factors of 10.
+\item we can represent numbers as a number $\{ x | 1 \leq x < 10 \}$ multiplied by a power of $10$
 \item this is particularly helpful with very large or very small numbers.
 \item the rules for scientific notation are:
 \begin{enumerate}
 \item the first number is between $ 1 $ and $ 10 $
-\item  the power of $ 10 $ is the number of places you move the decimal to the \emph{left}
-\item if you move the decimal to the \emph{right}, then the power of $ 10 $ is negative
+\item  the power of $ 10 $ is the number of places you move the decimal to the \emph{left} to get to $1$ (\emph{e.g.} $1000$ is $10^{3}$)
+\item if you move the decimal to the \emph{right}, then the power of $ 10 $ is negative (\emph{e.g.} $0.01$ is $10^{-2}$)
 \end{enumerate}
 \item notice that it's very easy to track significant figures with scientific notation!
-\item notice that the metric system is just scientific notation with pretentious names!
+\item notice that the metric system is just scientific notation with pretentious names! (see Table \ref{table:pretentiousprefixes})
  \end{itemize}
 
 \begin{table}
 \centering
-\begin{tabular}[hbpt]{|l|c|}
+\begin{tabular}[c]{l|c}
 \hline
 Pretentious Name & Scientific Notation Equivalent \\
 \hline
@@ -140,9 +196,9 @@ Pretentious Name & Scientific Notation Equivalent \\
 \emph{milli}  (m)    & $ \times 10^{-3} $  \\
 \emph{micro} ($\mu$)  & $ \times 10^{-6} $  \\
 \emph{pico}  (p) & $ \times 10^{-9} $  \\
-\hline
 \end{tabular}
 \caption{Scientific Notation and Metric Prefixes}
+\label{table:pretentiousprefixes}
 \end{table}
 
 \subsection{Examples}
