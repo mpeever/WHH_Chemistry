@@ -1,0 +1,113 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+% Scientific Laws
+\newtheorem{law-thermo-d-1}{The First Law of Thermodynamics}[section]
+
+\title{Module 2: Energy, Heat, and Temperature }
+\author{Mark Peever \texttt{mpeever@gmail.com}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+2 Peter 3:10--12
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Energy} is the ability to do work
+% TODO
+\end{enumerate}
+
+\section{Heat, Energy, and Temperature}
+\begin{itemize}
+\item energy is the ability to do work
+\item work done on a system can move it, speed it up, slow it down, or transform it
+\begin{enumerate}
+\item we generally think of work as the force applied to an object times the distance the object is moved by that force ($W = F \cdot d$)
+\item ok, ok, \ldots it's something more like: $W = \vec{F} \cdot \vec{d}$
+\item fine! it's  $W = \int \vec{F} \cdot d\vec{x}$, but we're still in high school here \ldots
+\end{enumerate}
+\item \textbf{Heat} is energy transferred as a result of temperature differences
+\item \textbf{Temperature} is the average thermal energy of a system
+\end{itemize}
+
+
+\section{The Nature of Scientific Laws}
+\begin{itemize}
+\item science is an \emph{inductive} process: it involves observation, measurement, and experimentation
+\item in general terms, the scientific process moves through several stages:
+\begin{enumerate}
+\item observation
+\item hypothesis
+\item experimentation
+\item theory
+\item repeated confirmation
+\item scientific law
+\end{enumerate}
+\item in principle, even a scientific law is open to refutation with careful observation, experimentation, and theory
+\item it's surprisingly easy to ``walk off the map" in scientific endeavors
+\end{itemize}
+
+\section{The First Law of Thermodynamics}
+
+\begin{law-thermo-d-1} \label{law:law-thermo-d-1}
+Energy cannot be created or destroyed. It can only change form.
+\end{law-thermo-d-1}
+
+\begin{itemize}
+\item this is ``The Law of Conservation of Energy"
+\item we can move energy from place to place, or from form to form, but we can't actually make more
+\item the two most basic forms of energy are:
+\begin{enumerate}
+\item Potential Energy: energy that is stored
+\item Kinetic Energy: energy that is in motion
+\end{enumerate}
+\item we can think of chemical energy as a form of potential energy: it's energy stored in chemical bonds
+\item we can think of energy stored in a battery as potential energy
+\item we can think of energy stored in a spring as potential energy
+\item heat is a form of kinetic energy: it's energy moving into (or out of) a system
+\end{itemize}
+
+\section{Measuring Heat and Energy}
+\begin{itemize}
+\item we measure mechanical energy in \emph{Joules (J)} in the metric system
+\item the explanation of a Joule here is pretty convoluted, let's use: $1J = \frac{1kg \times 1 m^{2}}{1 s^{2}}$
+\end{itemize}
+
+\subsection{Temperature Scales}
+\begin{itemize}
+\item there are four main temperature scales we use:
+\begin{enumerate}
+\item the Fahrenheit scale ($^{\circ} F$)
+\item the Rankine scale
+\item the Celsius scale ($^{\circ} C$)
+\item the Kelvin scale
+\end{enumerate}
+\item the last two are what we'll use in the metric system
+\item at \emph{standard pressure}, water freezes at $32^{\circ} F$ or $0^{\circ} C$
+\item at \emph{standard pressure}, water boils at $212^{\circ} F$ or $100^{\circ} C$ 
+\item (at what temperature does water boil in Moscow?)
+\end{itemize}
+
+
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
+\end{document}  
