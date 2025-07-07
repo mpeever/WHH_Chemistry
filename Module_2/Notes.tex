@@ -104,7 +104,61 @@ Energy cannot be created or destroyed. It can only change form.
 \item (at what temperature does water boil in Moscow?)
 \end{itemize}
 
+\subsubsection{Converting between Fahrenheit and Celsius}
+\begin{itemize}
+\item we can convert between temperatures in Fahrenheit and temperatures in Celsius with some Algebra I:
+\begin{enumerate}
+\item hint: this is a \emph{linear} relationship
+\item we already have two points, so we can define a line: $(32^{\circ} F, 0^{\circ}C)$ and $(212^{\circ} F, 100^{\circ} C)$
+\item we know that $y = mx + b$
+\item we know that $m = \frac{y_1 - y_0}{x_1 - x_0}$
+\item so let's apply that to our current problem:
+\begin{equation} 
+\boxed{
+\begin{split}
+    m      &= \frac{T_{C1} - T_{C0}}{T_{F1} - T_{F0}}  \\
+             &= \frac{100^{\circ}C - 0^{\circ}C}{212^{\circ} F - 32^{\circ} F} \\
+             &= \frac{100^{\circ}C}{180^{\circ} F} \\
+             &= \frac{5^{\circ}C}{9^{\circ} F} \\
+ \end{split}
+ }
+\end{equation}
 
+\item and:
+\begin{equation} 
+\boxed{
+\begin{split}
+   T_C   &= m T_F + b \\ 
+   T_C - m T_F &= b \\ 
+   b &= T_C - m T_F \\
+ \end{split}
+ }
+\end{equation}
+
+\item so:
+\begin{equation} 
+\boxed{
+\begin{split}
+   b &= T_{C0} - ( m ) ( T_{F0}) \\
+      &= ( 0^{\circ}C ) - (\frac{5^{\circ}C}{9^{\circ} F} ) ( 32^{\circ} F ) \\
+      &= - \frac{(32^{\circ} F)(5^{\circ}C)}{9^{\circ} F} \\
+      &= - \frac{160}{9} ^{\circ} C  \\
+ \end{split}
+ }
+\end{equation}
+\item which gives us: $T_C = (\frac{5^{\circ}C}{9^{\circ} F}) T_F -  \frac{160}{9} ^{\circ} C $
+\end{enumerate}
+\item and that's super ugly\ldots we can just use: $T_C = (\frac{5}{9})(T_F - 32^{\circ} F)$ \cite[p. 45]{wile-chem-2}
+\item and please, \emph{please} don't conflate units of measure with variables, like they do in the book!
+\end{itemize}
+
+\subsubsection{Kelvin and Rankine Scales}
+\begin{itemize}
+\item Kelvin and Rankine scales are \emph{absolute} temperature scales: there are no negative temperatures
+\item to convert between Celsius and Kelvin scales, just add 273.15 K: $T_K = T_C + 273.15 K $ \cite[p. 46]{wile-chem-2}
+\item similarly, to convert between Fahrenheit and Rankine scales, just add $459.67 ^{\circ} R$: $T_R = T_F + 459.67 ^{\circ} R$
+\item Rankine is \emph{not} in our book, but I want you to be aware there is an analog to Kelvin for the English system
+\end{itemize}
 
 
 \nocite{wile-chem-2}
