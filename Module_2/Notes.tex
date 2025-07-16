@@ -30,6 +30,8 @@
 \section{Overview}
 \begin{enumerate}
 \item \textbf{Energy} is the ability to do work
+\item \textbf{Heat} is thermal energy flowing into a system
+\item \textbf{Temperature} is a measure of the average thermal energy of a system
 % TODO
 \end{enumerate}
 
@@ -150,6 +152,7 @@ Energy cannot be created or destroyed. It can only change form.
 \end{enumerate}
 \item and that's super ugly\ldots we can just use: $T_C = (\frac{5}{9})(T_F - 32^{\circ} F)$ \cite[p. 45]{wile-chem-2}
 \item and please, \emph{please} don't conflate units of measure with variables, like they do in the book!
+\item conversely, we can convert Celsius measurements to Fahrenheit with: $T_F = (\frac{9}{5}) T_C + 32^{\circ} F$  \cite[p. 46]{wile-chem-2}
 \end{itemize}
 
 \subsubsection{Kelvin and Rankine Scales}
@@ -159,6 +162,111 @@ Energy cannot be created or destroyed. It can only change form.
 \item similarly, to convert between Fahrenheit and Rankine scales, just add $459.67 ^{\circ} R$: $T_R = T_F + 459.67 ^{\circ} R$
 \item Rankine is \emph{not} in our book, but I want you to be aware there is an analog to Kelvin for the English system
 \end{itemize}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item The highest temperature Mr. Peever can remember from when he was living in St. Louis is  $116^{\circ} F$. What is that temperature in the Celsius scale?
+\begin{equation} 
+\boxed{
+\begin{split}
+    T_C &= (\frac{5^{\circ} C}{9^{\circ} F}) (T_F - 32^{\circ} F) \\
+            &= (\frac{5^{\circ} C}{9^{\circ} F}) (116^{\circ} F - 32^{\circ} F) \\
+            &= (\frac{5^{\circ} C}{9^{\circ} F}) (84^{\circ} F) \\
+            &= (\frac{5^{\circ} C}{9\xcancel{^{\circ} F}}) (84\xcancel{^{\circ} F}) \\
+            &= \frac{420^{\circ} C}{9} \\
+            &= 46.666667^{\circ} C \\
+            &= 46.7^{\circ} C \\
+ \end{split}
+ }
+ \end{equation}
+
+ \item The lowest temperature Mr. Peever can remember from when he was living in Canada is  $-45^{\circ} C$. What is that temperature in the Fahrenheit scale?
+\begin{equation} 
+\boxed{
+\begin{split}
+    T_F  &= (\frac{9^{\circ} F}{5^{\circ} C}) T_C + 32^{\circ} F \\
+            &=  (\frac{9^{\circ} F}{5^{\circ} C}) (-45 ^{\circ} C) + 32^{\circ} F \\
+            &= (\frac{9^{\circ} F}{5\xcancel{^{\circ} C}}) (-45\xcancel{^{\circ} C})  + 32^{\circ} F \\
+            &= (\frac{9^{\circ} F}{1}) (-9)  + 32^{\circ} F \\
+            &= -81^{\circ} F + 32^{\circ} F \\
+            &= -49^{\circ} F \\
+ \end{split}
+ }
+ \end{equation}
+ 
+  \item What is Mr. Peever's lowest temperature in the Kelvin scale?
+\begin{equation} 
+\boxed{
+\begin{split}
+    T_K  &= T_C + 273.15 K \\
+             &= -45 ^{\circ} C +  273.15 K \\
+             &= (-45 ^{\circ} C)(\frac{1 K}{1 ^{\circ}C}) +  273.15 K \\
+             &= (-45 \xcancel{^{\circ} C})(\frac{1 K}{1 \xcancel{^{\circ}C}}) +  273.15 K \\
+             &= -45 K +  273.15 K \\
+             &= 228.15 K \\
+ \end{split}
+ }
+ \end{equation}
+ 
+ \end{enumerate}
+
+\section{Calorie, calories, and kilocalories}
+\begin{itemize}
+\item Heat is energy, but\ldots we generally measure heat in \emph{calories}
+\item 1 calorie is the amount of heat necessary to raise the temperature of $1g$ of water by $1^{\circ} C$
+\item since both calories and Joules measure energy, we ought to be able to convert between them: $1 calorie = 4.184 Joules$ \cite[p. 48]{wile-chem-2}
+\item in the world of nutrition, we measure energy in \emph{kilocalories} ($1 kcal = 1000 cal$)
+\item oddly, we generally write kilocalories as ``Calories": $1 Cal = 1 kcal = 1000 cal$)
+\end{itemize}
+
+\section{Measuring Heat}
+\begin{itemize}
+\item remember that heat is thermal energy moving in (or out) of a system
+\item we can calculate heat as: $q = m c \Delta T$
+\item generally, the Delta symbol($\Delta$) indicates a change, so $\Delta T$ is a change in temperature: $\Delta T = T_{final} - T_{initial}$
+\item (note: we could also write that as $\Delta T = T_2 - T_1$, or even as $\Delta T = T_1 - T_0$)
+\item so back to our heat equation\ldots
+\begin{enumerate}
+\item $q$ is heat
+\item $m$ is the \emph{mass} of our object (generally in grams)
+\item $c$ is the \emph{specific heat} of our object (generally in $\frac{J}{g \cdot ^{\circ}C}$)
+\item $\Delta T$ is the change in temperature of our object (generally in $^{\circ}C$, but $K$ would work too)
+\end{enumerate}
+\end{itemize}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item What is the specific heat of water?
+\begin{equation} 
+\boxed{
+\begin{split}
+    q &= m c \Delta T  \\
+    \frac{q}{c} &= m \Delta T \\
+    \frac{1}{c} &= \frac{m \Delta T}{q} \\
+    (\frac{1}{c}) ^{-1} &= (\frac{m \Delta T}{q})^{-1} \\
+    c &= \frac{q}{m \Delta T} \\    
+       &= \frac{1 cal} {1g \cdot 1^{\circ} C} \\
+       &= \frac{1 cal} {1g \cdot 1^{\circ} C} \\
+       &= 1 \frac{cal} {g \cdot ^{\circ} C} \\
+ \end{split}
+ }
+ \end{equation}
+ \item What is the specific heat of water in Joules?
+\begin{equation} 
+\boxed{
+\begin{split}
+      c &= 1 \frac{cal} {g \cdot ^{\circ} C} \\
+         &= 1 (\frac{cal} {g \cdot ^{\circ} C})(\frac{4.184 J}{1 cal})\\
+         &= 1 (\frac{\xcancel{cal}} {g \cdot ^{\circ} C})(\frac{4.184 J}{1 \xcancel{cal}})\\
+         &= 1 (\frac{4.184 J} {g \cdot ^{\circ} C})\\ 
+         &= 4.184 \frac{ J} {g \cdot ^{\circ} C}\\     
+ \end{split}
+ }
+ \end{equation}
+
+ \end{enumerate}
+
+
 
 
 \nocite{wile-chem-2}
