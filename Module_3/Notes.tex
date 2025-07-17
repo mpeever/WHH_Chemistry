@@ -14,6 +14,8 @@
 \usepackage{cancel}
 \usepackage{amsmath}
 
+\usepackage{mhchem}
+
 % Scientific Laws
 \newtheorem{definition}{Definition}
 \newtheorem{law}{Law}
@@ -38,7 +40,7 @@
 
 \section{Mass Conservation}
 
-\begin{law}[The Law of Conservation of Mass]
+\begin{law}[The Law of Conservation of Mass]\label{law-conservation-mass}
 Matter cannot be created or destroyed, it can only change forms.
 \end{law}
 
@@ -94,7 +96,7 @@ An element is a substance that cannot be decomposed into a less massive substanc
 A compound is a substance that can be decomposed into elements by chemical means.
 \end{definition}
 
-\begin{law}[The Law of Definite Proportions]
+\begin{law}[The Law of Definite Proportions]\label{law-definite-proportions}
 The proportion of elements in any compound is always the same.
 \end{law}
 
@@ -102,11 +104,51 @@ The proportion of elements in any compound is always the same.
 \item there are basically two types of matter: elements and compounds
 \item a compound is a substance made up of elements (\emph{e.g.} water, steel, sulfuric acid)
 \item note compounds are made of elements combined \emph{chemically}: bolting a piece of Iron to a piece of Tin doesn't make a compound
-\item 
+\end{itemize}
 
+\section{The Law of Multiple Proportions}
+
+\begin{law}[The Law of Multiple Proportions]\label{law-multiple-proportions}
+If two elements combine to form different compounds, the ratio of masses of the \emph{second} element that react with a fixed mass of the \emph{first} element 
+will be a simple, whole-number ratio.
+\end{law}
+
+\begin{itemize}
+\item this one is easier to understand than it seems:
+\begin{itemize}
+\item if we have two compounds made up of two elements
+\item and if they use the same amount (mass) of one of the elements, then:
+\item the amount (mass) of the \emph{other} element in one compound will be a simple ratio of the mass of that same element in the \emph{other} compound
+\end{itemize}
+\item so if you compare water (\ce{H2O}) and hydrogen peroxide (\ce{H2O2}), if you have the same amount of \ce{H} in each compound (by \emph{mass}), then you'll have twice as much \ce{O} in the second compound as in the first
+\item or if you compare water and hydronium (\ce{H3O^+}), if you have the same amount of \ce{O} in each compound, the ratio of \ce{H} in the two compounds will be $2:3$, a simple, whole-number ratio 
+\item or if you compare hydrogen peroxide and hydroxyl (\ce{OH^-}), if you have the same amount of \ce{O} in each compound, the ratio of \ce{H} in the two compounds will be $1:1$, a simple, whole-number ratio 
+\end{itemize}
+
+\section{Molecules}
+\begin{itemize}
+\item compounds are made of \emph{molecules}, which are groups of connected atoms
+\item just like elements are made of identical atoms, compounds are made of identical molecules
 \end{itemize}
 
 
+\section{Dalton's Atomic Theory}
+\begin{itemize}
+\item John Dalton (1766 -- 1844) came up with an atomic theory\cite[p. 83--85]{wile-chem-2}
+\begin{enumerate}
+\item all elements are composed of small, indivisible particles called ``atoms"
+\item all atoms of the same element have exactly the same properties
+\item atoms of different elements have different properties
+\item compounds are formed when atoms are joined together --- since atoms are indivisible, they can only join in simple, whole-number ratios
+\end{enumerate}
+\item as far as it goes, Dalton's Atomic Theory is [mostly] correct
+\item chemical reactions are just atoms rearranging: they don't create new atoms, nor do they destroy existing atoms
+\item the total number of atoms stays the same, so the total amount of mass stays the same (see Law \ref{law-conservation-mass})
+\item since atoms are indivisible, they can only combine in consistent ratios (see Law \ref{law-definite-proportions})
+\item since atoms are indivisible, they can only combine in whole-number ratios (see Law \ref{law-multiple-proportions})
+\item it turns out atoms aren't actually indivisible: they, too, are made of smaller particles\cite[p. 85]{wile-chem-2}
+\item it turns out atoms of a single element aren't actually identical: there are slight variations in mass between \emph{isotopes}\cite[p. 85]{wile-chem-2}
+\end{itemize}
 
 
 
