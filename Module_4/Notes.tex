@@ -1,0 +1,111 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+
+\title{Module 4: Classifying Matter and Its Changes }
+\author{Mark Peever \texttt{mpeever@gmail.com}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Mixtures} contain multiple types of elements and/or compounds
+\end{enumerate}
+
+\section{Classifying Matter}
+
+\begin{definition}[Pure Substance]\label{defn:pure-substance}
+A substance that contains only one element and/or compound
+\end{definition}
+
+\begin{definition}[Mixture]\label{defn:mixture}
+A substance that contains different elements and/or compounds
+\end{definition}
+
+\begin{itemize}
+\item a mixture contains multiple elements and/or compounds, but they haven't lost their individual identities and properties
+\item \emph{e.g.} air is a mixture of many different gases\footnote{See the table in the textbook, p. 105}: each gas in air is still whatever kind of gas it would be without the others\ldots air is not a compound
+\item it's possible to separate parts of a mixture \emph{physically} (\emph{e.g.} by filtering)
+\end{itemize}
+
+\begin{definition}[Homogenous Mixture]\label{defn:mixture:homo}
+A mixture with a composition that is always the same, regardless of which part of the sample you are observing
+\end{definition}
+
+\begin{definition}[Heterogenous Mixture]\label{defn:mixture:hetero}
+A mixture with a composition that differs depending on which part of the sample you are observing
+\end{definition}
+
+\begin{itemize}
+\item air \emph{seems like} a homogeneous mixture: it pretty much looks the same everywhere\ldots if you go past a dairy farm, you'll realize it's actually heterogeneous on a large enough scale
+\item paint is a heterogenous mixture, which is why you have to mix it up before you can use it
+\end{itemize}
+
+\section{Classifying Changes in Matter}
+
+\begin{definition}[Chemical Change]\label{defn:change-chemical}
+a change that affects the type of atoms or molecules in a substance
+\end{definition}
+
+\begin{definition}[Physical Change]\label{defn:change-physical}
+a change in which the atoms or molecules in a substance stay the same
+\end{definition}
+
+\begin{itemize}
+\item the idea here is that if we physically alter a substance, that's not a chemical change
+\item dissolving one substance into another is a physical change\footnote{I realize we could argue differently based on our definitions, but let's just go with it. Check out p. 107 for more.}, because we haven't actually changed the kinds of atoms and/or molecules involved
+\item chewing a steak is a physical change, but digesting a steak is a chemical change
+\end{itemize}
+
+\section{Phase Changes}
+\begin{itemize}
+\item one interesting type of physical change is the \emph{phase change}
+\item in general, there are three phases of matter: solid, liquid, and gas\footnote{Let's not get hung up on plasma right now.}.
+\item we can convert matter between these phases with heat \footnote{And pressure!} (see Table \label{table:phase-changes})
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}[b]{| l | l | l | l |}
+\textbf{Name} & \textbf{Phase Change} & \textbf{Beginning Phase} & \textbf{Ending Phase} \\
+\hline
+freeze & add heat & liquid & solid \\
+melt & take heat away & solid & liquid \\
+evaporate & add heat & liquid & gas \\
+condense & take heat away & gas & liquid \\
+sublimate\footnote{This one isn't in the book, but we see it a lot in the winter around Moscow.} & change pressure & solid & gas \\
+\end{tabular}
+\caption{Phase Changes for Matter}
+\label{table:phase-changes}
+\end{table}
+
+
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
+\end{document}  
