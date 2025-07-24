@@ -125,6 +125,75 @@ Molecules and atoms are in constant motion, and the higher the temperature, the 
 \end{itemize}
 
 
+\section{Chemical Reactions and Chemical Equations}
+\begin{definition}[Homonuclear Diatomic]\label{defn:homonuclear-diatomic}
+Homonuclear diatomic molecules are made up of two atoms of the same type.
+\end{definition}
+
+\begin{itemize}
+\item homonuclear diatomic molecules are the natural form\footnote{``Natural" here means, ``found in nature."} of several elements: \ce{N2}, \ce{O2}, \ce{Cl2}, \ce{F2}, \ce{Br2}, \ce{I2}, \ce{At2}, \ce{H2}
+\item you'll find all these at the right-hand side of the periodic table
+\item we only care about homonuclear diatomic molecules when we discuss the substances in terms of their natural form: we don't care about them when we deal with these substances in terms of their roles in molecules (\emph{e.g.} water (\ce{H2O}) contains a \emph{single} \ce{O}, not two \ce{O} atoms)
+\end{itemize}
+
+\begin{itemize}
+\item we think of chemical changes in terms of \textbf{chemical reactions}, \emph{e.g.} ``carbon plus oxygen yields carbon dioxide"
+\item we write chemical reactions like an equation in math: 
+\begin{center}
+\ce{C + O2 -> CO2}
+\end{center}
+\item when we write a chemical reaction as an equation, we call it a \textbf{chemical equation}
+\item we write the \textbf{reactants} on the left-hand side, and the \textbf{products} on the right-hand side
+\item we can add phase information too: 
+\begin{center}
+\ce{C (s) + O2 (g) -> CO2 (g) }
+\end{center}
+\end{itemize}
+
+\subsection{Balancing Chemical Equations}
+
+
+\begin{itemize}
+\item let's consider the burning of methane\cite[p. 117ff]{wile-chem-2}: ``methane plus oxygen yields carbon dioxide plus water"
+\item we can write that one as:\\
+\begin{center}
+ \ce{CH4 (g) + O2 (g) -> CO2 (g) + H2O (g)}
+ \end{center}
+\item written that way, we have matter both created and destroyed:
+\begin{enumerate}
+\item we have one \ce{C} atom on the left, and one on the right\ldots that works, but
+\item we have four \ce{H} atoms on the left, and two on the right\ldots so, did we create atoms?
+\item we have two \ce{O} atoms on the left, and three on the right\ldots so once again, we're creating atoms
+\end{enumerate}
+\item in order to tell the truth about not creating atoms, we need to conserve the atoms on each side
+\item so our equation is:\\  
+\begin{center}
+\ce{CH4 (g) + O2 (g) + O2 (g) -> CO2 (g) + H2O (g) + H2O (g)}
+\end{center}
+\item now we have:
+\begin{enumerate}
+\item one \ce{C} atom on the left, and one on the right
+\item four \ce{H} atoms on the left, and four on the right
+\item four \ce{O} atoms on the left, and four on the right
+\end{enumerate}
+\item so now we're not creating or destroying atoms!
+\item we can write that more simply\footnote{Just like we would in a math equation.}:\\
+\begin{center}
+ \ce{CH4 (g) + 2O2 (g) -> CO2 (g) + 2H2O (g)}
+ \end{center}
+\item this is called a \textbf{balanced chemical equation}
+\item and notice what it tells us:
+\begin{enumerate}
+\item \ce{CH4} takes twice as many \ce{O2} molecules to burn as \ce{CH4} molecules 
+\item for every \ce{CH4} molecule we burn, we'll get one \ce{CO2} molecule
+\item for every \ce{CH4} molecule we burn, we'll get one \ce{H2O} molecule
+\end{enumerate}
+\end{itemize}
+
+
+
+
+
 \nocite{wile-chem-2}
 \bibliography{../Chemistry}{}
 \bibliographystyle{apalike}
