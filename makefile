@@ -4,8 +4,7 @@ PDFLATEX := /Library/Tex/texbin/pdflatex
 
 SUBDIRS := $(wildcard */.)
 
-
-all: $(SUBDIRS) FORCE
+all: Syllabus.pdf Baseline_Quiz.pdf $(SUBDIRS) FORCE
 
 clean: $(SUBDIRS) FORCE
 	rm -rf *.aux
@@ -16,7 +15,11 @@ realclean: clean
 	rm -f *.pdf
 	rm -f *.synctex.gz
 
-baseline_quiz: Baseline_Quiz.tex
+Syllabus.pdf: Syllabus.tex
+	${PDFLATEX} Syllabus
+	${PDFLATEX} Syllabus
+
+Baseline_Quiz.pdf: Baseline_Quiz.tex
 	${PDFLATEX} Baseline_Quiz
 	${PDFLATEX} Baseline_Quiz
 
