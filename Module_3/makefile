@@ -2,7 +2,7 @@ BIBTEX := /Library/Tex/texbin/bibtex
 LATEX := /Library/Tex/texbin/latex
 PDFLATEX := /Library/Tex/texbin/pdflatex
 
-all: dvi pdf
+all: Notes.dvi Notes.pdf
 
 clean:
 	rm -f *.aux
@@ -13,13 +13,13 @@ realclean: clean
 	rm -f *.pdf
 	rm -f *.synctex.gz
 
-dvi: Notes.tex 
+Notes.dvi: Notes.tex 
 	$(LATEX) Notes
 	$(BIBTEX) Notes
 	$(LATEX) Notes
 	$(LATEX) Notes
 
-pdf: dvi Notes.tex 
+Notes.pdf: Notes.dvi Notes.tex 
 	$(PDFLATEX) Notes
 
 
