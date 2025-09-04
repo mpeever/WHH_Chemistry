@@ -2,7 +2,7 @@ BIBTEX := /Library/Tex/texbin/bibtex
 LATEX := /Library/Tex/texbin/latex
 PDFLATEX := /Library/Tex/texbin/pdflatex
 
-all: Module_2_Notes.pdf Notes.dvi Notes.pdf
+all: Module_2_Notes.pdf Notes.pdf LessonPlan_2_1.pdf
 
 clean:
 	rm -f *.aux
@@ -24,4 +24,9 @@ Notes.pdf: Notes.dvi Notes.tex
 
 Module_2_Notes.pdf: Notes.pdf
 	cp Notes.pdf Module_2_Notes.pdf
+
+LessonPlan_2_1.pdf: LessonPlan_2_1.tex 
+	$(PDFLATEX) LessonPlan_2_1
+	$(PDFLATEX) LessonPlan_2_1
+	$(PDFLATEX) LessonPlan_2_1
 

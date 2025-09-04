@@ -23,6 +23,11 @@ Baseline_Quiz.pdf: Baseline_Quiz.tex
 	${PDFLATEX} Baseline_Quiz
 	${PDFLATEX} Baseline_Quiz
 
+Lab_Guide.pdf: Lab_Guide.tex Sample_Chem_Chart.png
+	${PDFLATEX} Lab_Guide
+	${PDFLATEX} Lab_Guide
+
+
 $(SUBDIRS): FORCE
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
