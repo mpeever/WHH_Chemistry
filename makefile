@@ -4,7 +4,7 @@ PDFLATEX := /Library/Tex/texbin/pdflatex
 
 SUBDIRS := $(wildcard */.)
 
-all: Syllabus.pdf Baseline_Quiz.pdf $(SUBDIRS) FORCE
+all: Syllabus.pdf Baseline_Quiz.pdf Lab_Guide.pdf $(SUBDIRS) FORCE
 
 clean: $(SUBDIRS) FORCE
 	rm -rf *.aux
