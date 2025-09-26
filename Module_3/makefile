@@ -2,11 +2,12 @@ BIBTEX := /Library/Tex/texbin/bibtex
 LATEX := /Library/Tex/texbin/latex
 PDFLATEX := /Library/Tex/texbin/pdflatex
 
-all: Module_3_Notes.pdf Notes.dvi Notes.pdf LessonPlan_3_1.pdf LessonPlan_3_2.pdf Quiz.pdf ExamQ1.pdf
+all: Module_3_Notes.pdf Notes.dvi Notes.pdf LessonPlan_3_1.pdf LessonPlan_3_2.pdf Quiz.pdf ExamQ1.pdf ExamQ1Review.pdf
 
 clean:
 	rm -f *.aux
 	rm -f *.log
+	rm -f *.out
 
 realclean: clean
 	rm -f *.dvi
@@ -39,6 +40,12 @@ ExamQ1.pdf: ExamQ1.tex
 	$(PDFLATEX) ExamQ1
 	$(PDFLATEX) ExamQ1
 	$(PDFLATEX) ExamQ1
+
+ExamQ1Review.pdf: ExamQ1Review.tex 
+	$(PDFLATEX) ExamQ1Review
+	$(PDFLATEX) ExamQ1Review
+	$(PDFLATEX) ExamQ1Review
+
 
 Quiz.pdf: Quiz.tex 
 	$(PDFLATEX) Quiz
