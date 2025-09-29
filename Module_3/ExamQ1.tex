@@ -5,6 +5,8 @@
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amsmath}
+\usepackage{cancel}
 \usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{mhchem}
@@ -18,6 +20,7 @@
 
 \pointsinrightmargin
 %\marginpointname{ \points}
+%\printanswers
 
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering
@@ -30,27 +33,142 @@ Answer all questions on a separate sheet of paper. Show all your work.
 
 \begin{questions}
 \question[5] Gideon has a shiny new calorimeter. He measures the temperature of the water in it and finds it measures  $25.0^{\circ}C$. What is the temperature of the water in Kelvin? 
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    T_K &= T_C + 273.15 K \\
+            &= 25.0^{\circ}C + 273.15 K \\
+            &= 298.15 K \\
+            &= 298.2 K                                       
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Am\'{e}lie measures the volume of water in Gideon's calorimeter and finds it to be $1.00 L$. What is the mass of the water in Gideon's calorimeter?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+  \rho &= \frac{m}{V} \\
+  V \rho &= \frac{m}{\xcancel{V}} \xcancel{V} \\
+  m &= V \rho \\
+      &= (1.00 \xcancel{L}) (1.000 \frac{\xcancel{kg}}{\xcancel{L}}) (\frac{1000 g}{\xcancel{1 kg}}) \\
+      &= 1.00 x 10^3 g                                 
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Ella puts a $5.00 cm^3$ piece of \ce{Cu} (copper) into Gideon's calorimeter.  The density of copper is $8.96 \frac{g}{cm^{3}}$. What is the mass of the piece of copper?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   \rho &= \frac{m}{V} \\
+   V \rho &= \frac{m}{\xcancel{V}} \xcancel{V} \\
+   m &= V \rho \\     
+       &= (5.00 \xcancel{cm^3})(8.96 \frac{g}{\xcancel{cm^3}}) \\
+       &= 44.8 g                             
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Nate notices that the temperature of the water rises to $30.0^{\circ}C$ after Ella puts the copper into the calorimeter. How many Joules of thermal energy has the water absorbed?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   q &= m c \Delta T \\
+      &= m c (T_1 - T_0) \\
+      &= (1.00 \times 10^3 g) (4.184 \frac{J}{g \cdot ^{\circ}C})(30.0 ^{\circ} C - 25.0 ^{\circ} C) \\
+      &= (1.00 \times 10^3 \xcancel{g})(4.184 \frac{J}{\xcancel{g} \cdot \xcancel{^{\circ}C}} (5.0 \xcancel{^{\circ} C}) \\
+      &= 20.92 J \\
+      &= 21 J                           
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Avery thinks Joules are a silly unit of measure, so she converts Nate's thermal energy measurement into calories. How many calories of thermal energy did the water absorb?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   q &= (21 J) (\frac{1.000 cal}{4.184 J}) \\
+      &= (21 \xcancel{J})(\frac{1.000 cal}{4.184 \xcancel{J}}) \\
+      &= 5.01912 cal \\
+      &= 5.0 cal                        
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Jack looks up the specs of the calorimeter in the user's manual and finds that its mass is $1.000 kg$ and its specific heat is $0.5990 \frac{J}{g \cdot ^{\circ}C}$. 
 How much thermal energy did the calorimeter absorb?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   q &= m c \Delta T \\
+      &= m c (T_1 - T_0) \\
+            &= (1.000 kg) (\frac{1000 g}{1 kg}) (0.5990 \frac{J}{g \cdot ^{\circ} C}) (30.0 ^{\circ}C - 25.0 ^{\circ} C) \\   
+      &= (1.000 \xcancel{kg})(\frac{1000 \xcancel{g}}{1 \xcancel{kg}}) (0.5990 \frac{J}{\xcancel{g} \cdot \xcancel{^{\circ} C}})(5.0 \xcancel{^{\circ} C})\\
+      &= 2995 J \\
+      &= 3.0 \times 10^3 J
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Caroline, knowing Avery hates measuring energy in Joules, wants to record the thermal energy the calorimeter absorbed into calories. How many calories is that?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   q &= (3.0 \times 10^3 J) (\frac{1.000 cal}{4.184 J}) \\
+      &= (3.0 \times 10^3 \xcancel{J})(\frac{1.000 cal}{4.184 \xcancel{J}}) \\
+      &= 717.017 cal \\
+      &= 720 cal                        
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Vianne realizes she forgot to record the initial temperature of Ella's piece of \ce{Cu}, but she knows she can calculate it easily. What was the original temperature of Ella's piece of copper?
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   q &= m c \Delta T \\
+   q &= m c (T_1 - T_0) \\
+   \frac{q}{m c} &= \xcancel{m c} (T_1 - T_0) ( \frac{1}{\xcancel{m c}} ) \\
+   \frac{q}{m c} - T_1 &= - T_0 \\
+   T_0 &= T_1 - \frac{q}{m c} \\
+           &= T_1 - \frac{ - (q_{water} + q_{calorimeter}) }{m c} \\
+           &= 30.0^{\circ}C - \frac{ -(21J  + 3.0 \times 10^3 J) }{44.8g \cdot  0.3851 \frac{J}{g \cdot ^{\circ} C}} \\     
+           &= 30.0^{\circ}C - \frac{ -(3021 \xcancel{J}) }{44.8 \xcancel{g} \cdot  0.3851 \frac{\xcancel{J}}{\xcancel{g} \cdot ^{\circ} C}} \\     
+           &= 30.0^{\circ}C - \frac{ -(3021 ) } {17.25248  \frac{1}{ ^{\circ} C}} \\ 
+           &= 30.0^{\circ}C - (- 175.105 ^{\circ} C)\\
+           &= 205.105 ^{\circ} C \\
+           &= 205 ^{\circ} C
+ \end{split}
+ \end{equation}
+ \end{solution}
 
 \question[5] Thomas wants to record temperatures in Kelvin. What is the original temperature of the \ce{Cu} block in Kelvin?
-
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    T_K &= T_C + 273.15 K \\
+            &= 205^{\circ}C + 273.15 K \\
+            &= 478.15 K \\
+            &= 478 K                                       
+ \end{split}
+ \end{equation}
+ \end{solution}
+ 
 \question[5] Ezra and No\'{e}mie dump out the calorimeter, draining the warm water into a bucket that already contains ice. After five minutes, they notice there is still ice floating in the water. What temperature would we expect the water and ice mixture to have? Explain your reasoning.
+\begin{solution}
+The ice and water mixture should be at water's freezing point ($32.0 ^{\circ} F$ or $0 ^{\circ} C$).
+We know this, because there is a thermal equilibrium and there are two phases of water together.
+\end{solution}
 
 \bonusquestion \emph{Bonus Question} There are three men Scripture calls ``King of kings." Who are they?
+\begin{solution}
+\begin{itemize}
+\item Nebuchadnezzar (Daniel 2:37)
+\item Artaxerxes (Ezra 7:12)
+\item Christ (Revelation 19:16)
+\end{itemize}
+\end{solution}
 
 \end{questions}
 
