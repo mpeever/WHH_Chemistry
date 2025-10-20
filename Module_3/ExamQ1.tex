@@ -20,7 +20,7 @@
 
 \pointsinrightmargin
 %\marginpointname{ \points}
-%\printanswers
+\printanswers
 
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering
@@ -52,7 +52,7 @@ Answer all questions on a separate sheet of paper. Show all your work.
   V \rho &= \frac{m}{\xcancel{V}} \xcancel{V} \\
   m &= V \rho \\
       &= (1.00 \xcancel{L}) (1.000 \frac{\xcancel{kg}}{\xcancel{L}}) (\frac{1000 g}{\xcancel{1 kg}}) \\
-      &= 1.00 x 10^3 g                                 
+      &= 1.00 \times 10^3 g                                 
  \end{split}
  \end{equation}
  \end{solution}
@@ -77,9 +77,9 @@ Answer all questions on a separate sheet of paper. Show all your work.
    q &= m c \Delta T \\
       &= m c (T_1 - T_0) \\
       &= (1.00 \times 10^3 g) (4.184 \frac{J}{g \cdot ^{\circ}C})(30.0 ^{\circ} C - 25.0 ^{\circ} C) \\
-      &= (1.00 \times 10^3 \xcancel{g})(4.184 \frac{J}{\xcancel{g} \cdot \xcancel{^{\circ}C}} (5.0 \xcancel{^{\circ} C}) \\
-      &= 20.92 J \\
-      &= 21 J                           
+      &= (1.00 \times 10^3 \xcancel{g})(4.184 \frac{J}{\xcancel{g} \cdot \xcancel{^{\circ}C}}) (5.0 \xcancel{^{\circ} C}) \\
+      &= 20920 J \\
+      &= 21000 J                           
  \end{split}
  \end{equation}
  \end{solution}
@@ -88,10 +88,11 @@ Answer all questions on a separate sheet of paper. Show all your work.
 \begin{solution}
 \begin{equation} 
 \begin{split}
-   q &= (21 J) (\frac{1.000 cal}{4.184 J}) \\
-      &= (21 \xcancel{J})(\frac{1.000 cal}{4.184 \xcancel{J}}) \\
-      &= 5.01912 cal \\
-      &= 5.0 cal                        
+   q &= (21000 J) (\frac{1.000 cal}{4.184 J}) \\
+      &= (21000 \xcancel{J})(\frac{1.000 cal}{4.184 \xcancel{J}}) \\
+      &= 5019.12 cal \\
+      &= 5.0 \times 10^3 cal \\
+      &= 5.0 kcal
  \end{split}
  \end{equation}
  \end{solution}
@@ -127,18 +128,24 @@ How much thermal energy did the calorimeter absorb?
 \begin{solution}
 \begin{equation} 
 \begin{split}
+   q_{water} &= 21000 J\\
+   q_{calorimeter} &= 3000 J\\
+   q_{copper} + q_{water} + q_{calorimeter} &= 0 \\
+   q_{copper} &= - (q_{water} + q_{calorimeter} )\\
+                      &= - (21000 J + 3000 J) \\
+                      &= -24000 J\\
    q &= m c \Delta T \\
    q &= m c (T_1 - T_0) \\
    \frac{q}{m c} &= \xcancel{m c} (T_1 - T_0) ( \frac{1}{\xcancel{m c}} ) \\
    \frac{q}{m c} - T_1 &= - T_0 \\
    T_0 &= T_1 - \frac{q}{m c} \\
-           &= T_1 - \frac{ - (q_{water} + q_{calorimeter}) }{m c} \\
-           &= 30.0^{\circ}C - \frac{ -(21J  + 3.0 \times 10^3 J) }{44.8g \cdot  0.3851 \frac{J}{g \cdot ^{\circ} C}} \\     
-           &= 30.0^{\circ}C - \frac{ -(3021 \xcancel{J}) }{44.8 \xcancel{g} \cdot  0.3851 \frac{\xcancel{J}}{\xcancel{g} \cdot ^{\circ} C}} \\     
-           &= 30.0^{\circ}C - \frac{ -(3021 ) } {17.25248  \frac{1}{ ^{\circ} C}} \\ 
-           &= 30.0^{\circ}C - (- 175.105 ^{\circ} C)\\
-           &= 205.105 ^{\circ} C \\
-           &= 205 ^{\circ} C
+           &= T_1 - \frac{ q } {m c} \\
+           &= 30.0^{\circ}C - \frac{ (-24000 J) }{44.8g \cdot  0.3851 \frac{J}{g \cdot ^{\circ} C}} \\     
+           &= 30.0^{\circ}C - \frac{ -24000 \xcancel{J} }{44.8 \xcancel{g} \cdot  0.3851 \frac{\xcancel{J}}{\xcancel{g} \cdot ^{\circ} C}} \\     
+           &= 30.0^{\circ}C - \frac{ -24000 } {17.25248  \frac{1}{ ^{\circ} C}} \\ 
+           &= 30.0^{\circ}C - (- 1391.104 ^{\circ} C)\\
+           &= 30.0^{\circ}C + 1400 ^{\circ} C\\
+           &= 1430 ^{\circ} C 
  \end{split}
  \end{equation}
  \end{solution}
@@ -148,9 +155,9 @@ How much thermal energy did the calorimeter absorb?
 \begin{equation} 
 \begin{split}
     T_K &= T_C + 273.15 K \\
-            &= 205^{\circ}C + 273.15 K \\
-            &= 478.15 K \\
-            &= 478 K                                       
+            &= 1430^{\circ}C + 273.15 K \\
+            &= 1703.15 K \\
+            &= 1703 K                                       
  \end{split}
  \end{equation}
  \end{solution}

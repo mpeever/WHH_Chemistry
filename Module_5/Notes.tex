@@ -1,0 +1,181 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 5: Counting Molecules and Atoms in Chemical Equations }
+\author{Mark Peever \texttt{mpeever@gmail.com}}
+\date{October 24 -- 31, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Decomposition Reactions} 
+\item \textbf{Formation Reactions}
+\item \textbf{Complete Combustion Reactions}
+\item \textbf{Incomplete Combustion Reactions}
+\item \textbf{Molecular Mass}
+\item A \textbf{Mole} is a fixed number of objects (usually molecules or atoms).
+\end{enumerate}
+
+\section{Classifying Chemical Reactions}
+
+\subsection{Decomposition Reactions}
+
+\begin{definition}[Decomposition Reaction]\label{defn:reaction:decomposition}
+A reaction that changes a compound into its constituent elements
+\end{definition}
+
+\begin{itemize}
+\item these are reasonably easy to predict
+\item they often (not always) involve some sort of energy input\footnote{A stable compound represents a \emph{localized} low-energy state, so getting it to decompose can require some energy input.}
+\item we can think of our old friend: \ce{2H2O (l) -> 2H2 (g) + O2 (g) }
+\end{itemize} 
+
+
+\subsection{Formation Reactions}
+
+\begin{definition}[Formation Reaction]\label{defn:reaction:formation}
+A reaction that starts with two or more elements and produces one compound
+\end{definition}
+\begin{itemize}
+\item these are really the opposite of decomposition reactions
+\item we can even write them by writing decomposition reactions backwards: \ce{2H2 (g) + O2 (g) ->  2H2O (l)} 
+\end{itemize}
+
+
+\subsection{Complete Combustion Reactions}
+
+\begin{definition}[Complete Combustion Reaction]\label{defn:reaction:complete-combustion}
+A reaction in which \ce{O2} is added to a compound containing carbon (\ce{C}) and hydrogen (\ce{H}), producing \ce{CO2} and \ce{H2O}
+\end{definition}
+\begin{itemize}
+\item this is a narrow definition of \emph{burning}\footnote{This is really a glimpse into the exciting world of \emph{organic chemistry}.}
+\item this definition excludes some really exciting combustion reactions, like \ce{2Mg (s) + O2 (g) -> 2MgO (s) }
+\item technically, our \emph{formation} example is a combustion, but we're classifying that differently for now
+\end{itemize}
+
+
+\subsection{Incomplete Combustion Reactions}
+
+%\begin{definition}[Incomplete Combustion Reaction]\label{defn:reaction:incomplete-combustion}
+%A reaction in which \ce{O2} is added to a compound containing carbon (\ce{C}) and hydrogen (\ce{H}), producing \ce{CO2} and \ce{H2O}
+%\end{definition}
+\begin{itemize}
+\item these are combustion reactions where insufficient \ce{O2} means the combustion produces \ce{CO} or even just \ce{C} instead of \ce{CO2}
+\item these can be pretty harmful --- even dangerous (breathing \ce{CO} can actually kill you) --- but they can also be beneficial\footnote{This is, after all, how we make charcoal.}
+\item the main take-away here is just that a combustion reaction can go one of three ways, depending on the \ce{O2} levels in the environment
+\end{itemize}
+
+
+\section{Atomic Mass}
+
+We've already talked about The Law of Definite Proportions, and how that led Dalton to formulate theories about atoms. Now we're going to dig more into that\ldots
+
+\begin{itemize}
+\item every element on the Periodic Table contains two important numbers: the \emph{atomic number} (above the element symbol), and the \emph{atomic mass} (below the symbol)
+\item remember that an element is made up of only one type of atom, so we'll use the terms ``atom" and ``element" interchangeably here
+\item the atomic number tells us the number of protons (and hence the number of electrons) in the atom\footnote{More on this later}
+\item the atomic mass tells us how much mass the atom has, in atomic mass units (\textbf{amu})
+\item the relationship between amu and grams is: $ 1 g = 6.02214076 \times 10^{23} amu$
+\item so one \ce{H} atom has the mass of $ 1.00794 amu$, the mass of $ 6.02214076 \times 10^{23} $ \ce{H} atoms is $ 1.00794 g$
+\item that means our Periodic Table can help us calculate how many atoms of any given element we have, if we know the mass of the sample:
+\begin{enumerate}[label=Example \arabic*]
+\item How many atoms are in $1.00 kg$ of gold (\ce{Au})? 
+\begin{equation} 
+\boxed{
+\begin{split}
+    m_{unit} &= \frac{196.966569 amu}{1 atom} \\
+    m_{sample} &= 1.00 kg \\
+                        &= ( 1.00 kg ) (\frac{1000 g}{1 kg}) ( \frac{6.02214076 \times 10^{23} amu}{1 g}) \\
+                        &= ( 1.00 \xcancel{kg} ) (\frac{1000 \xcancel{g}}{1 \xcancel{kg}}) ( \frac{6.02214076 \times 10^{23} amu}{1 \xcancel{g}}) \\
+                        &= 6.02214076 \times 10^{26} amu \\
+   count &= \frac{m}{m_{unit}} \\
+             &=  (6.02214076 \times 10^{26} amu) (\frac{1 atom}{196.966569 amu}) \\
+             &=  (6.02214076 \times 10^{26} \xcancel{amu}) (\frac{1 atom}{196.966569 \xcancel{amu}}) \\
+             &=  3.0574430933 \times 10^{24} atoms \\
+             &=  3.05744309 \times 10^{24} atoms \\                   
+ \end{split}
+ }
+ \end{equation}
+ 
+\end{enumerate}
+\end{itemize}
+
+\section{Molecular Mass}
+
+
+\section{Mole}
+
+\begin{definition}[Mole]\label{defn:mole}
+A mole is $6.02214076 \times 10^{23}$  objects.
+\end{definition}
+
+\begin{itemize}
+\item a \emph{mole} is a number of objects
+\item a mole is like a pair, or a dozen, or a gross (see Table \ref{table:collections:names})
+
+\end{itemize}
+
+\begin{table}[p]
+\centering
+\begin{tabular}[b]{l|l}
+\hline
+Name & Number \\
+\hline
+%each & $1$ \\
+pair  & $2$ \\
+%duo  & $2$ \\
+trio  & $3$ \\ 
+half-dozen & $6$ \\
+dozen & $12$ \\
+baker's dozen & $13$ \\
+score & $20$ \\
+gross & $144$ \\
+\textbf{mole}   & \textbf{$6.022 \times 10^{23}$}\\
+\end{tabular}
+\caption{Names of collections of objects}
+\label{table:collections:names}
+\end{table}
+
+
+
+
+
+\section{Homework}
+Review Problems: p. 131 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 132 \# 1--10 (due 2025-10-24)\\
+Experiment 4.3, p. 110 (due 2025-10-10)\\
+\textbf{Take-home Exam: Quarter 1 Cumulative Exam} (due 2025-10-10) \\
+
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
+\end{document}  
