@@ -1,0 +1,284 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 6: Stoichiometry }
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{November 7 -- 14, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Molar Mass} tells us the mass of one mole of a substance
+\item \textbf{Stoichiometry} is relating the quantities of various substances in a chemical reaction
+\item we can control chemical reactions by \textbf{limiting reactants} 
+\item \textbf{Gay-Lussac's Law} allows to to use volumes of a gas as a proxy for the count of atoms in a gaseous substance
+\item \textbf{Empirical Formulae} allow us to express \emph{possible} chemical formulae in terms of whole-number ratios
+\end{enumerate}
+
+\section{Mole Relationships in Chemical Equations}
+\begin{itemize}
+\item sometimes a package will display the text, ``this package is measured by weight, not be volume"\ldots what does that mean?
+\item the idea there is that a box might appear to be partially, or even mostly empty, but you got what you paid for, \emph{because you paid for a specific mass (weight) of the product}
+\item for example, if you buy a box of cereal\footnote{Don't judge me!} and the box advertises that it contains $10 oz$ of cereal, but it only fills half the box; the box is warning you that you paid for $10 oz$, as opposed to ``a boxfull''
+\item in exactly the same way\footnote{I sound like Homer here.}, we need to understand the chemical reactions don't occur \emph{per gram} or \emph{per liter}, but \emph{per atom}
+\item and since we group atoms into moles, we can say that chemical reactions work \emph{per mole}
+\item we can still relate the masses of the different substances, but we have to remember that a mole of one and a mole of another don't have the same mass:
+\end{itemize} 
+
+ \begin{enumerate}[label=Example \arabic*]
+ \item burning propane: \ce{ C3H8 + 5O2 -> 3CO2 + 4H2O }
+\begin{itemize}
+\item every propane molecule (\ce{C3H8}) requires \emph{five} oxygen molecules to burn
+\item every propane molecule we burn produces \emph{three} carbon dioxide (\ce{CO2}) molecules
+\item every propane molecule we burn produces \emph{four} water molecules
+\item but notice if we were to weigh out these substances, we wouldn't find we require five times as much oxygen as propane(!!)
+\begin{itemize}
+\item \ce{C3H8} has a mass of $44.0956 amu$
+\item  \ce{O2} has a mass of $31.9988 amu$, but there are \emph{five} of them for a total mass of $159.994 amu$
+\item so we'd find there is $3.628$ times as much much \ce{O2} as \ce{C3H8} by mass
+\end{itemize}	
+\end{itemize}
+
+ \item decomposing water: \ce{ 2H2O -> 2H2 + O2 }
+\begin{itemize}
+\item every water molecule produces \emph{one} oxygen molecules
+\item every water molecule produces \emph{two} hydrogen molecules
+\item but if we were to weigh them out\ldots 
+\begin{itemize}
+\item \ce{H2O} has a mass of $18.01528 amu$, but there are \emph{two} of them for a total mass of $36.03056 amu$
+\item \ce{O2} has a mass of $31.9988 amu$, and our reaction only contains \emph{one} 
+\item so we'd find there is $1.126$ times as much water as oxygen, by mass in our decomposition reaction	
+\end{itemize}
+\end{itemize}
+\end{enumerate}
+
+\pagebreak
+%\section{Recipes vs. Reactions}
+%\begin{itemize}
+%\item in the USA, most recipes are written in terms of \emph{volume}: $1 Tbsp$ of this, $2 tsp$ of that, etc.
+%\item sometimes you find ``more serious" recipes written in terms of \emph{weight}: $1 lb$ of this, $3 oz$ of that, etc.\footnote{Although small quantities are frequently measured by \emph{volume} regardless, because kitchen scales don't typically have sufficient sensitivity.}
+%\item sometimes ``more serious" recipes\footnote{Or recipes from countries that haven't managed to land someone on the moon.} will be written in terms of \emph{mass}: $1 kg$ of this, $2 g$ of that, etc.
+%\item chemical reactions are written in terms of \emph{number of atoms}: $1 mole$ of this, $3 mole$ of that, etc.
+%\item if we're actually putting together a chemical ``recipe," we'll end up calculating \emph{mass} from our moles, but we still represent chemical reactions in terms of moles
+%\end{itemize}
+
+
+
+\section{Limiting Reactants and Excess Components}
+\begin{itemize}
+\item let's go back to our burning of propane example:  \ce{ C3H8 + 5O2 -> 3CO2 + 4H2O }
+\item we might imagine if we were to fill a balloon with propane, take it outside, and touch it with a cattle prod, it would go up in flame
+\item but when would our reaction stop? 
+\item it would stop when we ran out of propane\ldots why?
+\item if we're outside, we have a virtually endless supply of \ce{O2}, but a very limited supply of \ce{C3H8}
+\item so we can safely say we're going to run out of propane before we run out of oxygen
+\item the reactant we run out of first is called the \textbf{limiting reactant}: that's the one that'll stop our reaction
+\item so in our balloon example, we have an \emph{excess} of \ce{O2} and we're limited by our quantity of \ce{C3H8}
+\end{itemize}
+
+%\section{Fully Analyzing Chemical Equations}
+
+
+\section{Stoichiometric Coefficients}
+
+\begin{itemize}
+\item the multipliers of each substance in a chemical equation are referred to as \textbf{stoichiometric coefficients} 
+\item these define ratios between the number of molecules and/or atoms of each substance in a chemical reaction
+\item we generally think of the as ratios between the number of \emph{moles} of each substance in a chemical reaction\footnote{Remember, a mole is just a bunch of things, so this is exactly the same thing as the point above.}
+\item remember: chemicals react by the mole\footnote{The great Greg Mitchell said this a lot, I think of it as ``Mitchell's Law," although we probably won't live to see it enshrined as it ought to be. We live in a fallen world, after all.}
+\end{itemize}
+
+\section{Volume Relationships in Chemical Reactions}
+
+\begin{law}[Gay-Lussac's Law]\label{law:gay-lussac}
+The stoichiometric coefficients in a chemical equation related the volumes of gases in the equation as well as the number of moles of substances in the equation.
+\end{law}
+
+\begin{itemize}
+\item we'll come back to this when we talk about the Ideal Gas Law later in the year
+\item it turns out gases tend to fill the same amount of space per mole, regardless of what sort of gas they are: \ce{O2} and \ce{C3H8}, for example, will both tend to fill the same volume per mole
+\item \emph{if a chemical equation consists only of gases}, then you can work in terms of volume (\emph{i.e.} litres) instead of moles
+\end{itemize}
+
+
+\section{Mass Relationships in Chemical Reactions}
+\begin{itemize}
+\item we've already learned that chemicals react \emph{by the mole}, not by the gram\footnote{See ``Mitchell's Law" above.}
+\item so when we want to examine quantities in a chemical reaction, we need to convert mass to moles (grams to moles), which we do using our molar mass
+\item when we finish analyzing a chemical reaction, we'll generally have to convert moles back to grams
+\item remember: \emph{chemicals react by the mole}
+\end{itemize}
+
+ \begin{enumerate}[label=Example \arabic*]
+ \item How much water is produced when we burn $2.00 kg$ of propane (\ce{C3H8})? 
+\begin{itemize}
+\item we know a \emph{combustion reaction} starts with a substance that contains both carbon (\ce{C}) and hydrogen (\ce{H}) and produces carbon dioxide and water
+\item so we know burning propane looks like: \ce{ C3H8 + 5O2 -> 3CO2 + 4H2O }
+\item the molar mass of propane can be calculated from the molar masses of carbon ($12.01 g$) and hydrogen ($1.01g$)
+\item so the molar mass of propane is:
+\begin{equation} 
+\boxed{
+\begin{split}
+    m_{C} = 12.01 \frac{g}{mol} \\
+    m_{H} = 1.01 \frac{g}{mol} \\
+    m_{mol} &= 3 \times m_{C} + 8 \times m_{H} \\
+                             &= 3(12.01\frac{g}{mol}) + 8(1.01 \frac{g}{mol}) \\
+                             &= 36.01 \frac{g}{mol} + 8.08 \frac{g}{mol}\\
+                             &= 44.09 \frac{g}{mol}
+\end{split}
+ }
+ \end{equation}
+ 
+ \item we're starting our with $2.00 kg$ of propane, so we need to figure out what that is in moles:
+\begin{equation} 
+\boxed{
+\begin{split}
+    moles &= \frac{m}{m_{mole}} \\ 
+               &= (\frac{2.00 kg}{44.09 \frac{g}{mol}})(\frac{1000 g}{1 kg})\\
+               &= (\frac{2.00 \xcancel{kg}}{44.09 \frac{\xcancel{g}}{mol}})(\frac{1000 \xcancel{g}}{1 \xcancel{kg}})\\
+               &= 45.36176 mol \\
+               &= 45.36 mol
+\end{split}
+ }
+ \end{equation}
+
+\item every propane molecule we burn produces \emph{four} water molecules:
+\begin{equation} 
+\boxed{
+\begin{split}
+    moles_{water} &= 4 \times moles_{propane} \\
+               &= 4 \times 45.36 mol \\
+               &= 181.447 mol \\
+               &= 181.4 mol \\
+\end{split}
+ }
+ \end{equation}
+	
+\item to get from the moles of water to a mass of water, we'll need to find the molar mass of water:
+\begin{equation} 
+\boxed{
+\begin{split}
+    m_{mole} &= 2 \times m_{H} + m_{O} \\
+                    &= 2 \times 1.01 \frac{g}{mol} + 16.00 \frac{g}{mol}\\
+                    &= 18.02 \frac{g}{mol}
+\end{split}
+ }
+ \end{equation}
+ 
+ \item so we'll multiply our number of moles by the molar mass of water to get a final mass:
+ \begin{equation} 
+\boxed{
+\begin{split}
+    m &= m_{mole} \times moles \\
+        &= 181.4 mol \times 18.02 \frac{g}{mol}  \\
+        &= 181.4 \xcancel{mol} \times 18.02 \frac{g}{\xcancel{mol}}  \\
+        &= (3269.67566342 g)(\frac{1 kg}{1000 g}) \\
+        &= (3269.67566342 \xcancel{g})(\frac{1 kg}{1000 \xcancel{g}}) \\
+        &= 3.26967566342 kg \\
+        &= 3.270 kg \\
+\end{split}
+ }
+ \end{equation}
+ \item so $2.00 kg$ of propane will produce $3.270 kg$ of water when burned
+\end{itemize}
+
+\end{enumerate}
+
+\section{Using Stoichiometry to Determine Chemical Formulae}
+\begin{itemize}
+\item we can use what we know of stoichiometry so far to come up with a chemical formula for a substance by decomposition
+\item so if we decompose a substance and identify its constituent parts, we can use our stoichiometry to work out what that substance was
+\end{itemize}
+\begin{enumerate}[label=Example \arabic*]
+ \item an unknown substance was decomposed into $2.02 g$ of hydrogen and  $32.00 g$ of oxygen, what was the substance?
+\begin{itemize}
+\item we know our \emph{decomposition reaction} starts with a substance that contains both oxygen (\ce{O}) and hydrogen (\ce{H}) and produces \ce{H2} and \ce{O2}\footnote{Because both \ce{O} and \ce{H} are homonuclear diatomics.}
+\item so we know our decomposition looks like: \ce{ H_{x}O_{y} -> H2 + O2 }
+\item we know the molar mass of \ce{H} is $1.01 g$
+\item we know the molar mass of \ce{O} is $16.00 g$
+\item so we know we start out with:
+\begin{equation} 
+\boxed{
+\begin{split}
+    mm_{H} &= 1.01 \frac{g}{mol} \\
+    moles_{H}   &= \frac{m_{H}}{mm_{H}} \\
+                        &= \frac{2.02 g}{1.01 \frac{g}{mol}} \\   
+                        &= \frac{2.02 \xcancel{g}}{1.01 \frac{\xcancel{g}}{mol}} \\ 
+                        &= 2.00 mol 
+\end{split}
+ }
+ \end{equation}
+
+\begin{equation} 
+\boxed{
+\begin{split}
+    m_{O} = 16.00 \frac{g}{mol} \\
+    moles_{O} &= \frac{m_{O}}{mm_{O}} \\
+                      &= \frac{32.00 g}{16.00 \frac{g}{mol}} \\
+                      &= \frac{32.00 \xcancel{g}}{16.00 \frac{\xcancel{g}}{mol}} \\
+                      &= 2.00 mol \\
+\end{split}
+ }
+ \end{equation}
+\item so we have $1.00 mol$ of \ce{H} and $1.00 mol$ \ce{O}
+\item so in our chemical equation, we must have $ x = y$
+\item so our equation becomes \ce{H2O2 -> H2 + O2}
+\end{itemize}
+\end{enumerate}
+
+\section{Empirical and Molecular Formulae}
+
+\begin{definition}[Molecular Formula]\label{definition:molecular-formula}
+A chemical formula that provides the number of each type of atom in a molecule.
+\end{definition}
+
+\begin{definition}[Empirical Formula]\label{definition:empirical-formula}
+A chemical formula that tells you a simple, whole-number ratio for the atoms in a molecule.
+\end{definition}
+
+\begin{itemize}
+\item in our example above, I skipped a step: I jumped to the conclusion that we began with \ce{H2O2} (hydrogen peroxide)\footnote{And let's be honest, I used a contrived example to get the result I wanted.}
+\item but at least in theory, the left-hand side of our equation could have been \ce{\frac{1}{3}H6O6}, right? or even \ce{2HO}
+\item this makes brings us to the concept of an \emph{empirical formula}: a formula that gives us ratios of the atoms in a molecule, but not the specific number of all the different types of atoms
+\item so in this example, the \emph{empirical formula} of our mystery substance is \ce{HO}: there's a $1:1$ ratio of \ce{H} to \ce{O}, but we don't know for sure how many atoms of each are in our substance\footnote{This isn't quite as contrived as I'm making it out to be: \ce{H2O2} is hydrogen peroxide, but \ce{OH-} is hydronium. They both exist in real life, although hydronium really only exists in solution.}
+\item while this seems like a dead-end for serious inquiry, it's possible to work from one to the other if we can figure out a molecule's mass for our mystery substance
+\item measuring molecular mass is a bit too complicated for us right now, so we'll treat it as a given in our homework\ldots
+\end{itemize}
+
+\section{Homework}
+Review Problems: p. 198 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 199--200 \# 1--10 (due 2025-11-21)\\
+Experiment 6.1, p. 149 (due 2025-11-21)\\
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
+\end{document}  
