@@ -23,7 +23,7 @@
 \newtheorem{theory}{Theory}
 \newtheorem{hint}{Hint}
 
-\title{Module 6: Stoichiometry (Reprise)}
+\title{Module 6: Stoichiometry (Reprise)\\ Fun with Balancing}
 \author{Mark Peever\\ \texttt{mpeever@gmail.com}}
 \date{November 15, 2025}
 
@@ -37,8 +37,8 @@
 \section{Overview}
 This is a short side-quest: a look at three different ways we could think about balancing Chemical Equations.
 
-In every case we're going to consider the complete combustion of hectane, because we know it works out to be a bit ugly
-\footnote{No, I didn't realize how ugly it would be when I picked it as an example in class. I like to work examples ``cold," and they sometimes surprise me.}:\\
+In every case we're going to consider the complete combustion of hectane, because we know it works out to be a bit ugly:
+\footnote{No, I didn't realize how ugly it would be when I picked it as an example in class. I like to work examples ``cold," and they sometimes surprise me.}\\
 \begin{center}
 \ce{2C6H14 + 19O2 -> 12CO2 + 14H2O}
 \end{center}
@@ -65,7 +65,7 @@ In every case we're going to consider the complete combustion of hectane, becaus
  
 \item so we're going to say that there are values of $\alpha, \beta, \gamma, \epsilon$ such that our chemical equation is balanced
 \footnote{Interestingly, these values aren't unique.}
-\footnote{Traditionally in linear algebra people use variables like $x_{0}, x_{1}, x_{2}, x_{3}$ etc.}
+\footnote{Traditionally in linear algebra people use variables like $x_{0}, x_{1}, x_{2}, x_{3}$, etc.}
 
 \item \emph{if that's true}, then we can come up with specific equations for each of our elements:
 \begin{enumerate}%[label=Equation \arabic*]
@@ -110,7 +110,7 @@ In every case we're going to consider the complete combustion of hectane, becaus
 \section{Solving by Elimination}
 \begin{itemize}
 \item one way to solve a system of linear equations is to add, subtract, and multiply equations to simplify our system\ldots
-\emph{on y va!}\footnote{``Let's get going!"}
+\emph{on y va!}\footnote{French for ``Let's go!"}
 
 \item we'll start by subtracting twice the first equation from the second:
 \begin{equation} 
@@ -157,7 +157,7 @@ In every case we're going to consider the complete combustion of hectane, becaus
 \end{equation}
 
 \item now we'll multiply equation 2 by $\frac{7}{2}$ and subtract equation 3 from it:
-\footnote{I bet you were wondering where 19 would show up, weren't you? I'll be honest: I was happy to see it show up.} 
+\footnote{I bet you were wondering where 19 would show up, weren't you? I'll be honest: I was happy to see it show up\ldots I was starting to worry.} 
 \begin{equation} 
 \boxed{
 \begin{split}
@@ -183,7 +183,7 @@ In every case we're going to consider the complete combustion of hectane, becaus
 \begin{equation} 
 \boxed{
 \begin{split}
-        \alpha &                &                    & \frac{-1}{7} \epsilon  &= 0 \\
+        \alpha &                &                   &- \frac{1}{7} \epsilon  &= 0 \\
                    &  \beta      &                   & -\frac{19}{14} \epsilon  &= 0 \\
                    &                & \gamma     &- \frac{6}{7} \epsilon &= 0 \\
 \end{split}
@@ -232,7 +232,7 @@ $$
 \item we're going to add, subtract, and simplify our system just like we did before, but now we think in terms of Rows.
 \footnote{Remember, each row in the matrix is an equation in our original system.}
 
-\item we'll start by subtracting $2 \times$ the first equation from the second, which we abbreviate $ R2 - 2 R1$\footnote{``Row 2 minus 2 times Row 1"}:\\
+\item we'll start by subtracting $2 \times$ the first equation from the second, which we abbreviate $ R2 - 2 R1:$\footnote{``Row 2 minus 2 times Row 1"}\\
 $$
 \begin{bmatrix}
 6   &  0 & -1 &  0 & 0 \\
@@ -296,7 +296,7 @@ $$
 0   &  0 &  1 &  - \frac{6}{7}   & 0 \\
 \end{bmatrix}
 $$
-
+\item this is as simplified as our matrix will get, as we have fewer equations than unknowns, so we're done
 \item we can rewrite our matrix as:
 \begin{equation} 
 \boxed{
@@ -329,6 +329,7 @@ $$
 \begin{itemize}
 \item the idea here is that we can figure out on variable in terms of one other, then we can eliminate variables
 \item this can be a \emph{lot} more work that elimination (above), but it might be easier to understand each step
+\footnote{And in this case, substitution is actually the shorter approach, but that's not always true.}
 \item in our equations, we know $6 \alpha = \gamma$, so we can rewrite equation 3 like:
 \begin{equation} 
 \boxed{
@@ -416,13 +417,14 @@ $$
  \end{itemize}
  
  \section{Conclusion}
- We can balance chemical equations by keeping tabs on the atoms on each side. This way works, and it's probably the fastest approach for most of the chemical equations we'll see in this class.
+ We can balance chemical equations by keeping tabs on the atoms on each side. This way works, and it's probably the fastest approach for most of the chemical equations we'll see in our class.
  
  We can choose a more elegant approach by treating the \textbf{stoichiometric coefficients} as variables and constructing a system of linear equations to solve for those variables.
- \footnote{I found a short paper published in \emph{Applied Mathematics} explaining this approach\cite{hamid:balancing:linear}. I was delighted to see the author used a similar combustion reaction to ours as an example: perhaps great minds do occasionally think alike?} 
+ \footnote{I found a short paper published in \emph{Applied Mathematics} explaining this approach\cite{hamid:balancing:linear}. I was delighted to see the author used a similar combustion reaction to ours as an example.
+ My mother used to say, ``Great minds think alike, and fools seldom differ."} 
 
 We can solve our system of equations by elimination (using matrices as a shorthand notation, if we like), or by substitution. Regardless, we note that we won't have a \emph{unique} solution to our system of equations, because we have fewer equations than unknowns. This example demonstrates that's not a real problem, as long as we choose one variable to be our ``baseline," and then select a usable value to assign it.
-\footnote{This example also demonstrates that I was willing to burn a whole lot of time on my weekend to come up with this doc. Perhaps I have too much time on my hands.}
+\footnote{This example also demonstrates that I was willing to burn a whole lot of time on my weekend to come up with this document. Perhaps I have too much time on my hands. The ever-growing list of projects around the homestead suggests it's an issue of priority more than time.}
  
 
  

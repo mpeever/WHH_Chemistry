@@ -6,7 +6,7 @@ all: Module_7_Notes.pdf Notes.dvi Notes.pdf LessonPlan_7_1.pdf LessonPlan_7_2.pd
 
 clean:
 	rm -f *.aux
-	rm -f *.log *.out
+	rm -f *.log *.out *.blg *.bbl
 
 realclean: clean
 	rm -f *.dvi
