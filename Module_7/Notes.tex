@@ -1,0 +1,335 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+
+\usepackage{hyperref}
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 7: Atomic Structure }
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{November 21 -- December 5, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Electrical Charge} is controlled by an atom's  \textbf{Protons}  and  \textbf{Electrons}  
+\item an atom's \textbf{Nucleus} is made up of \textbf{Protons} and \textbf{Neutrons}
+\item \textbf{Light} is a form of electromagnetic energy, and it proves to be much more important than we realize
+\item it turns out the \textbf{Frequency} of electromagnetic radiation determines how much energy it carries
+\item the \textbf{Bohr Model} of the atom gives us a good mental model for how atoms work, but it has limitations
+\end{enumerate}
+
+\section{Subatomic Particles}
+\begin{itemize}
+\item it turns out Dalton wasn't quite right about atoms: \emph{atom} means ``indivisible," but it turns out atoms are actually divisible
+\item William Crookes (1832--1919) demonstrated that  a battery connected to a tube filled with gas would cause a glow in at the positively-charged end
+\item Crookes experimented, and concluded that the glow at the end of the tube was a result of a stream of particles
+\item J. J. Thompson (1856--1940) demonstrated that the behavior in the ``Crookes' Tube''\footnote{We now call this a ``cathode ray tube." This is the basic technology inside old-school televisions and computer monitors, with a whole lot of improvements and refinements.} didn't depend on the type of gas in the tube
+\item Thompson concluded that the stream of particles in the cathode ray tube was actually a small bit of the atoms in the gas that broke away from the atoms
+\item because they seemed to be that same particles regardless of the type of gas used, he concluded they were basic building blocks of the atoms
+\item Thompson called the particles \textbf{electrons}, and demonstrated they have a \emph{negative electrical charge}
+\item Thompson came up with the so-called plum-pudding model of the atom, where the atom is a mass of positive charge, with electrons embedded in it\cite[p. 209]{wile-chem-2}
+\end{itemize}
+
+\section{Side Quest: Electrical Charge}
+\begin{itemize}
+\item electrical charge is intimately tied into our understanding of the atom, but we need some background on what electrical charge is
+\item electrical charges are with \emph{positive} or \emph{negative}\footnote{These aren't value judgments, we just use them to categorize charge, and it turns out the math works out nicely. Don't get too hung up on them: negative charges aren't worse than positive charges, they're just charged oppositely.}
+\item opposite charges attract each other: a negatively-charged object will be attracted towards a positively-charged object
+\item like charges repel each other: two positively-charged objects will tend to push each other apart, two negatively-charged objects will do the same
+\item if an object has no charge, or if it has an equal number of positive and negative charges, then it is \emph{neutral}, or has a $0$ charge
+\item it's important to note that we really don't understand what electrical charge \emph{is}, but we have a decent idea how it behaves 
+\end{itemize}
+
+\section{Atomic Structure and Electrical Charge}
+\begin{itemize}
+\item it turns out atoms contain three types of particles, each with their own charge:
+\begin{itemize}
+\item \emph{electrons} have a negative charge
+\item \emph{protons} have a positive charge
+\item \emph{neutrons} have a neutral charge
+\end{itemize}
+\item electrons are the smallest of the three in terms of both mass and volume by a \emph{huge} amount (see Table \ref{table:particles:mass-and-charge}, p. \pageref{table:particles:mass-and-charge})
+\item let's revisit the Periodic Table with our new knowledge:
+\begin{itemize}
+\item the Atomic Number in our Periodic Table is actually the count of protons in an atom
+\item in theory, the number of electrons and protons is the same, but that's not generally the case\footnote{This is actually where chemical bonds come from, but we'll get more into that later.}
+\item the Atomic Mass of an element in the Periodic Table is the sum of the masses of protons and neutrons (which are pretty close in mass)
+\item electrons are small enough they don't really affect the atomic mass\footnote{They're not even a rounding error on the mass of a proton!}
+\item you'd \emph{think} the atomic masses would all be whole numbers, but they're not because\ldots
+\begin{enumerate}
+\item protons and neutrons don't have \emph{exactly} the same mass (see Table \ref{table:particles:mass-and-charge}, p. \pageref{table:particles:mass-and-charge})
+\item atomic masses are \emph{averages}: there are variations (``isotopes") of elements   
+\end{enumerate}
+\end{itemize}
+\item it's important to note that an element's identity is determined by its Atomic Number, which is the number of protons it has
+\item if three atoms have the same number of protons, but differing numbers of neutrons, then they're the same element, even if they have different masses
+\item variants of mass within a single element are called ``isotopes"
+\item isotopes behave the same as far as we're concerned (at the chemical reaction level), although there can be huge differences on the nuclear level\footnote{There are less stable and more stable isotopes for many elements: \ce{^{14}C}, for example ``decays" over time, where \ce{^{12}C} is stable.}
+\end{itemize}
+
+
+\begin{table}[hp]
+\centering
+\begin{tabular}[b]{l | l | l | l }
+\hline
+Name & Charge & Charge (in Coulombs) & Mass \\
+\hline
+electron  & $-1 e$   & $-1.602176634 \times 10^{-19} C $  &  $9.1093837139 \times 10^{-28} g$ \\ 
+proton    & $1 e$     & $1.602176634 \times  10^{-19} C $  &  $1.67262192595 \times 10^{-24} g$ ($1 amu$) \\
+neutron  & $0 e$     & $0 C $                                               &  $1.67492750056 \times 10^{-24} g$ \\
+\end{tabular}
+\caption{Mass and Charge of Subatomic Particles}
+\label{table:particles:mass-and-charge}
+\end{table}
+
+\section{Rutherford and the Planetary Model of the Atom}
+\begin{itemize}
+\item Ernest Rutherford (1871--1937) experimented with $\alpha$ (alpha) particles and gold (\ce{Au}) foil to investigate the Thompson ``plum-pudding" model
+\item he found the $\alpha$ particles were much more uniformly thrown ``off course" than he expected
+\item this led him to believe that the positively-charged parts of an atom were more localized than the Thompson model would indicate\footnote{\emph{I.e.} the positive part of the atom was ``all in one place," rather than being a sort of an amorphous mass.} 
+\item Rutherford's model of the atom is pretty close to the iconic atom you see on movies and T.V.: protons all gathered in the center, with electrons circling them at a distance
+\item note carefully the critique of Rutherford's model\cite[p. 213]{wile-chem-2}: even in Rutherford's time, it was known that a charged particle moving in a circle would lose energy in the form of emitted light, so that the electron would quickly fall into the atom's center
+\end{itemize}
+
+\section{The Nature of Light}
+\begin{itemize}
+\item light is super complicated, we don't really understand it, and what we do understand is confusing\footnote{You have been warned}
+\end{itemize}
+
+\subsection{Wave/Particle Duality}
+\begin{definition}[Particle/Wave Duality Theory]\label{definition:wave-particle-duality}
+The theory that light sometimes behaves as a particle, and sometimes behaves as a wave.
+\end{definition}
+
+\begin{itemize}
+\item light is an electromagnetic wave: it is a wave traveling through the electromagnetic fields of the universe
+\item light is a particle: it's a stream of small particles called ``photons"
+\item our current understanding of light is that both of these statements are true: light is a wave \emph{and} light is a particle
+\end{itemize}
+
+\subsection{All about Waves}
+\begin{definition}[Wavelength]\label{definition:wavelength}
+The distance between two crests of a wave
+\end{definition}
+
+\begin{definition}[Amplitude]\label{definition:amplitude}
+A measure of the height of the crests or the depths of the troughs on a wave.
+\end{definition}
+
+\begin{definition}[Frequency]\label{definition:frequency}
+The number of wave crests (or troughs) that pass a given point each second.
+\end{definition}
+
+\begin{itemize}
+\item waves are a disturbance in a medium that carries energy while the medium does not\footnote{This can be confusing to students, because the waves we see in real life aren't always the best example of waves. Surf, for example, is actually a \emph{decaying} wave.}
+\item waves have a:
+\begin{itemize}
+\item wavelength ($\lambda$) (measured in meters, centimeters, etc.)
+\item frequency ($f$ or $\nu$) (measured in Hertz (Hz))
+\item amplitude ($A$)
+\item a speed ($v$) (measured in ``meters per second" ($\frac{m}{s}$))
+\end{itemize}
+\item generally we take the speed of a wave to be: $v = \lambda  f$
+\item so waves with higher frequency have lower wavelength
+\item the energy of a wave is related to its amplitude: waves with higher amplitude have higher energy
+\item since we're talking mainly about light here, we'll mention the speed of light:\\ $$c = 3.00 \times 10^{8} \frac{m}{s}$$
+\end{itemize}
+
+
+\subsection{The Electromagnetic Spectrum}
+\begin{itemize}
+\item it turns out what we perceive as light is really just a slice of all the electromagnetic waves that exist\footnote{If you really want to blow your mind, look up Maxwell's Equations. Whoa!}
+\item we already know about that: radio waves are electromagnetic waves with \emph{lower frequency} than visible light, ultraviolet rays are electromagnetic waves with \emph{higher frequency} than visible light (see \cite[p. 219]{wile-chem-2})\footnote{Fun fact: ``infrared" means ``lower than red," meaning it has lower frequency than the color red. ``Ultraviolet" means ``higher than violet," meaning it has higher frequency than the color violet.}
+\item while traditionally energy is related to the \emph{amplitude} of a wave, when we talk about electromagnetic waves, it turns out that energy is related to the \emph{frequency} of the wave\footnote{Our text just sort of mentions this like it's no big deal, but it's one of the most shocking discoveries of the last 200 years.}
+\item we can say that $E = h f$ where $E$ is energy, $f$ is frequency, and $h$ is \textbf{Planck's Constant}:\\
+$$h = 6.63 \times 10^{-34} \frac{J}{Hz}$$ 
+\item $\frac{J}{Hz}$ is ugly, so I generally write it as: $h = 6.63 \times 10^{-34} J \cdot s$. I always find Hertz an awkward unit of measurement.
+\footnote{$1 Hz = \frac{1}{s}$, one Hertz is one ``per second."}
+\end{itemize}
+
+\section{The Bohr Model of the Atom}
+\begin{itemize}
+\item this is not ``the boring model of the atom"!
+\item it's not really possible to overstate how much Max Planck's work shook up the world of Physics: \emph{everyone} knew that the energy of a wave depends on its \emph{Amplitude}, not its \emph{frequency}
+\item in 1908, Albert Einstein won the Nobel Prize for his work on the photoelectric effect\footnote{Not, surprisingly, for his work on Relativity.}
+\item so Max Planck's hypothesis was experimentally confirmed, but it still re-wrote what we ``knew" to be true
+\item this gave rise to the idea of \emph{Quantum Physics}, which Bohr incorporated into his model of the atom
+\item the most fundamental concept of Quantum Physics is that energy doesn't \emph{flow}, rather it moves in [very, very tiny] packets, and you can't ever have $\frac{1}{2}$ a packet
+\item so you can have $0n$ packets, $5n$ packets, or even $1.23456789 \times 10^{100} n$ packets, but you can't ever have a \emph{partial} packet
+\item Bohr started with Rutherford's model, but added some features:
+\begin{itemize}
+\item he included neutrons in the nucleus of the atom\footnote{Rutherford's model of the atom didn't include neutrons, as they hadn't yet been discovered.}
+\item he proposed electrons only live in certain \emph{allowed} locations, or ``orbits"
+\item lower-energy orbits are closer to the nucleus, higher-energy orbits are further out
+\item when an electron gains energy, it can ``jump" to a higher-energy orbit, when it loses energy it ``jumps" to a lower-energy orbit, but it can't ever be between those two orbits
+\end{itemize}
+\item Bohr's model didn't make sense at the time, but it explained a lot:
+\begin{itemize}
+\item Rutherford's model couldn't explain why electrons don't [eventually] crash into the nucleus, Bohr said they're not ``allowed" to lose that much energy
+\item scientists had already recognized that each element has its own ``signature" wavelengths (and thus frequencies) of light it emits when it is heated
+\end{itemize}
+\item so in Bohr's model, if a \ce{H} atom is given a shot of energy (say from intense heat), then the electron\footnote{\ce{H} has only one electron, right?} gains energy and ``jumps" to an outer orbit; when the electron ``jumps" back down, it releases a photon whose frequency corresponds to the energy level difference between the outer and inner orbits
+\item Bohr's model really only works perfectly for \ce{H} atoms, but it's the basis of what we now consider the ``current" model
+\end{itemize}
+
+\section{The Quantum Model of the Atom}
+\begin{itemize}
+\item we still believe a lot of the ideas behind the Bohr model
+\item we now think the orbits are more complicated: not merely circles at fixed distances, but odd, cloud-like shapes we call \emph{orbitals}
+\footnote{Orbitals do share the idea of fixes energy levels, so we still think Bohr was right about that, but they're not circular paths at fixed radii.}
+\item there are different shapes of orbitals, detailed in the text book
+\footnote{I don't want to get too deep into the bunny trail, but one feature of quantum mechanics is \emph{uncertainty}, where an electron in an orbital isn't really like a small ball zooming around the nucleus.
+Instead, an electron in an orbital is very like a cloud where the more dense parts of the cloud indicate a place where the electron is ``more probable," and the less dense parts are where the electron is ``less probable."
+If we think in those terms, we might think of the spaces between orbitals are places where the electron has ``zero probability."
+This gets complicated quickly, and it can be easy to get lost in this one.} 
+\item the orbitals aren't unique: there are many $s$ orbitals (each one with a different energy level), many $p$ orbitals, and many $d$ orbitals
+\item like in the Bohr Model, the Quantum Model puts these different orbitals at different distances from the atom's nucleus that correspond to energy levels
+\end{itemize}
+
+\subsection{$s$ Orbitals}
+\begin{itemize}
+\item the $s$ orbitals have a \emph{spherical} shape
+\item there are three $s$ orbitals: $1s$, $2s$, and $3s$
+\item just like in the Bohr Model, the electrons in the more outer orbitals (\emph{e.g.} the $3s$ orbital) have more energy than electrons in the more inner orbitals (\emph{e.g.} $1s$)
+\end{itemize}
+
+\subsection{$p$ Orbitals}
+\begin{itemize}
+\item the $p$ orbitals have a \emph{dumbbell} shape
+\item there is no $1p$ orbital, so there's not a $p$ orbital in the innermost energy level
+\item there are three $p$ orbitals per energy level, oriented along three perpendicular axes (we can think of $x$, $y$, and $z$ axes here)
+\item so there are three $2p$ orbitals, three $3p$ orbitals, 3 $4p$ orbitals, etc.
+\item just like in the Bohr Model, the electrons in the more outer orbitals (\emph{e.g.} the $3p$ orbital) have more energy than electrons in the more inner orbitals (\emph{e.g.} $2p$)
+\end{itemize}
+
+\subsection{$d$ Orbitals}
+\begin{itemize}
+\item the $d$ orbitals have a ``complicated" shape\cite[p. 230--231]{wile-chem-2}
+\item there is no $1d$ or $2d$ orbital, so there are no $d$ orbitals below the third energy level
+\item there are 5 $d$ orbitals per energy level
+\item just like in the Bohr Model, the electrons in the more outer orbitals (\emph{e.g.} the $4d$ orbital) have more energy than electrons in the more inner orbitals (\emph{e.g.} $3d$)
+\end{itemize}
+
+\subsection{Electron Configurations}
+\begin{itemize}
+\item it turns out for any given orbital, there is room for two electrons in that orbital:
+\begin{itemize}
+\item so there can be two electrons in $1s$, two in $2s$, etc.
+\item two in \emph{each} of the $p$ orbitals (so six $p$ electrons per energy level)
+\item two in \emph{each} of the $d$ orbitals (so ten $d$ electrons per energy level)
+\item two in \emph{each} of the $f$ orbitals (so fourteen $f$ electrons per energy level), but our text doesn't discuss $f$ orbitals
+\end{itemize}
+\item and we didn't discuss the $f$ orbitals here
+\item I found the \href{https://chem.libretexts.org/@go/page/1650}{Electron Orbitals page at LibreTexts Chemistry} to be helpful and approachable\cite{chem:libretexts:orbitals}
+\end{itemize}
+
+\begin{definition}[Ground State]\label{defn:ground-state}
+The lowest possible energy state for a given substance.
+\end{definition}
+
+\begin{itemize}
+\item we've already discussed how energy always ``wants" to be kinetic\footnote{Remember we specified it's a ``local minimum" for potential energy that drives almost everything.}
+\item \textbf{All forms of matter try to stay in their lowest possible energy state.}\cite[pp. 231--232]{wile-chem-2}
+\item so every element will try to stay at --- or return to --- its ground state (Definition \ref{defn:ground-state}, p. \pageref{defn:ground-state})
+\item so when an atom is excited, one or more of its electrons ``jumps" to a different energy level
+\item but the atom wants to get back to its ground state, so the electron ``jumps" down to the lowest level it can, and releases electromagnetic energy (in the form of a photon) so that it can get back to its ground state
+\item in the Quantum Model of the atom, we ``build" atoms by filling in electrons from lowest-energy to highest-energy locations
+\item there are some examples in the text book\cite[pp. 232--233]{wile-chem-2}, but we'll work through some here
+\end{itemize}
+
+\subsection{Examples}
+\begin{enumerate}[label=Example \arabic*]
+\item Hydrogen (\ce{H})
+\begin{itemize}
+\item \ce{H} has one proton (atomic number 1) and no neutrons (atomic mass is 1)
+\item \ce{H} has one electron
+\item the lowest energy level is $1$, and the lowest energy orbital is $1s$ (actually, level 1 only has one orbital)
+\item so the \ce{H} atom in its ground state has an electron configuration of $1s^{1}$ (one electron in orbital $1s$)
+\end{itemize}
+
+\item Sodium (\ce{Na})
+\begin{itemize}
+\item \ce{Na} has eleven protons (atomic number 11) and 12 neutrons (atomic mass is 23 $23 - 11 = 12$)
+\item \ce{Na} has 11 electrons:
+\begin{itemize}
+\item the lowest orbital, $1s$, can hold 2 electrons
+\item the next lowest orbital, $2s$ can hold 2 electrons
+\item the next lowest orbital, $2p$ can hold 6 electrons
+\item that leaves one more electron ($11- (2 + 2 + 6) = 1$), so it goes into the next lowest orbital
+\item the next lowest energy orbital is $3s$, so one electron goes into it
+\end{itemize}
+ \item so the \ce{Na} atom in its ground state has an electron configuration of $1s^{2} 2s^{2} 2p^{6} 3s^{1}$ 
+\end{itemize}
+\end{enumerate}
+
+
+\section{Electron Configurations and the Periodic Table}
+\begin{itemize}
+\item our electron configuration is reflected in an atom's position in the Periodic Table
+\item elements in the two leftmost columns (the Alkaline and Alkaline Earth metals) all have configurations ending in an $s$ orbital
+\begin{itemize}
+\item the column indicates the count the configuration ends in (\emph{e.g.} \ce{H} is in column 1A, so it ends in $s^{1}$)
+\item the row indicates which layer the configuration ends in (\emph{e.g.} \ce{Cs} is in row 6, so it ends in $6s^{1}$)
+\footnote{Actually, $1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{6} 4s^{2} 3d^{10} 4p^{6} 5s^{2} 4d^{10} 5p^{6} 6s^{1}$}
+\item so we can just assume \ce{Mg} ends in $3s^{2}$
+\end{itemize}
+\item elements in the six rightmost columns all have configurations ending in a $p$ orbital
+\begin{itemize}
+\item the column indicates the count the configuration ends in (\emph{e.g.} \ce{Si} is in column 4A, so it ends in $p^{4}$)
+\item the row indicates which layer the configuration ends in (\emph{e.g.} \ce{Br} is in row 3, so it ends in $3p^{5}$)
+\end{itemize}
+\item the transition metals (the middle section) all end in $d$ orbitals, but because a $d$ orbital has lower energy than the $p$ orbital one layer down, we have to shift our rows\ldots
+\item so \ce{Cr} is in column 6B, row 4, so its electron configuration ends in $3d^{4}$
+\footnote{Actually, $1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{6} 4s^{2} 3d^{4} $}
+\item note we can write an \emph{abbreviated} electron configuration starting with the \emph{last} 8A element and just work up from there:
+\begin{itemize}
+ \item \ce{Na} is row 3, row 1A: the element in row 2, column 8A is \ce{Ne}, so we can write \ce{Na} as $[Ne] 3s^{1}$ 
+ \item \ce{Ag} is row 5, column 1B: the element in row 4 column 8A is \ce{Kr}, so we can write \ce{Ag} as $[Kr] 5s^{2} 4d^{9}$ 
+ \item \ce{Cs} is in row 6, column 1A: the element in row 5, column 8A is \ce{Xe}, so we can write \ce{Cs} as $[Xe] 6s^{1}$
+\end{itemize}
+
+\end{itemize}
+
+\section{Homework}
+Review Problems: p. 245 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 246 \# 1--10 (due 2025-12-12)\\
+Experiment 7.1, p. 203 (due 2025-12-05)\\
+
+\subsection{Answers to Practice Problems}
+Answers to Practice Problems p. 246 \# 1--10:
+\begin{enumerate}
+\item \ldots
+\end{enumerate}
+
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}{}
+\bibliographystyle{apalike}
+\end{document}  
