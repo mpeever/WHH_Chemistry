@@ -1,17 +1,7 @@
-BIBTEX := /Library/Tex/texbin/bibtex
-LATEX := /Library/Tex/texbin/latex
-PDFLATEX := /Library/Tex/texbin/pdflatex
+# includes
+include ../includes.mk
 
 all: LessonPlan_1_1.pdf LessonPlan_1_2.pdf Module_1_Notes.pdf Notes.pdf Quiz.pdf Metric_Prefix_Cheat_Sheet.pdf Metric_Prefix_Quiz.pdf
-
-clean:
-	rm -f *.aux
-	rm -f *.log
-
-realclean: clean
-	rm -f *.dvi
-	rm -f *.pdf
-	rm -f *.synctex.gz
 
 Notes.dvi: Notes.tex 
 	$(LATEX) Notes

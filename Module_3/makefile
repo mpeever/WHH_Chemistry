@@ -1,18 +1,6 @@
-BIBTEX := /Library/Tex/texbin/bibtex
-LATEX := /Library/Tex/texbin/latex
-PDFLATEX := /Library/Tex/texbin/pdflatex
+include ../includes.mk
 
 all: Module_3_Notes.pdf Notes.dvi Notes.pdf LessonPlan_3_1.pdf LessonPlan_3_2.pdf Quiz.pdf ExamQ1.pdf ExamQ1Review.pdf
-
-clean:
-	rm -f *.aux
-	rm -f *.log
-	rm -f *.out
-
-realclean: clean
-	rm -f *.dvi
-	rm -f *.pdf
-	rm -f *.synctex.gz
 
 Notes.dvi: Notes.tex 
 	$(LATEX) Notes
