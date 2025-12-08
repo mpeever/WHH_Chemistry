@@ -1,0 +1,261 @@
+\documentclass[11pt,addpoints]{exam}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{mhchem}
+
+\title{Quarter 2 Exam}
+\author{Mark Peever}
+\date{December 12, 2025}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\pointsinrightmargin
+%\marginpointname{ \points}
+%\printanswers
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Answer all questions on a separate sheet of paper. Show all your work.
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{questions}
+
+\question[5] Jack has a tank of methane gas (\ce{CH4}). He wants to measure out $0.500$ ($5.00 \times 10^{-1}$) moles of methane by mass, so he needs to know the molar mass of methane.\\
+What is the molar mass of methane (\ce{CH4})?\\
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    M_{C} &= 12.0107 \frac{g}{mol} \\
+    M_{H} &= 1.00794 \frac{g}{mol} \\
+    M_{\ce{CH4}} &= M_{C} + 4 M_{H} \\
+                          &= (12.0107 \frac{g}{mol}) + 4 (1.00794 \frac{g}{mol}) \\
+                          &= 12.0107 \frac{g}{mol} + 4.03176 \frac{g}{mol} \\
+                          &= 16.04246  \frac{g}{mol} \\
+                          &= 16.0425  \frac{g}{mol}
+ \end{split}
+ \end{equation}
+ \end{solution}
+
+\question[2] Am\'elie knows that methane is a \emph{covalent compound}, because it's made up of two non-metals.
+Am\'elie doesn't like the name ``methane," though. (She doesn't even like to say ``water," preferring to call it ``dihydrogen monoxide.")\\
+What other name could she call \ce{CH4}?\\
+
+\begin{solution}
+Am\'elie  could call it ``monocarbon tetrahydride'' or just ``carbon tetrahydride''. 
+ \end{solution}
+
+
+\question[5] Jack fills a balloon with $0.500$ moles of methane gas (\ce{CH4})  and gives the balloon to Ella. How many \emph{grams} of methane gas does Ella have in her balloon?\\
+(Remember to use the correct significant figures!)\\
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+M_{\ce{CH4}} &= 16.0425  \frac{g}{mol}\\
+    m &= n \times M \\
+	&= (0.500 mol) ( 16.0425  \frac{g}{mol} ) \\
+	&= (0.500 \xcancel{mol}) ( 16.0425  \frac{g}{\xcancel{mol}} ) \\
+	&= 8.02125 g \\
+	&= 8.02 g \\
+ \end{split}
+ \end{equation}
+ \end{solution}
+
+
+\question[5] Ella wants to burn her methane gas. She remembers that it's possible for methane to burn incompletely, and Avery reminds her that the
+unbalanced chemical reaction for incomplete combustion of methane requires methane and oxygen and produces carbon monoxide and water. \\ 
+Avery wouldn't ever do something so \emph{gauche} as using an unbalanced chemical equation, so she balances it first. 
+What does the balanced chemical equation look like?\\
+
+\begin{solution}
+\ce{2CH4 + 3O2 -> 2CO + 4H2O}
+\end{solution}
+
+
+\question[5] Ella wants to burn her methane \emph{completely}, so she decides to burn it outside.
+She hangs it on a tree limb and Nate touches it with a cattle prod (\emph{BOOM!}). 
+Ella and Nate know that the propane has reacted with the oxygen in the air to produce water and carbon dioxide.\\
+Write the chemical reaction that occurred. Be sure your chemical equation is balanced!
+\begin{solution}
+\ce{CH4 + 2O2 -> CO2 + 2H2O}
+\end{solution}
+
+\question[5] Vianne is curious how much \ce{O2} was consumed in the reaction, so she does a very quick calculation to figure it out.
+How many moles of \ce{O2} were consumed?
+
+\begin{solution}
+There are $2$ moles of \ce{O2} consumed for every mole of \ce{CH4} in our reaction: \ce{CH4 + 2O2 -> CO2 + 2H2O}\\
+
+\begin{equation} 
+\begin{split}
+    \frac{n_{\ce{O2}}}{2} &= \frac{n_{\ce{CH4}}}{1} \\
+    n_{\ce{O2}} &= 2 n_{\ce{CH4}} \\
+                       &= 2 (0.500 mol ) \\
+                       &= 1.000 mol \\
+                       &= 1.000 mol
+ \end{split}
+ \end{equation}
+
+\end{solution}
+
+
+\question[5] No\'emi, like Vianne, wants to know how much \ce{O2} was consumed, but she's more interested in the oxygen's \emph{mass}. How many \emph{grams} of \ce{O2} were consumed?
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    M_{\ce{O2}} &= 2 (15.9994 \frac{g}{mol}) \\
+                        &= 31.9988 \frac{g}{mol} \\                        
+    m &= n \times M \\
+        &= (1.000 mol ) (31.9988 \frac{g}{mol}) \\
+        &= (1.000 \xcancel{mol} ) (31.9988 \frac{g}{\xcancel{mol}}) \\
+        &= 31.9988 g \\
+        &= 32.00 g
+ \end{split}
+ \end{equation}
+ \end{solution}
+
+
+\question[5] Ezra isn't that interested in mass or in moles, but he's curious how many balloons worth of \ce{CO2} gas was produced in the reaction.
+If Ella managed to get all her propane into a single balloon, how many \emph{balloons} would it take to contain all the \ce{CO2}? 
+
+\begin{solution}
+By the Gay-Lussac Law, the volume ratio of \ce{CH4} to \ce{CO2} is $1:1$.\\
+Therefore, there is $1$ balloon worth of \ce{CO2} produced.
+\end{solution}
+
+
+\question[5] Caroline is curious how much water vapor is produced in the \emph{BOOM!} reaction. How many moles of water vapor (\ce{H2O}) were produced?
+\begin{solution}
+There are $2$ moles of \ce{O2} produced for every mole of \ce{CH4} in our reaction: \ce{CH4 + 2O2 -> CO2 + 2H2O}\\
+
+\begin{equation} 
+\begin{split}
+    \frac{n_{\ce{O2}}}{2} &= \frac{n_{\ce{CH4}}}{1} \\
+    n_{\ce{O2}} &= 2 n_{\ce{CH4}} \\
+                       &= 2 (0.500 mol ) \\
+                       &= 1.000 mol \\
+                       &= 1.000 mol
+ \end{split}
+ \end{equation}
+\end{solution}
+
+
+
+\question[5] Gideon asks Caroline to calculate the number of \emph{grams} of water vapor produced when Ella and Nate blew up the balloon. How many grams of \ce{H2O} were produced?\\
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    M_{\ce{H2O}} &= 2 (1.00794 \frac{g}{mol}) + (15.9994 \frac{g}{mol}) \\
+                           &= (2.01588 \frac{g}{mol}) + (15.9994 \frac{g}{mol}) \\
+                           &= 18.01528 \frac{g}{mol} \\      
+                           &= 18.0153 \frac{g}{mol} \\              
+    m &= n \times M \\
+        &= (1.000 mol ) (18.0153 \frac{g}{mol}) \\
+        &= (1.000 \xcancel{mol} ) (18.0153 \frac{g}{\xcancel{mol}}) \\
+        &= 18.0153 g \\
+        &= 18.02 g
+ \end{split}
+ \end{equation}
+ \end{solution}
+
+
+\question[3] Thomas is pretty sure there was an \emph{excess} of oxygen in that \emph{BOOM!} reaction, and that the propane was the \emph{limiting} reactant.
+Is Thomas correct? How do you know?
+
+\begin{solution}
+Thomas generally is right. An outdoor combustion has virtually limitless \ce{O2} to consume, so \ce{CH4} is the limiting reactant.
+\end{solution}
+
+
+
+\bonusquestion \emph{Bonus Question} 
+The book of Genesis closes with, ``he was put in a coffin in Egypt" (Genesis 50:26).
+Of course, Joseph isn't the first person to be buried in the book of Genesis.
+Who is the first dead person buried in Scripture?
+\begin{solution}
+\begin{itemize}
+\item Sarah
+\end{itemize}
+\end{solution}
+
+\end{questions}
+
+\begin{center}
+This exam has \numquestions\ questions for a total of \numpoints\ points and 1 bonus points.
+\end{center}
+
+\pagebreak
+\section*{Fun Facts}
+\begin{multicols}{2}
+\begin{itemize}
+\item
+$q = m c \Delta T$
+\vspace{0.2in}
+
+\item
+$\Delta T = T_{final} - T_{initial}$
+\vspace{0.2in}
+
+\item
+$\rho = \frac{m}{V} $
+\vspace{0.2in}
+
+\item
+$T_K = T_C + 273.15 K$
+\vspace{0.2in}
+
+\item
+$T_F = \frac{9}{5}T_C + 32^{\circ}F$
+\vspace{0.2in}
+
+\item
+$T_C = \frac{5}{9}(T_F - 32^{\circ}F)$
+\vspace{0.2in}
+
+\item
+$c_{water} = 1.000 \frac{calorie}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$c_{water} = 4.184 \frac{J}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$c_{copper} = 0.3851 \frac{J}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$\rho_{water} = 1.000 \frac{g}{cm^3}$
+\vspace{0.2in}
+
+\item
+$\rho_{copper} = 8.96 \frac{g}{cm^3}$
+\vspace{0.2in}
+
+\item
+$ 1.0000 cm^3 = 1.0000 mL $
+\vspace{0.2in}
+
+\item
+$ 1.000 cal = 4.184 J $
+\end{itemize}
+\vspace{0.2in}
+
+\end{multicols}
+\end{document}  
