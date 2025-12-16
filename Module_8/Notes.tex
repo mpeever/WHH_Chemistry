@@ -15,6 +15,7 @@
 \usepackage{amsmath}
 
 \usepackage{mhchem}
+\usepackage{lewis}
 
 \usepackage{hyperref}
 
@@ -26,7 +27,7 @@
 
 \title{Module 8: Molecular Structure }
 \author{Mark Peever\\ \texttt{mpeever@gmail.com}}
-\date{December 12 -- December 19, 2025}
+\date{December 19 -- January 23, 2025}
 
 \begin{document}
 \maketitle
@@ -48,26 +49,235 @@
 \item \textbf{Electronegativity} is a measure of how strongly an atom attracts extra electrons
 \end{enumerate}
 
-\subsection{Valence Electrons}
+\section{Valence Electrons}
 \begin{definition}[Valence Electrons]\label{definition:valence-electrons}
 The electrons furthest from an atom's nucleus. They are generally the electrons with the highest energy level number.
 \end{definition}
 
 \begin{itemize}
-\item in almost every case, the electron configuration of an atom will end with an orbital that has a capacity of eight electrons
-\item \ce{H} and \ce{He} are exceptions: their electron configurations are $1s^{1}$ and $1s^{2}$ 
-\item their valences only hold two electrons
+\item when atoms join to form molecules, the bonds occur almost entirely in their outermost layer of electrons
+\item we call these the \emph{valence} electrons (see Definition \ref{definition:valence-electrons})
+\item in almost every case, the electron configuration of an atom will end an a layer with some combination of $s$ and $p$ orbitals (remember, the $d$ orbitals fill \emph{after} the $s$ orbitals one layer up)
+\item so in almost every case, the outer layer of electrons for an atom has a capacity of eight electrons
+\item \ce{H} and \ce{He} are exceptions: their electron configurations are $1s^{1}$ and $1s^{2}$: their valences only hold two electrons
 \item this leads us to the Octet Rule: atoms ``try" to fill their valence electrons by giving or taking electrons so they end up with eight in their outermost layers
 \item in general, atoms on the left side of the Periodic Table find it easier to ``give away" electrons, while atoms on the right side of the Periodic Table ``take" electrons
-\item so metals essentially try for an empty valence layer, while non-metals look to fill up their valences
+\item so metals tend to try for an empty valence layer, while non-metals look to fill up their valences
 \end{itemize}
+
+\begin{hint}\label{hint:valence-electrons}
+An atom's chemistry is mostly determined by the number of valence electrons it has.
+\end{hint}
+
+\begin{hint}\label{hint:valence-electrons}
+Atoms in the same column of the Periodic Table have the same number of valence electrons, and thus have very similar chemistry.\footnote{Remember, Dmitri Mendeleev laid out the Periodic Table in terms of chemical similarities.}
+\end{hint}
+
+\begin{itemize}
+\item we can see an element's valence electron configuration by its position on the Periodic Table:
+\begin{itemize}
+\item elements on the far right have 8 valence electrons (except \ce{He}), so they are \emph{inert}: they don't generally react at all
+\item elements on the far left have 1 valence electron, so they are highly reactive, and they tend to ``want" to give one away instead of taking seven (again, \ce{H} is a bit weird, as its valence can only hold two)
+\item elements in the $2A$ column have two valence electrons
+\item elements in the $3A$ column have three valence electrons
+\item elements in the $4A$ column have four valence electrons
+\item elements in the $5A$ column have five valence electrons
+\item elements in the $6A$ column have six valence electrons
+\item elements in the $7A$ column have seven valence electrons
+\end{itemize}
+\item for atoms in columns 1A--8A, the column number indicates the number of valence electrons it has
+\item we'll ignore atoms in columns 1B--8B for now
+\end{itemize}
+
+\section{Lewis Structures}
+\begin{itemize}
+\item Gilbert A. Lewis developed a notation to show an atom's valence electrons: the \textbf{Lewis Structure} \cite[p. 249]{wile-chem-2}
+\item a Lewis structures are an atomic symbol surrounded by dots indicating valence electrons
+\item so some element with an atomic symbol \ce{Sym} and eight valence electrons would look like:  \lewis{Sym}{.}{.}{.}{.}{.}{.}{.}{.}
+\item notice the order we fill the valence electrons: one dot on each side placed clockwise from the right side\footnote{This order is not universal, but we'll stick to the book's order.}
+\begin{itemize}
+\item Hydrogen looks like: \lewis{H}{}{}{}{.}{}{}{}{}
+\item Carbon looks like: \lewis{C}{.}{}{.}{}{.}{}{.}{}
+\item Fluorine looks like: \lewis{F}{.}{.}{.}{}{.}{.}{.}{.}
+\item Neon looks like: \lewis{Ne}{.}{.}{.}{.}{.}{.}{.}{.}
+\end{itemize}
+\end{itemize}
+
+\section{Lewis Structures for Ionic Compounds}
+
+\begin{definition}[Ion]\label{definition:ion}
+An atom that has gained or lost electrons and thus has become electrically charged.
+\end{definition}
+
+\begin{itemize}
+\item ionic compounds are made of \emph{ions}, or charged atoms (see Definition \ref{definition:ion})
+\item Lewis structures are helpful with ionic compounds like table salt (\ce{NaCl}):
+\begin{itemize}
+\item Sodium looks like: \lewis{Na}{}{}{}{}{.}{}{}{}
+\item Chlorine looks like: \lewis{Cl}{.}{.}{.}{.}{.}{}{.}{.}
+\end{itemize}
+
+\item in an ionic bond, the metal gives up its valence electrons, which are taken by the non-metal
+\item so the formation reaction for \ce{NaCl} looks like: \ce{Na + Cl -> NaCl}
+\item with Lewis Structures, the reaction looks like: \ce{\lewis{Na}{}{}{}{}{.}{}{}{} + \lewis{Cl}{.}{.}{.}{.}{.}{}{.}{.} -> \lewis{Na^{+}}{}{}{}{}{}{}{}{} \lewis{Cl^{-}}{.}{.}{.}{.}{.}{.}{.}{.}}
+\item notice \ce{Na} ends up with no valence electrons, while \ce{Cl} ends up with eight!
+\item notice the atoms end up charged:
+\begin{itemize}
+\item \ce{Na} loses an electron, so it becomes \ce{Na+}
+\item \ce{Cl} gains an electron, so it becomes \ce{Cl-}
+\end{itemize} 
+\item a charged atom is called an \emph{ion} (see Definition \ref{definition:ion})
+\item positive ions retain their name, but negative ions are suffixed with ``-ide"
+
+\item it's possible for ionic compounds to form where the numbers don't work out as cleanly
+\item \emph{e.g.} \ce{Mg + 2F -> MgF2} (why?)
+\item the Lewis diagram looks like: \ce{\lewis{Mg}{}{}{}{}{.}{}{.}{} + \lewis{F}{.}{.}{.}{}{.}{}{.}{.} -> \lewis{F^{-}}{.}{.}{.}{.}{.}{.}{.}{.} \lewis{Mg^{2+}}{}{}{}{}{}{}{}{} \lewis{F^{-}}{.}{.}{.}{.}{.}{.}{.}{.}}
+\end{itemize}
+
+\begin{hint}\label{hint:valence-electrons:ionic-compounds}
+In an ionic compound, metals tend to lose electrons to fill their valences, while non-metals gain electrons in order to fill their valences.
+\end{hint}
+
+\begin{hint}[Subscripts in Ionic Compounds]\label{hint:valence-electrons:ionic-compounds:subscripts}
+If the charges of the metal and non-metal are the same, the subscript for each is $1$ and can be ignored.\\
+If the charges have different numerical values, drop the $+$ and $-$ signs, switch the numbers, and use them as subscripts.\cite[p. 255]{wile-chem-2}
+\end{hint}
+
+\section{Exceptions in Ionic Compounds}
+\begin{itemize}
+\item there are some exceptions to our simple ionic rules, especially with \ce{B}, \ce{Ge}, \ce{Sn}, and \ce{Pb}
+\item almost all the tricky exceptions are metals, especially the ``transition metals" (!b--8B)
+\item because we can't always tell the charges of the oddball metals, we list the positive charge of the metal in Roman numerals in the name
+\item so ``tin(II) chloride" contains an \ce{Sn^{2+}} ion
+\item so ``tin(II) chloride" is just \ce{SnCl2}
+\item whereas ``tin(IV) chloride" contains an \ce{Sn^{4+}} ion and looks like: \ce{SnCl4}
+\end{itemize}
+
+\section{Ionization Potential and Periodic Properties}
+
+\begin{definition}[Periodic Property]\label{definition:periodic-property}
+A characteristic of atoms that varies regularly across the Periodic Table.
+\end{definition}
+
+\begin{definition}[Ionization]\label{definition:ionization}
+The process by which an atom turns into an ion by gaining or losing electrons.
+\end{definition}
+
+\begin{definition}[Ionization Potential]\label{definition:ionization-potential}
+The amount of energy needed in order to take an electron away from an atom.
+\end{definition}
+
+\begin{itemize}
+\item \textbf{ionization} is the process of an atom gaining or losing electrons
+\item we measure how ``eager" an atom is to become an ion as \textbf{ionization potential}
+\item this measures how tightly an atom hangs onto its valence electrons
+\item ionization potential is a \textbf{periodic property} (see Definition \ref{definition:periodic-property})
+\item it's worth noting that the Periodic Table was built around periodic properties, not the other way around
+\end{itemize}
+
+\begin{hint}\label{hint:valence-electrons:ionization-potential}
+In general, ionization potential increases from the left of the Periodic Table to the right.
+\end{hint}
+
+\begin{hint}\label{hint:valence-electrons:ionization-potential}
+In general, ionization potential decreases from the top of the Periodic Table to the bottom.
+\end{hint}
+
+
+\section{Electronegativity}
+
+\begin{definition}[Electronegativity]\label{definition:electronegativity}
+A measure of how strongly an atom attracts extra electrons to itself.
+\end{definition}
+
+\begin{itemize}
+\item closely related to ionization potential is \textbf{electronegativity} (see Definition \ref{definition:electronegativity})
+\item electronegativity measures how strongly an atom tries to get an extra electron
+\item based on Hint \ref{hint:electronegativity-horizontal} and Hint \ref{hint:electronegativity-vertical}, which element would we expect to be the ``mostest electronegative"?
+\end{itemize}
+
+\begin{hint}\label{hint:electronegativity-horizontal}
+In general, electronegativity of atoms increases from the left of the Periodic Table to the right.
+\end{hint}
+
+\begin{hint}\label{hint:electronegativity-vertical}
+In general, electronegativity of atoms  decreases from the top of the Periodic Table to the bottom.
+\end{hint}
+
+\section{Atomic Radius}
+
+\begin{itemize}
+\item atomic radius is the ``size" of an atom
+\end{itemize}
+
+\begin{hint}\label{hint:electron-radius-horizontal}
+In general, atomic radius decreases from the left of the Periodic Table to the right.
+\end{hint}
+
+\begin{hint}\label{hint:electron-radius-vertical}
+In general, atomic radius increases from the top of the Periodic Table to the bottom.
+\end{hint}
+
+
+\section{Lewis Structures of Covalent Compounds}
+
+\begin{definition}[Covalent Bond]\label{definition:covalent-bond}
+A shared pair of valence electrons that holds atoms together in covalent compounds.
+\end{definition}
+
+\begin{itemize}
+\item covalent bonds are bonds where atoms ``share" electrons\footnote{It's right there in the name: ``co" means shared, ``valent" refers to valence electrons.}
+\item in a covalent bond, one or more electrons are shared between atoms
+\item \emph{e.g.} \ce{Cl2}:
+\begin{itemize}
+\item Chlorine atoms have seven valence electrons: \lewis{Cl}{.}{.}{.}{}{.}{.}{.}{.}
+\item Chlorine is a homonuclear diatomic, so \ce{Cl} atoms pair up
+\item they actually pair up around two shared electrons:
+\item \lewis{Cl}{.}{.}{.}{.}{.}{}{.}{.}\lewis{Cl}{.}{}{.}{.}{.}{.}{.}{.}
+\item if they get close enough together, they can shared electrons that sometimes are in orbit around one atom, sometimes around the other
+\item so each atom ``sees" a full valence, even though no atom has given up any electrons
+\item we generally represent shared electrons as a dash (``--"):  \lewis{Cl}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em}--\hspace{-0.75em}\lewis{Cl}{}{}{.}{.}{.}{.}{.}{.}
+\item notice this means the atoms are still neutrally charged, there's no ionization involved
+\end{itemize}
+\item in ionic compounds, there really aren't any molecules: molecules are really only formed in covalent compounds
+\item ionic compounds are made of positive (``cation") and negative (``anion") pairs formed by exchanging electrons, which tend to form into lattice structures
+\item covalent compounds form discrete molecules that consist of at least two --- and sometimes many more --- atoms bonded together
+\item notice our Lewis Structure can contain many bonds
+\item \emph{e.g.} \ce{H2O} looks like: \lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{O}{}{}{.}{.}{}{}{.}{.}\hspace{-0.5em}--\hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+\item Lewis Structures are super helpful for envisioning covalent bonds, and there are rules for them given on p. 267 of the text:
+\begin{itemize}
+\item write out the Lewis structure for all atoms in the chemical formula
+\item you have to use \emph{all} the electrons, and you can't add any more
+\item put the atom with the most unpaired electrons in the center of the diagram
+\item if there are multiple atoms with least pairing (\emph{e.g.} multiple \ce{C} atoms), put them all in the center, linked together
+\item try to arrange all the other atoms around the ones in the center, making sure they all end up with a full valence ($8$ in most cases, but $2$ for \ce{H})
+\end{itemize}
+\item don't worry too much about orientation: we're more worried about electron count than we are about electron position
+\item note there are times we need to share more than two electrons, it all depends on the valence
+\item for example, let's look at \ce{O2}:
+\begin{itemize}
+\item there are two \ce{O} atoms: \lewis{O}{.}{.}{.}{}{.}{.}{.}{.} and \lewis{O}{.}{}{.}{}{.}{.}{.}{.} 
+\item notice we only have $6$ valence electrons per atom, so each needs to ``gain" $2$ electrons
+\item which means we need to share $4$ electrons ($6 + 6 = 12$, $8 + 8 = 16$, $16 -12 = 4$)
+\item so \ce{O2} is going to look like: \lewis{O}{.}{.}{.}{}{}{}{}{.}\hspace{-0.5em}=\hspace{-0.75em}\lewis{O}{}{}{.}{}{.}{.}{.}{}
+\item notice the double bond! that represents $4$ shared electrons, $2$ from each atom
+\item we can have triple bond too:  \lewis{N}{.}{.}{}{}{}{}{}{}\hspace{-0.5em}$\equiv$\hspace{-0.75em}\lewis{N}{}{}{}{}{.}{.}{}{}
+\end{itemize}
+
+\end{itemize}
+
+\begin{hint}\label{hint:covalent-vs-ionic}
+the atoms in covalent compounds share electrons to form molecules, while the atoms in ionic compounds give and take electrons to form ions\cite[p. 265]{wile-chem-2}.
+\end{hint}
+
+
 
 
 
 \section{Homework}
-Review Problems: p. 245 \# 1--10 (not to be turned in)\\
-Practice Problems: p. 246 \# 1--10 (due 2025-12-12)\\
-Experiment 7.1, p. 203 (due 2025-12-05)\\
+Review Problems: p. 283 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 284 \# 1--10 (due 2026-01-30)\\
+%Experiment 7.1, p. 203 (due 2026-01-30)\\
 
 \nocite{wile-chem-2}
 \bibliography{../Chemistry}{}
@@ -75,7 +285,7 @@ Experiment 7.1, p. 203 (due 2025-12-05)\\
 
 \clearpage
 \subsection{Answers to Practice Problems}
-Answers to Practice Problems p. 246 \# 1--10:
+Answers to Practice Problems p. 284 \# 1--10:
 \begin{enumerate}
 \item bleah, bleah, bleah
 \end{enumerate}
