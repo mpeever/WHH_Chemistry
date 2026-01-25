@@ -1,0 +1,218 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 9: Polyatomic Ions and Geometry }
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{January 30, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Polyatomic Ions} are ions the contain a covalent bond
+\item \textbf{VSEPR Theory} predicts molecular shape: molecules attain whatever shape maximizes the distances between valence electrons on the central atom
+\footnote{I have a theory about motor scooters that sounds a whole lot like ``VSEPR Theory," but it's not the same thing.}
+\item \textbf{Molecular Shape} affects chemical properties of covalent compounds
+\end{enumerate}
+
+\section{Polyatomic Ions}
+\begin{definition}[Polyatomic Ions]\label{definition:polyatomic-ions}
+Ions which are formed when a group of atoms gains or loses electrons.
+\end{definition}
+
+\begin{itemize}
+\item it is possible for a group of atoms to form a molecule with a charge
+\item that molecule is then both a molecule \emph{and} an ion
+\item \emph{e.g.} \ce{OH^{-}} (hydroxide) looks like:  \lewis{O}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em} -- \hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+\item the hydroxide molecule can then form an ionic compound with a positive ion, \emph{e.g.} \ce{NaOH} or \ce{Mg(OH)2} 
+\footnote{This is the general form of a \emph{base}: bases are ionic compounds formed with hydroxide.}
+\item \emph{e.g.} \ce{H3O^{+}} (hydronium) looks like:  
+\lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em} \lewis{O}{}{}{}{
+\hspace{-1.0em} \lewis{H}{}{}{}{}{}{}{|}{}
+}{.}{.}{
+\hspace{-1.0em} \lewis{H}{}{}{|}{}{}{}{}{}
+}{}
+
+\item there is a table of common polyatomic ions (Table \ref{table:polyatomic-ions}, p. \pageref{table:polyatomic-ions})  reproduced from the text \cite[p. 288]{wile-chem-2}
+\end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}[p]{| l | l |}
+\textbf{Ion Name} & \textbf{Formula} \\
+\hline
+ammonium  & \ce{NH4+} \\
+hydroxide    & \ce{OH-} \\
+chlorate       & \ce{ClO3-} \\
+chlorite        & \ce{ClO2-} \\
+nitrate          & \ce{NO3-} \\
+nitrite           & \ce{NO2-} \\
+acetate        & \ce{C2H3O2-} \\
+cyanide       & \ce{CN-} \\
+carbonate   & \ce{CO3^{2-}} \\
+chromate    & \ce{CrO4^{2-}} \\
+dichromate & \ce{Cr2O7^{2-}}\\
+sulfate        & \ce{SO4^{2-}} \\
+sulfite         & \ce{SO3^{2-}} \\
+phosphate  & \ce{PO4^{3-}} 
+\end{tabular}
+\caption{Polyatomic Ions}
+\label{table:polyatomic-ions}
+\end{table}
+
+\begin{hint}\label{hint:table:polyatomic-ions}
+It's worth learning  (Table \ref{table:polyatomic-ions}, p. \pageref{table:polyatomic-ions}).
+We'll be seeing these ions a lot, and we need to recognize them like the old friends they will become.
+\end{hint}	
+
+
+\section{Molecular Shape and VSEPR}
+\begin{itemize}
+\item \textbf{V}alence \textbf{S}hell \textbf{E}lectron \textbf{P}air \textbf{R}epulsion (VSEPR) Theory says that each pair of bonded electrons will repel other bonded electron pairs
+\item this means that molecules generally form in such a way that the distance between molecular bonds is maximized
+\item so, for example, we draw a \ce{CH4} molecule like this: 
+\lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{C}{}{}{}{
+\lewis{H}{}{}{}{}{}{}{|}{}
+}
+{}{}{
+\lewis{H}{}{}{|}{}{}{}{}{}
+}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+
+\item but it actually looks more like Figure \ref{figure:tetrahedral-ch4}, p. \pageref{figure:tetrahedral-ch4} 
+\footnote{My artistic talent is such that my drawing might require some explanation: there is one \ce{H}  atom directly above the \ce{C} atom, while the other three are spaced in a triangle beneath the \ce{C} atom. There is one coming out of the page toward you, one behind the page, and one off more-or-less to the right.}
+(see \cite[p. 290]{wile-chem-2})
+\begin{figure}[hp]
+\centering
+\includegraphics[scale=0.25]{ch4}
+\caption{Tetrahedral \ce{CH4} Molecule}
+ \label{figure:tetrahedral-ch4}
+ \end{figure}  
+\item the idea is that each bond is attempting to get away from the others, and they all find the optimal distance from ``all other bonds" by forming a tetrahedron
+\item unbonded electrons can also affect where bonds end up, as in the case of \ce{NH3}, see Figure 9.2 in your text \cite[p. 292]{wile-chem-2}
+\item notice there the unbonded pair on the \ce{N} atom has a less pronounced effect on the bonds than another bond would
+\item this even affects water, see Figure 9.3 in your text \cite[p. 293]{wile-chem-2}
+\item notice, too, in the case of double bonds, they still attempt to repel each other, ``bowing out" from each other \cite[pp. 294--295]{wile-chem-2} 
+\end{itemize}	
+
+\section{Purely Covalent and Polar Covalent Bonds}
+
+\begin{definition}{Purely Covalent Bond}\label{definition:purely-covalent-bond}
+A covalent bond where electrons are shared equally between the atoms involved.
+\end{definition}
+
+\begin{definition}{Polar Covalent Bond}\label{definition:polar-covalent-bond}
+A covalent bond where electrons are shared unequally between the atoms involved.
+\end{definition}
+
+\begin{itemize}
+\item we're not going to spend a lot of time on molecular shape, but the idea of a ``polar covalent bond" is interesting
+\item the idea here is that some covalent bonds form a ``polar" shape, with a negative side and a positive side
+\item notice this isn't the same thing as an ionic bond: the atoms aren't ionizing
+\footnote{You might catch a mistake I made in class on p. 299 \cite{wile-chem-2}.}
+\item but it's possible for an electrically neutral molecule to more electrons on one side, and more protons on the other
+\item this leads to a ``polar" molecule which has a net neutral charge, but still has a ``more positive" and a ``more negative" side
+\end{itemize}
+
+\begin{hint}[Determining Whether a Covalent Bond is Polar]\label{hint:polar-covalent-bonds}
+If a covalent bond exists between two identical atoms, it is purely covalent.
+Otherwise, it is polar.
+\end{hint}	
+
+\section{Purely Covalent and Polar Covalent Molecules}
+\begin{itemize}
+\item a molecule that contains only purely covalent bonds is a purely covalent molecule (see Definition \ref{definition:purely-covalent-bond})
+\item but a molecule might also be purely covalent if it contains multiple polar covalent bonds that cancel each other out (see Definition \ref{definition:polar-covalent-bond})
+\item however, if a molecule contains polar covalent bonds \emph{and} if the bonds pull unequally, the molecule itself will be polar
+\item for example, \ce{CH4} contains four polar bonds, but they all cancel each other out, so \ce{CH4} is a purely covalent molecule
+\item for example, \ce{H2O} contains two polar bonds, but they \emph{don't} cancel each other out, so \ce{H2O} is a polar covalent molecule
+\end{itemize}
+
+\begin{hint}[Polar Covalent Bonds and Solubility]\label{hint:polar-covalent-bonds-and-solubility}
+Polar covalent compounds can dissolve other polar covalent compounds \emph{and} ionic compounds.
+Purely covalent compounds can dissolve \emph{only} purely covalent compounds.
+\end{hint}	
+
+\section{Homework}
+Review Problems: p. 317 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 318 \# 1--10 (due 2026-02-06)\\
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+%\clearpage
+\subsection{Answers to Practice Problems}
+Answers to Practice Problems p. 218 \# 1--10:
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item \ce{K2SO4}
+\item \ce{Ca(NO3)2}
+\item \ce{MgCO3}
+\item \ce{Al2(CrO4)3}
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item ammonium oxide
+\item potassium nitrite
+\item calcium phosphate
+\item aluminum phosphate
+\end{enumerate}
+\item \ce{Ca(NO3)2 (aq) + Na2CO3 (aq) -> CaCO3 (s) + 2NaNO3 (aq)} 
+\item \ce{PCl3} is pyramidal
+\item \ce{H2} is linear
+\item \ce{SiCl4} is tetrahedral
+\item \ce{H2S} is bent
+\item \ce{CS2} is linear
+\item 
+\begin{enumerate}
+\item \ce{MgCl2} is ionic
+\item \ce{CF3Cl} is polar covalent
+\item \ce{CS2} is purely covalent
+\item \ce{H2} is purely covalent
+\item \ce{SiCl4} is purely covalent
+\item \ce{PCl3} is polar covalent
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item \ce{MgCl2} is soluble in water
+\item \ce{CF3Cl} is soluble in water
+\item \ce{CS2} is not soluble in water
+\item \ce{H2} is not soluble in water
+\item \ce{SiCl4} is not soluble in water
+\item \ce{PCl3} is soluble in water
+\end{enumerate}
+\end{enumerate}
+
+\end{document}  
