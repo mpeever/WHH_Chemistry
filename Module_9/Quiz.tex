@@ -7,10 +7,12 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{mhchem}
+\usepackage{lewis}
 
-\title{Module 2 Quiz}
+
+\title{Module 8 Quiz}
 \author{Mark Peever}
-\date{October 3, 2025}							% Activate to display a given date or no date
+\date{January 30, 2026}							% Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -18,49 +20,83 @@
 \pointsinrightmargin
 %\marginpointname{ \points}
 
-\begin{center}
-\fbox{\fbox{\parbox{5.5in}{\centering
-$q = m c \Delta T$ \\
-$\rho = \frac{m}{V} $
-}}}
-\end{center}
+%\begin{center}
+%\fbox{\fbox{\parbox{5.5in}{\centering
+%$q = m c \Delta T$ \\
+%$\rho = \frac{m}{V} $
+%}}}
+%\end{center}
 \vspace{0.1in}
 \makebox[\textwidth]{Name:\enspace\hrulefill}
 \vspace{0.2in}
 
 \begin{questions}
-\question[5] Ezra lights a candle and notices that it gives off light and heat --- two different kinds of energy.
-What can we say about the burning candle? Choose all the correct answers:
-
-\begin{choices}
-\choice Ezra has created electromagnetic energy (light energy)
-\choice Ezra has converted chemical energy into electromagnetic energy
-\choice Ezra has created thermal energy
-\choice Ezra has converted chemical energy into thermal energy
-\choice Ezra has too much time on his hands
+\question[5] The Lewis structure for \ce{Mg} looks like this: \lewis{Mg}{}{}{}{}{.}{.}{}{}\\
+Based on the Lewis structure, how many valence electrons does \ce{Mg} have?
+ \begin{choices}
+\choice 1
+\choice 2
+\choice 3
+\choice 4
 \end{choices}
-%\vspace{.2in}
+
+\question[5] In its base state, the Lewis structure for \ce{H} looks like this: \lewis{H}{}{}{}{}{.}{}{}{}\\
+Which of the following is the correct Lewis structure for \ce{H2}?
+ \begin{choices}
+\choice \lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+\choice \lewis{H}{.}{.}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{H}{}{}{}{}{.}{.}{}{}
+\choice \lewis{\ce{H^{2+}}}{.}{.}{}{}{}{}{}{} \hspace{-0.5em}--\hspace{-0.75em} \lewis{\ce{H^{2+}}}{}{}{}{}{.}{.}{}{}
+\choice \lewis{H}{}{}{}{}{.}{}{}{} \lewis{H}{.}{}{}{}{}{}{}{}
+\end{choices}
+
+\question[5] The Lewis structure for methane looks like:\\
+\lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{C}{}{}{}{
+\lewis{H}{}{}{}{}{}{}{|}{}
+}
+{}{}{
+\lewis{H}{}{}{|}{}{}{}{}{}
+}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+
+What is the correct molecular formula for methane, based on its Lewis structure?
+ \begin{choices}
+\choice \ce{C4H} 
+\choice \ce{CH4} 
+\choice \ce{C4H4} 
+\choice \ce{CH4^{2+}} 
+\end{choices}
+
+\question[5] The Lewis structure for Lithium ion like this: \lewis{\ce{Li^{+}}}{}{}{}{}{}{}{}{}\\
+Based on the Lewis structure, how many valence electrons does a Liithium atom (\emph{i.e.} a \emph{non}-ionized Lithium atom) have?
+
+ \begin{choices}
+\choice 1
+\choice 2
+\choice 3
+\choice 4
+\end{choices}
+
+\clearpage
+\question[5] In its base state, the Lewis structure for \ce{O} is \lewis{O}{.}{}{.}{}{.}{.}{.}{.}\\
+Which of the following is the correct Lewis structure for \ce{O2}?
+
+ \begin{choices}
+\choice \lewis{O}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{O}{}{}{}{}{}{}{}{}
+\choice \lewis{O}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em} -- \hspace{-0.75em}\lewis{O}{}{}{.}{.}{.}{.}{.}{.}
+\choice \lewis{O}{}{}{.}{.}{}{}{.}{.}\hspace{-0.5em} = \hspace{-0.75em}\lewis{O}{}{}{.}{.}{}{}{.}{.}
+\choice \lewis{O}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em} = \hspace{-0.75em}\lewis{O}{}{}{.}{.}{.}{.}{.}{.}
+\end{choices}
 
 
-\question[5]
-\ce{Cu} (copper) has a specific heat of $0.3851 \frac{J}{g \cdot ^{\circ}C}$.
-How much heat is required to increase the temperature of $1.00g$ of \ce{Cu} from $50.00 ^{\circ}C$ to $60.00 ^{\circ}C$? 
-Answer with correct significant figures. 
+\question[5] In its base state, the Lewis structure for \ce{Cl} is \lewis{Cl}{.}{.}{.}{}{.}{.}{.}{.}\\
+Which of the following is the correct Lewis structure for \ce{Cl2}?
 
-%\vspace{.2in}
+ \begin{choices}
+\choice \lewis{Cl}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{Cl}{}{}{}{}{}{}{}{}
+\choice \lewis{Cl}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em} -- \hspace{-0.75em}\lewis{Cl}{}{}{.}{.}{.}{.}{.}{.}
+\choice \lewis{Cl}{}{}{.}{.}{}{}{.}{.}\hspace{-0.5em} = \hspace{-0.75em}\lewis{Cl}{}{}{.}{.}{}{}{.}{.}
+\choice \lewis{Cl}{.}{.}{.}{.}{}{}{.}{.}\hspace{-0.5em} = \hspace{-0.75em}\lewis{Cl}{}{}{.}{.}{.}{.}{.}{.}
+\end{choices}
 
-
-\question
-Convert the following measurements:
-
-\begin{parts}
-\part[1] how many seconds in $1 \mu s$?
-
-\part[1] how many kilograms in $1,000,000$ grams?
-
-\part[1] how many centimeters in $375$ meters?
-\end{parts}
-%\vspace{.2in}
 \end{questions}
 
 \begin{center}
