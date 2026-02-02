@@ -1,0 +1,258 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 10: Acids and Bases }
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{February 6 -- 13, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Electrolytes} are compounds that produce ions when dissolved in water
+\item \textbf{Acids} are electrolytes that are proton donors
+\item \textbf{Bases} are electrolytes that are proton acceptors
+\item \textbf{Salts} are electrolytes that are ionic compounds 
+\end{enumerate}
+
+\section{Acids and Bases}
+\begin{definition}[Electrolyte]\label{definition:electrolyte}
+Electrolytes are substances that give ions in aqueous solution.
+\end{definition}
+
+\begin{definition}[Indicator]\label{definition:indicator}
+A substance that turns one color in the presence of acids and another color in the presence of bases.
+\end{definition}
+
+\begin{itemize}
+\item ``electrolytes are substances that give ions in aqueous solution" (see \href{https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Supplemental_Modules_and_Websites_(Inorganic_Chemistry)/Chemical_Reactions/Chemical_Reactions_Examples/Electrolytes}{``Electrolytes"} \cite{chem:libretexts:electrolytes})
+\item acids, bases, and salts are all electrolytes (see Definition \ref{definition:electrolyte} , p. \pageref{definition:electrolyte}) 
+\item acids share these common properties:
+\begin{enumerate}
+\item acids taste sour 
+\footnote{\emph{Don't} taste a substance to see what it is. Don't do that. Just don't.}
+\item acids are covalent molecules that conduct electricity when dissolved in water
+\footnote{\emph{I.e.} they are electrolytes.}
+\item acids turn litmus paper red (see Definition \ref{definition:indicator}, p. \pageref{definition:indicator})
+\end{enumerate}
+
+\item bases share these common properties:
+\begin{enumerate}
+\item bases taste bitter
+\footnotemark[1]
+\item bases are slippery when dissolved in water
+\item bases turn litmus paper blue (see Definition \ref{definition:indicator}, p. \pageref{definition:indicator})
+\end{enumerate}
+\end{itemize}
+
+\section{The Chemical Definitions of Acids and Bases}
+\begin{definition}[Acid]\label{definition:acid}
+A molecule that donates \ce{H^{+}} ions.
+\end{definition}
+
+\begin{definition}[Base]\label{definition:base}
+A molecule that accepts \ce{H^{+}} ions.
+\end{definition}
+
+\begin{definition}[Amphiprotic Compounds]\label{definition:amphiprotic}
+Compounds that can act as acid or base, depending on the situation.
+\end{definition}
+
+\begin{itemize}
+\item acids are \emph{proton donors}
+\footnote{Remember that \ce{H} is just one proton and one electron, so \ce{H^{+}} is basically a proton. I \emph{told} you \ce{H} is barely an atom!}
+\item bases are \emph{proton acceptors}
+\item when acids and bases are dissolved in water, there is a sneaky sort of reaction that takes place
+\item \emph{e.g.} \ce{HCl (aq) + H2O (l) -> H3O^{+} (aq) + Cl^{-} (aq)}
+\item \emph{e.g.} \ce{H2O (l) + NH3 (aq) -> NH4^{+} (aq) + OH^{-} (aq)}
+
+\item it's important to note acids and bases only do their thing in aqueous solution: if you had a bottle of pure \ce{HCl}, the \ce{H^{+}} magic wouldn't be happening
+\item this is a result of the electronegativity of \ce{Cl} compared to the electronegativity of \ce{O}
+\item since the \ce{H} atom in \ce{HCl} doesn't get a very big share of the electrons in the covalent bond, it can join with a \ce{H2O} molecule to form \ce{H3O^{+}}
+\item notice we have this new polyatomic ion: \ce{H3O^{+}}, called ``hydronium"
+\end{itemize}
+
+\begin{hint}\label{hint:determining-acids-and-bases}
+Whenever a reaction involves a \ce{H^{+}} ion moving, then we can think in terms of acid and base.
+\begin{itemize}
+\item \ce{HCl (aq) + H2O (l) -> H3O^{+} (aq) + Cl^{-} (aq)}, here \ce{HCl} acts as an acid and \ce{H2O} acts as a base
+\item \ce{H2O (l) + NH3 (aq) -> NH4^{+} (aq) + OH^{-} (aq)}, here \ce{NH3} acts as a base and \ce{H2O} acts as an acid
+\end{itemize}
+\end{hint}	
+
+\section{Ionic Compounds in Ionic Solution}
+\begin{itemize}
+\item when ionic compounds dissolve, the split into their ions in aqueous solution
+\item \emph{e.g.} \ce{NaCl + H2O (l) -> Na^{+} (aq) + Cl^{-} (aq) + H2O (l)}
+\item this isn't truly a chemical reaction\footnote{Remember that dissolution is a \emph{physical} change.}, but it might be an easy way to think about it
+\item so ionic compounds are also electrolytes (see Definition \ref{definition:electrolyte} , p. \pageref{definition:electrolyte}), we often refer to them as ``salts"
+\end{itemize}
+
+
+\section{Recognizing Acids and Bases from their Formulae}
+
+\begin{table}
+\centering
+\begin{tabular}[p]{| l | l |}
+\textbf{Acid Name} & \textbf{Formula} \\
+\hline
+hydrochloric acid  & \ce{HCl} \\
+hydrobromic acid  & \ce{HBr} \\
+hydrofluoric acid   & \ce{HF} \\
+nitric acid              & \ce{HNO3} \\
+sulfuric acid          & \ce{H2SO4} \\
+phosphoric acid    & \ce{H3PO4} \\
+carbonic acid        & \ce{H2CO3} \\
+acetic acid.           & \ce{C2H4O2} \\
+\end{tabular}
+\caption{Common Acids}
+\label{table:common-acids}
+\end{table}
+
+\begin{itemize}
+\item acids are covalent compounds that generally start with an \ce{H} 
+\item most bases have an \ce{OH^{-}} in them
+\item many acids (and some bases) have common names, see Table \ref{table:common-acids}, p. \pageref{table:common-acids} gives several common acids, reproduced from your text (see \cite[Table 10.1 (p. 328)]{wile-chem-2}) 
+\end{itemize}
+
+\section{Predicting Acid-Base Reactions}
+
+\begin{definition}[Polyprotic Acid]\label{definition:polyprotic-acid}
+An acid that can donate more than one \ce{H^{+}} ion.
+\end{definition}
+
+\begin{hint}\label{hint:acid-and-base-reaction}
+In general, \ce{acid + base -> salt + water}
+\end{hint}	
+
+\begin{itemize}
+\item in general, when an acid reacts with a base, we'll get an ionic compound and water as a result (see Hint \ref{hint:acid-and-base-reaction}, p. \pageref{hint:acid-and-base-reaction}) 
+\item let's think about a super simple case: \ce{HCl + NaOH -> NaCl (aq) + H2O (l)}
+\begin{enumerate}
+\item in aqueous solution, \ce{HCl + H2O (l) -> H3O^{+} (aq) + Cl^{-} (aq) }
+\item in aqueous solution, \ce{NaOH (aq) -> Na^{+} (aq) + OH^{-} (aq) }  
+\item so together we have, \ce{HCl + NaOH + H2O (l) -> H3O^{+} (aq)  + Cl^{-} (aq)  Na^{+} (aq) + OH^{-} (aq) }  
+\item which then becomes, \ce{HCl + NaOH + H2O (l) -> H3O^{+} (aq) + OH^{-} (aq)  + Cl^{-} (aq)  Na^{+} (aq) }  
+\item which then becomes, \ce{HCl + NaOH + H2O (l) -> H3O^{+} (aq) + OH^{-} (aq)  + Cl^{-} (aq)  Na^{+} (aq) -> H2O (l) + Cl^{-} (aq)  Na^{+} (aq)}  
+\item which then becomes, \ce{HCl + NaOH + H2O (l) -> H3O^{+} (aq) + OH^{-} (aq)  + Cl^{-} (aq)  Na^{+} (aq) -> H2O (l) + Cl^{-} (aq)  Na^{+} (aq) -> NaCl (aq) + H2O (l)}  
+\end{enumerate}
+\item so generally speaking, \ce{acid + base -> salt + water}\footnote{Remember ``salt" means any ionic compound, not merely \ce{NaCl}.}
+\item there is a caveat to this, which we'll see when we discuss Chemical Equilibrium (Module 15)
+\item the salt will always be the ``leftovers" from the \ce{H3O^{+} + OH^{-} -> 2H2O} reaction
+\item so we might predict something like \ce{H2SO4 (aq) + 2KOH (aq) -> K2SO4 (aq) + 2H2O (l)}, here the salt is \ce{K2SO4}
+\end{itemize}
+
+\subsection{Acids and Covalent Bases}
+\begin{itemize}
+\item in the above examples, we've considered acids reacting to ionic bases (\ce{NaOH}, \ce{KOH}, etc.)
+\item but we can also consider an acid dissolving in water as its own reaction\footnote{In this case, it really is a chemical reaction.}
+\item so when we dissolve \ce{H2SO4} in water, we get something like: \ce{H2SO4 + H2O (l) -> H3O^{+} + SO4^{2-}}
+\item notice we end up with ions on the right-hand-side
+\item note, too, that when we balance these equations, the charges should balance as well as the elements: \ce{H2SO4 + 2H2O (l) -> 2H3O^{+} + SO4^{2-}}
+\end{itemize}
+
+\section{Concentration and Dilution}
+
+\begin{definition}[Concentration]\label{definition:concentration}
+The concentration of a substance in solution is the amount of that substance in a given volume:
+$$ [ \hspace{0.1 in} ] = \frac{n}{V} $$	
+\end{definition}
+
+\begin{definition}[Molarity]\label{definition:concentration}
+\textbf{Molarity} is the number of moles of a substance per liter of solution:
+$$ 1 M = \frac{1 mole}{1 liter} $$
+\end{definition}
+
+\begin{definition}[Dilution]\label{definition:dilution}
+Adding water to a solution to decrease its concentration.
+\end{definition}
+
+\begin{itemize}
+\item electrolytes do their thing in aqueous solution
+\item we remember that all chemical reactions go ``by the mole"
+\item when we mix things in aqueous solution, we want to be able to think of our chemical reactions in terms of volumes (``$2 L$ of this acid added to $1.5 L$ of that base")
+\item so we have to introduce the idea of \emph{Concentration}, which we'll measure in terms of amount per volume
+\item because we really want to know how many moles of a substance we have, we'll express our concentrations in \textbf{Molarity}, which is just ``moles per liter"
+\item because any given solution might contain many different substances, we write the concentration of any substance as $[substance]$ (\emph{e.g.} \ce{[HCl]} is the concentration of \ce{HCl})
+\item so if we dissolved $1.000 mol$ of \ce{NaCl} in $2.35 L$ of water, we could calculate the concentration of \ce{NaCl} as:
+\begin{equation} 
+\boxed{
+\begin{split}
+    [ NaCl ] &= \frac{n}{V} \\
+                 &= \frac{1.000 mol}{2.35 L}\\
+                 &= 0.4255139 \frac{mol}{L}\\
+                 &= 0.425 M
+\end{split}
+ }
+ \end{equation}
+\item we can add water\footnote{Or whatever the solvent is: it's only water for aqueous solutions.} to an aqueous solution to decrease the concentration of the solute
+\item so if we have saltwater, we can make it ``less salty" by adding water
+\item of course we can't ever get it to be non-salty, at least not in the absolute sense, but we can reduce the concentration of the salt (\ce{[NaCl]}) by ``watering it down"
+\item from a Conservation of Mass perspective, we can see that salt is neither created nor destroyed, but it can be made less concentrated
+\item so if we start with $[NaCl] = \frac{n}{V}$, then we could say that the number of moles must be given by: $n = V \cdot [NaCl]$
+\item and since diluting our solution doesn't change the number of moles of \ce{NaCl} we have, then we can say:
+\begin{equation} 
+\boxed{
+\begin{split}
+    [\hspace{0.1 in}]_{1} \cdot V_{1} &= [\hspace{0.1 in}]_{2} \cdot V_{2}               
+\end{split}
+ }
+ \end{equation}
+ \item so we're back to cross-mulitplying!!!!
+\end{itemize}
+
+
+
+
+\section{Homework}
+Review Problems: p. 351 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 352 \# 1--10 (due 2026-02-20)\\
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+%\clearpage
+\subsection{Answers to Practice Problems}
+Answers to Practice Problems p. 352 \# 1--10:
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item \ce{K2SO4}
+\item \ce{Ca(NO3)2}
+\item \ce{MgCO3}
+\item \ce{Al2(CrO4)3}
+\end{enumerate}
+\end{enumerate}
+\end{document}  
