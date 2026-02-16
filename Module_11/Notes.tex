@@ -1,0 +1,210 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 11: The Chemistry of Solutions}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{February 20 -- 27, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+
+\end{center}
+
+\section{Overview}
+\begin{enumerate}
+\item A \textbf{solution} is a homogenous mixture.
+\item A solution consists of one or more \textbf{solutes} dissolved into a \textbf{solvent}
+\item We have talked mainly about \emph{aqueous} solutions so far, but there are many solvents other than water.
+\end{enumerate}
+
+\section{How Solutes Dissolve in Solvents}
+\subsection{How Solids Dissolve}
+\begin{itemize}
+\item remember\footnote{We've discussed this at length in class, but we'll discuss some more if you don't remember.} 
+how \emph{aqueous} solutions work with ionic compounds:
+\footnote{The book is careful to point out that not all ionic compounds are soluble in water \cite[p. 355]{wile-chem-2}.}
+\begin{itemize}
+\item in aqueous solutions, the solvent is water (\ce{H2O})
+\item ionic compounds break into positive ions (cations) and negative ions (anions) in water
+\item \emph{e.g.} \ce{NaCl (aq) -> Na^{+} (aq) + Cl^{-} (aq)}
+\item \ce{H2O} is polar covalent: the $-2 \delta$ charge at the \ce{O} and the $+1 \delta$ charge at each \ce{H} attract oppositely-charged ions
+\item  so\ldots 
+\item the \ce{Na^{+}} ions tend to gather at the \ce{O} side of the water molecules
+\item the \ce{Cl^{-}} ions tend to gather around the \ce{H} side of the water molecules
+\item as a result, the \ce{NaCl} seems to disapper into the water
+\footnote{My initial wording was, ``the \ce{NaCl} appears to disappear\ldots" which is sort of awkward.}
+\end{itemize}
+
+\item a polar covalent solute does something similar (not quite the same):
+\footnote{Remember polar covalent molecules \emph{in general} don't break into ions in aqueous solution. Electrolytes are an exception.}
+\begin{itemize}
+\item if we put \ce{PH3} in \ce{H2O}, each \ce{PH3} molecule will tend to attract opposite ends
+\item like in water, there is a $-3 \delta$ charge around the \ce{P} end of the molecule
+\item and there is a $+1 \delta$ charge at each \ce{H} atom
+\item so\ldots 
+\item the \ce{P} end of the \ce{PH3} molecules will tend to attract the \ce{H} end of the \ce{H2O} molecules
+\item the \ce{H} end of the \ce{PH3} molecules will tend to attract the \ce{O} end of the \ce{H2O} molecules
+\end{itemize}
+
+\item a substance that cannot be dissolved into another substance is said to be \textbf{insoluble} in it
+\footnote{Notice solubility --- hence all \emph{insolubility} --- is a result of a \emph{pair} of substances. Think about it, it'll make sense.}
+\end{itemize}
+
+\subsection{How Liquids and Gases Dissolve}
+\begin{itemize}
+\item in principle, there mechanism is the same for dissolving gases and liquids as solids, \emph{but}\ldots
+\item liquids take less attraction to dissolve than solids do: the solute is less ``held together'' when it's a liquid
+\item gases take less attraction to dissolve even than liquids do: there's very little structure at all holding them together
+\footnote{Take note of this reaction: \ce{CO2 (g) + H2O (l) <=> H2CO3 (aq)} (see \cite[p. 353]{wile-chem-2}). 
+Notice dissolving \ce{CO2} in \ce{H2O} involves a \emph{chemical} change as well as a \emph{physical} one.} 
+\end{itemize}
+
+\section{Solubility}
+
+\begin{definition}[Solubility]\label{definition:solubility}
+The maximum amount of a solute that can dissolve in a given amount of solvent.
+\end{definition}
+
+\begin{hint}\label{hint:solubility}
+The solubility of any solute depends on both the identity of the solute and the identity of the solvent.
+\end{hint}
+
+\begin{definition}[Saturated Solution]\label{definition:saturated-solution}
+A solution in which the maximum amount of solute has been dissolved.
+\end{definition}
+
+\begin{itemize}
+\item solubility measures how much (and, indirectly) how easily a solute dissolves into a given solvent
+\item notice solubility is a function of both the solute and the solvent: something highly soluble in water might be insoluble in oil
+\item solubility is generally measured in ``grams per hundred," or how many grams of solute can dissolve into $100.0 g$ of solvent
+\item when you dissolve the maximum amount of solute into a solvent, you have a \textbf{saturated solution} (see Definition \ref{definition:saturated-solution}, p. \pageref{definition:saturated-solution})
+\footnote{There is such a thing as a \emph{super-saturated solution}, where it's possible to get more solute into a solvent than it can hold.}
+\item the solubility of a solute can also be a function of things like temperature and pressure (see Hint \ref{hint:solubility-rules-temperature} , p. \pageref{hint:solubility-rules-temperature} and Hint \ref{hint:solubility-rules-pressure}, p. \pageref{hint:solubility-rules-pressure}.)
+\footnote{This is why soda goes flat if you leave the lid off, and it goes flat faster if it's warm.}
+\end{itemize}
+
+\begin{hint}\label{hint:solubility-rules-temperature}
+For solid solutes, solubility usually increases with increasing temperatures.\\
+The solubility of liquid solutes is not affected by temperature.\\
+The solubility of gases decreases with increasing temperatures.
+\end{hint}
+
+\begin{hint}\label{hint:solubility-rules-pressure}
+Increasing pressure increases the solubility of gases.\\
+Pressure does not affect solubility of either liquids or solids.
+\end{hint}
+
+\section{Energy Changes that Occur when Making a Solution}
+
+\begin{definition}[Exothermic Process]\label{definition:process-exothermic}
+A process that releases heat.
+\end{definition}
+
+\begin{definition}[Endothermic Process]\label{definition:process-endothermic}
+A process that absorbs heat.
+\end{definition}
+
+\begin{itemize}
+\item we've classified dissolving (\emph{dissolution}) as a physical process, but it gets a bit more complicated than that
+\item some solutes trigger chemical reactions when they dissolve (\emph{e.g.} \ce{HCl + H2O (l) -> H3O^{+} (aq) + Cl^{-} (aq)})
+\item these chemical reactions can be \emph{exothermic} (see Definition \ref{definition:process-exothermic}, p. \pageref{definition:process-exothermic})
+\item some dissolutions are exothermic on their own, like dissolving strong bases (\emph{e.g.} \ce{NaOH  -> Na^{+} (aq) + OH^{-} (aq)}
+\item most dissolutions are \emph{endothermic} (see Definition \ref{definition:process-endothermic}, p. \pageref{definition:process-endothermic}) 
+\end{itemize}
+
+\section{Applying Stoichiometry to Solutions}
+
+\begin{hint}\label{hint:stoichiometry-in-solutions}
+Stoichiometry in solutions is no different than stoichiometry in general, except that mole calculations are often based on concentration.
+\end{hint}
+
+\begin{definition}[Concentration]\label{definition:concentration}
+The concentration of a substance in solution is the amount of that substance in a given volume:
+$$ [ \hspace{0.1 in} ] = \frac{n}{V} $$	
+\end{definition}
+
+\begin{definition}[Molarity]\label{definition:concentration-molarity}
+\textbf{Molarity} is the number of moles of a substance per liter of solution:
+$$ 1 M = \frac{1 mole}{1 liter} $$
+\end{definition}
+
+
+\section{Molality}
+
+\begin{definition}[Molality]\label{definition:concentration-molality}
+\textbf{Molality} is the number of moles of a substance per kilogram of solution:
+$$ 1 m = \frac{1 mole}{1 kg} $$
+\end{definition}
+
+\begin{itemize}
+\item in Module 10, we discussed concentration in terms of molarity (See Definitions 7 \& 8 in Module 10 notes)
+\item we can also measure concentration in \textbf{molality}, which is the number of moles of a solute divided by the mass of the solvent.
+\item so we don't overload the equations, we'll write the formula for molality as:\\
+$$ b = \frac{n}{m}$$
+\item we'll abbreviate ``Molar" as $M$ and ``Molal" as $m$
+\end{itemize}
+
+\section{Freezing Point Depression}
+
+\section{Boiling Point Elevation}
+
+
+\section{Homework}
+Review Problems: p. 381 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 382 \# 1--10 (due 2026-03-06)\\
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+%\clearpage
+\subsection{Answers to Practice Problems}
+Answers to Practice Problems p. 382 \# 1--10:
+\begin{enumerate}
+\item bleah, bleah, bleah
+\item 
+\item \ce{3H2SO4 + 2Al(OH)3 -> Al2(SO4)3 + 6H2O}
+\item \ce{2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O}
+\item \ce{H2CO3 + 2NH3 -> + 2NH4^{+} + CO3^{2-}} (\emph{Hint}: the charges need to balance too!)
+\item \ce{HBr + H2O (l) -> H3O^{+} (aq) + Br^{-} (aq)} 
+\item 
+\begin{enumerate}
+\item $2.9M$
+\item $12.1M$
+\item $0.93M$
+\end{enumerate}
+\item $150 mL$
+\item $0.84 mL$
+\item $32 g$
+\item $2.4 M$
+\item $0.42 M$
+\end{enumerate}
+\end{document}  
