@@ -1,6 +1,6 @@
 include ../includes.mk
 
-all: Module_10_Notes.pdf Notes.dvi Notes.pdf LessonPlan_10_1.pdf LessonPlan_10_2.pdf Quiz.pdf
+all: Module_10_Notes.pdf Notes.dvi Notes.pdf LessonPlan_10_1.pdf LessonPlan_10_2.pdf Quiz.pdf Quiz_Review_Sheet.pdf
 
 Notes.dvi: Notes.tex 
 	$(LATEX) Notes
@@ -28,3 +28,8 @@ Quiz.pdf: Quiz.tex
 	$(PDFLATEX) Quiz
 	$(PDFLATEX) Quiz
 	$(PDFLATEX) Quiz
+
+Quiz_Review_Sheet.pdf: Quiz_Review_Sheet.tex 
+	$(PDFLATEX) Quiz_Review_Sheet
+	$(PDFLATEX) Quiz_Review_Sheet
+	$(PDFLATEX) Quiz_Review_Sheet
