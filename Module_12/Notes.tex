@@ -1,0 +1,202 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 12: The Gas Phase}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{March 6 -- 13, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Pressure} is .
+\item A solution consists of one or more \textbf{solutes} dissolved into a \textbf{solvent}
+\item We have talked mainly about \emph{aqueous} solutions so far, but there are many solvents other than water.
+\end{enumerate}
+
+\section{Pressure}
+
+\begin{definition}[Pressure]\label{def:pressure}
+The force per unit area exerted on an object.\\
+\end{definition}
+
+
+\begin{itemize}
+\item pressure is force per unit area: $P = \frac{F}{A}$
+\item pressure is measured in Pascals: $1 Pa = \frac{1 N}{1 m^{2}}$
+\item in English units, we measure pressure in \emph{pounds per square inch} (psi)
+\item pressure is the result of the particles (atoms, molecules) of a substance bounding off surfaces
+\item we can express pressure in atmospheres: $1.000 atm = 101.3 kPa$
+\end{itemize}
+
+\section{Boyle's Law}
+
+\begin{law}[Boyle's Law]\label{law:boyles}
+For any given temperature, the product of a gas's pressure and volume is constant.\\
+$$P V = constant$$
+\end{law}
+
+\begin{itemize}
+\item $P V = constant$ at any given temperature
+\item so if you decrease volume, you increase pressure
+\item this works clearly with kinetic theory: the less space particles have, the more they'll bump into things
+\item we can express Boyle's Law like this: $P_1 V_1 = P_2 V_2$
+\end{itemize}
+
+\section{Charles's Law}
+
+\begin{law}[Charles's Law]\label{law:charles}
+At a constant pressure, the temperature and volume of a gas are linearly proportional.\\
+$$\frac{V}{T} = constant$$
+\end{law}
+
+\begin{itemize}
+\item Boyle's Law says pressure and volume are inversely proportional (as one goes up, the other goes down) (see Law \ref{law:boyles}, p. \pageref{law:boyles})
+\item Charles's Law says temperature and volume are linearly proportional (as one goes up, the other goes up) 
+\item this also makes sense with kinetic theory: the more we restrain objects from moving, the more they bump into each other
+\item we can express Charles's Law like this: $\frac{V_1}{T_1} = \frac{V_2}{T_2}$
+\end{itemize}
+
+\section{Combined Gas Law}
+
+\begin{law}[Combined Gas Law]\label{law:gas:combined}
+$$\frac{P V}{T} = constant$$
+\end{law}
+
+\begin{itemize}
+\item we can combine Charles's Law and Boyle's Law to get a Combined Gas Law:\\
+$$\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}$$
+\item we need to measure our temperatures in Kelvin to use this law\footnote{Yes, we can use Rankine as well. The point is we can't have an arbitrary zero, and both Fahrenheit and Celsius scales have arbitrary zeroes.}
+\end{itemize}
+
+\section{Ideal Gases}
+
+\begin{definition}[Ideal Gas]\label{def:ideal-gas}
+An ideal gas has the following properties:\\
+\begin{enumerate}
+\item The molecules or atoms that make up the gas are very small compared to the total volume available to the gas.
+\item The molecules of atoms that make up the gas must be so far apart from one another that there is no attraction or repulsion between them.
+\item The collisions that occur between the gas molecules or atoms must be elastic. When they collide, no energy can be lost in the collision.
+Also, no energy can be lost when they collide with the walls of the container.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Standard Temperature and Pressure]\label{defn:stp}
+A temperature of 273k and a pressure of 1.00 atm.
+\end{definition}
+
+\begin{itemize}
+\item gases behave like ideal gases (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}) at high temperatures and low pressures
+\item we define the ``standard" temperature and pressure (STP) as 273k and 1.00 atm (see Definition \ref{defn:stp}, p, \pageref{defn:stp})
+\item so gases are pretty close to ideal at STP
+\end{itemize}
+
+\section{Partial Pressures}
+
+\begin{law}[Dalton's Law of Partial Pressures]\label{law:dalton:partial-pressures}
+When two or more ideal gases are mixed together, the total pressure of the mixture is equal to the sum of the pressures of each individual gas.\\
+$$P_{mixture} = \sum^{n}_{i=1} P_{i} $$
+\end{law}
+
+\begin{hint}[Ideal Gas Identity]\label{hint:ideal-gas-identity}
+The pressure of an ideal gas does not depend on the identity of the gas.
+It depends only on the quantity of the gas.
+\end{hint}
+
+\begin{itemize}
+\item the pressure of a mixture of gases is the sum of the pressure of each gas
+\item in other words\ldots if we mix two gases with two different pressures, the mixture's pressure will be the sum of their pressurs
+\end{itemize}
+
+
+\section{Vapor Pressure}
+
+\begin{definition}[Vapor Pressure]\label{defn:vapor-pressure}
+The pressure exerted by the vapor which sites on top of any liquid.
+\end{definition}
+
+\begin{definition}[Boiling Point]\label{defn:boiling-point}
+The temperature at which the vapor pressure of a liquid is equal to the normal atmospheric pressure.
+\end{definition}
+
+\begin{itemize}
+\item any given liquid has a small amount of vapor sitting above it, which results from evaporation of the liquid
+\item because the vapor (gas) exerts pressure, there is a \emph{vapor pressure} associated with that liquid (see Definition \ref{defn:vapor-pressure}, p. \pageref{defn:vapor-pressure})
+\item so the layer of evaporated liquid is pushing down on the liquid
+\item the vapor pressure increases with temperature, as our combined gas law (Law \ref{law:gas:combined}, p. \pageref{law:gas:combined}) predicts
+\item if we increase the temperature until the vapor pressure reaches atmospheric pressure, then liquid is at the boiling point (Definition \ref{defn:boiling-point}, p. \pageref{defn:boiling-point})
+\end{itemize}
+
+\section{Concentration: Molar Fraction}
+\begin{itemize}
+\item we can think of gas mixtures like solutions
+\item just like solutions, we can think in terms of \emph{concentration}
+\item with gases, we think in terms of \textbf{mole fraction}, which is just $\frac{moles of one substance}{moles of the whole mixture}$
+\item so if we mix $1.000 mol$ of \ce{O2} into $3.000 mol$ of \ce{N2}, then the mole fraction of \ce{O2} is $\frac{1.000 mol}{1.000 mol + 3.000 mol} = 0.2500$
+\item so in this case, the partial pressure of \ce{O2} would be $\frac{1}{4}$ of the pressure of the mixture
+\end{itemize}
+
+
+\section{Ideal Gas Law}
+
+\begin{law}[Ideal Gas Law]\label{law:ideal-gas}
+$$P V = n R T$$ \\
+$$ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$$
+\end{law}
+
+\begin{itemize}
+\item for an ideal gas (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}), we can related temperature, pressure, and volume by the Ideal Gas Law (Law \ref{law:ideal-gas}, p. \pageref{law:ideal-gas})
+\item in that law:
+\begin{itemize}
+\item $n$ refers to the number of moles of our ideal gas
+\item $R$ is a constant: $ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$
+\item $P$ is pressure
+\item $V$ is volume
+\item $T$ is temperature
+\end{itemize}
+\item it shouldn't surprise us that we can use this in stoichiometery, because it lets us find $n$, the number of moles of an ideal gas!!!!
+\end{itemize}
+
+\section{Homework}
+Review Problems: p. 415 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 416 \# 1--10 (due 2026-03-27)\\
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+%\clearpage
+\subsection{Answers to Practice Problems}
+Answers to Practice Problems p. 416 \# 1--10:
+\begin{enumerate}
+\item \ldots
+
+\end{enumerate}
+\end{document}  

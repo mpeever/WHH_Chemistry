@@ -1,0 +1,253 @@
+\documentclass[11pt,addpoints]{exam}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{mhchem}
+\usepackage{lewis}
+
+\title{Quarter 3 Exam Review}
+\author{Mark Peever}
+\date{March 6, 2026}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\pointsinrightmargin
+%\marginpointname{ \points}
+\printanswers
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Answer all questions on a separate sheet of paper. Show all your work.
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{questions}
+
+\question[5] Give the electron configurations for:
+\begin{itemize}
+\item \ce{He}
+\item \ce{O}
+\item \ce{S}
+\item \ce{Cl}
+\end{itemize}
+
+\begin{solution}
+\begin{itemize}
+\item $1s^{2} $
+\item $1s^{2} 2s^{2} 2p^{4} $
+\item $1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{4}$
+\item $1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{5}$
+\end{itemize}
+\end{solution}
+
+\clearpage
+\question[5] 
+Give the Lewis Structures for:
+\begin{itemize}
+\item \ce{H}
+\item \ce{HCl}
+\item \ce{H2O}
+\item \ce{NaOH}
+\end{itemize}
+
+\begin{solution}
+\begin{itemize}
+\item \lewis{H}{}{}{}{}{}{.}{}{}
+\item \lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em}--\hspace{-0.75em}\lewis{Cl}{}{}{.}{.}{.}{.}{.}{.}
+\item \lewis{H}{}{}{}{}{}{}{}{}\hspace{-0.5em} = \hspace{-0.75em}\lewis{O}{}{}{.}{.}{}{}{.}{.}\hspace{-0.5em} = \hspace{-0.75em}\lewis{H}{}{}{}{}{}{}{}{}
+\item \lewis{\ce{Na^{+}}}{}{}{}{}{}{}{}{} \lewis{ \ce{OH^{-}} }{.}{.}{.}{.}{.}{.}{.}{.}
+\end{itemize}
+\end{solution}
+
+\question[5] What is the correct chemical equation to show \ce{HCl} producing \ce{H3O^{+}} ions in water?
+
+\begin{solution}
+\ce{HCl (aq) + H2O (l) -> H3O^{+} (aq) + Cl^{-} (aq)}
+\end{solution}
+
+\clearpage
+\question[5] How many \emph{moles} of \ce{HCl} are in a $124.00 mL$ sample of $0.250 M$ solution?
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    [HCl] &= 0.250 M \\
+    V_{HCl} &= 0.12400 L\\
+    n &= ?\\
+    [HCl] = \frac{n_{HCl}}{V_{HCl}} \\
+    n_{HCl} &= [HCl] \cdot V_{HCl} \\
+                 &= (0.250 \frac{mol}{L})(0.12400 L) \\
+                 &= 0.0310 mol \\
+ \end{split}
+ \end{equation}
+\end{solution}
+
+\question[5]  What is the molar mass of \ce{HCl}?
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    M_{HCl} &= M_{H} + M_{Cl} \\
+                  &= (1.00794 \frac{g}{mol}) + (35.453 \frac{g}{mol}) \\
+                  &= 35.46094 \frac{g}{mol} \\
+                  &= 35.461 \frac{g}{mol} \\
+ \end{split}
+ \end{equation}
+\end{solution}
+
+\question[5]  How many grams of \ce{HCl} are in $0.100 L$ of $2.34 M$ solution?
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+    m &= n_{HCl} \cdot M_{HCl} \\
+        &= ([HCl])(V_{HCl}) \cdot M_{HCl} \\
+        &= (0.100 L) (2.34 \frac{mol}{L}) (35.461 \frac{g}{mol}) \\
+        &= 8.297874 mol \\
+        &= 8.30 mol
+ \end{split}
+ \end{equation}
+\end{solution}
+
+\question[5] What is the volume of $0.1000 M$ solution you get from diluting $10.00 mL$ of $3.500 M$ solution?
+
+\begin{solution}
+\begin{equation} 
+\begin{split}
+   V_1 [ \hspace{0.1 in}]_1 &= V_2 [ \hspace{0.1 in}]_2 \\
+   V_2 &= \frac{V_1 [ \hspace{0.1 in}]_1} {[\hspace{0.1 in} ]_2} \\
+          &= \frac{(10.00 mL) (3.500 \frac{mol}{L}) } {0.1000 \frac{mol}{L}} \\
+          &= 350.0 mL
+ \end{split}
+ \end{equation}
+\end{solution}
+
+
+
+\end{questions}
+
+\pagebreak
+\section*{Fun Facts}
+\begin{multicols}{2}
+\begin{itemize}
+\item 
+$ [\hspace{0.2 in}] = \frac{n}{V}$
+
+\item 
+$ [\hspace{0.2 in}]_1 \cdot V_1=  [\hspace{0.2 in}]_2 \cdot V_2$
+
+\item
+$q = m c \Delta T$
+\vspace{0.2in}
+
+\item
+$\Delta T = T_{final} - T_{initial}$
+\vspace{0.2in}
+
+\item
+$\rho = \frac{m}{V} $
+\vspace{0.2in}
+
+\item
+$T_K = T_C + 273.15 K$
+\vspace{0.2in}
+
+\item
+$T_F = \frac{9}{5}T_C + 32^{\circ}F$
+\vspace{0.2in}
+
+\item
+$T_C = \frac{5}{9}(T_F - 32^{\circ}F)$
+\vspace{0.2in}
+
+\item
+$c_{water} = 1.000 \frac{calorie}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$c_{water} = 4.184 \frac{J}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$c_{copper} = 0.3851 \frac{J}{g \cdot ^{\circ}C}$
+\vspace{0.2in}
+
+\item
+$\rho_{water} = 1.000 \frac{g}{cm^3}$
+\vspace{0.2in}
+
+\item
+$\rho_{copper} = 8.96 \frac{g}{cm^3}$
+\vspace{0.2in}
+
+\item
+$ 1.0000 cm^3 = 1.0000 mL $
+\vspace{0.2in}
+
+\item
+$ 1.000 cal = 4.184 J $
+\vspace{0.2in}
+
+\item
+$m = n \times M$
+\vspace{0.2in}
+
+\item
+$m = n \times m_{molar}$
+\vspace{0.2in}
+
+\item
+$1 amu = 1 \frac{g}{mol}$ 
+\vspace{0.2in}
+
+\item
+$N_A = 6.02214076 \times 10^{23} $ 
+\vspace{0.2in}
+
+\end{itemize}
+\vspace{0.2in}
+
+\end{multicols}
+
+
+
+
+\pagebreak
+
+\begin{table}
+\centering
+\begin{tabular}[p]{| l | l |}
+\textbf{Prefix} & \textbf{Count} \\
+\hline
+mono & one \\
+di       & two \\
+tri       & three \\
+tetra       & four \\
+penta       & five \\
+hecta       & six \\
+hepta       & seven \\
+octa       & eight \\
+nona       & nine \\
+deca       & ten \\
+\end{tabular}
+\caption{Prefixes for Covalent Compound Names}
+\label{table:covalent-prefix}
+\end{table}
+
+
+
+
+
+
+\end{document}  
