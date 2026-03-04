@@ -41,8 +41,9 @@ Let's consider our Ideal Gas Law as it relates to one of the most American thing
 
 \section{Combustion of Gunpowder}
 \begin{itemize}
-\item the accepted equation for burning black powder is:\\
- \ce{2KNO3 (s) + S (s) + 3C (s) -> 3CO2 (g) + 2N (g) + K2S (g) +\Delta Q}  \cite{naval:gunpowder:combustion}
+\item one accepted equation for burning black powder is:\\
+ \ce{2KNO3 (s) + S (s) + 3C (s) -> 3CO2 (g) + 2N (g) + K2S (g) +\Delta Q} 
+\item see \cite{naval:gunpowder:combustion}
 \item the chemistry of smokeless powders isn't quite so well documented, partially because there's not just one smokeless powder
 \item so we're going to pretend this is the reaction fueling our test subject: a lever-action rifle in .44 Remington Magnum
 \footnote{Obviously loading a modern magnum cartridge with black powder isn't something you should try.}
@@ -124,11 +125,11 @@ $$ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$$
 \item so the lever-action rifle with a $20.00 in$ barrel has a barrel volume of $44 mL$
 \item from the point of view of our chemical reaction, that's the \emph{maximum} volume of our gun barrel
 \item the reaction occurs between the bullet and the cartridge base, so the starting volume is just the empty space in the cartridge
-\item but as the reaction occurs, the bullet moves down the barrel, and the volume increases
+\item as the reaction occurs, the bullet moves down the barrel, and the volume increases
 \footnote{Really the only difference between a rifle and a pipe bomb is that the bullet moves down the barrel of the rifle: if the bullet stops, then the rifle becomes a pipe bomb.
-Many hunters have stories about this. Some now have nicknames like ``Lefty."}
+Many hunters have stories about this. Some have nicknames like ``Lefty."}
 \item what's the theoretical maximum volume of the barrel for our cartridge?  it depends on $P V = n R T$
-\footnote{By ``maximum volume," I mean it's possible to make a rifle barrel so long that the bullet just sort of stops in there. 
+\footnote{By ``maximum volume," I mean it's possible to make a rifle barrel so long that the bullet just stops in there. 
 This is exactly what a squib load is: a load where the theoretical maximum volume of the rifle barrel is smaller than the actual rifle barrel.}
 \end{itemize}
 
@@ -175,6 +176,59 @@ This is exactly what a squib load is: a load where the theoretical maximum volum
 \footnote{Of course with factory loads, this is way more likely than with hand loads.}
 \end{itemize}
 
+\section{Bullet Motion}
+\begin{itemize}
+\item the bullet moves as it's pushed by the expanding gases behind it
+\item the force on the bullet depends on both pressure and the bullet's cross-sectional area
+\item for our bullet, the cross-sectional area is:
+\begin{equation} 
+\begin{split}
+ A &= \pi \cdot r^{2} \\
+    &= \pi (\frac{0.429 in}{2})^{2} \\
+    &= 0.1445 in^{2} \\
+    &= 9.325 \times 10^{-5} m^{2} \\
+\end{split}
+ \end{equation}
+\item we can calculate the force on the bullet from our definition of pressure:
+\begin{equation} 
+\begin{split}
+P &= \frac{F}{A} \\
+F &= P \times A \\
+\end{split}
+ \end{equation}
+\item so our bullet moving under maximum pressure is being pushed by:
+\begin{equation} 
+\begin{split}
+F &= P \times A\\
+   &= (250 MPa) (9.325 \times 10^{-5} m^{2}) \\
+   &= 23312.5 N\\
+\end{split}
+\end{equation}
+
+\item or in English units:
+\begin{equation} 
+\begin{split}
+F &= P \times A\\
+   &= (36000 \frac{lb}{in^{2}})  (0.1445 in^{2}) \\
+   &= 5202 lb \\
+\end{split}
+\end{equation}
+ 
+\item that's a whole lot of push!
+\item the bullet will accelerate down the barrel until the pressure drops, usually because it leaves the gun barrel
+\footnote{Again, see ``squib load" above.}
+\item as the bullet moves, three very important quantities are changing:
+\begin{enumerate}
+\item $\Delta V > 0$  as the the space \emph{behind} the bullet increases
+\item $\Delta P < 0$  because $\Delta V > 0$
+\item $\Delta P > 0$  because $\Delta n > 0$
+\item $\Delta P > 0$ because $\Delta T > 0$
+\item so pressure will be pushed \emph{both} up and down: whether it actually increases or decreases depends on the relative sizes of the other measurements
+\footnote{With a low enough burn rate, for example, the pressure will \emph{decrease} as the bullet moves.}
+\end{enumerate}
+\item when the bullet exits the barrel, the pressure behind it exits the barrel with a loud ``POP!" that sounds remarkably like a gunshot
+\footnote{Because it \emph{is} a gunshot, obviously. Also, if the bullet is moving faster than sound there's a ``sonic boom" as well.}
+\end{itemize}
 
 \nocite{wile-chem-2}
 \bibliography{../Chemistry}
