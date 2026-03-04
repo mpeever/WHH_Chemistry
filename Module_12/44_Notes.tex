@@ -1,0 +1,183 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 12 (Reprise)\\ Fun with Gases and a .44}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{March 6 -- 13, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+This is a short side-quest.
+Let's consider our Ideal Gas Law as it relates to one of the most American things ever: a lever-action rifle.
+
+
+\section{Combustion of Gunpowder}
+\begin{itemize}
+\item the accepted equation for burning black powder is:\\
+ \ce{2KNO3 (s) + S (s) + 3C (s) -> 3CO2 (g) + 2N (g) + K2S (g) +\Delta Q}  \cite{naval:gunpowder:combustion}
+\item the chemistry of smokeless powders isn't quite so well documented, partially because there's not just one smokeless powder
+\item so we're going to pretend this is the reaction fueling our test subject: a lever-action rifle in .44 Remington Magnum
+\footnote{Obviously loading a modern magnum cartridge with black powder isn't something you should try.}
+\end{itemize}
+
+\section{Pressure}
+
+\begin{definition}[Pressure]\label{def:pressure}
+The force per unit area exerted on an object.\\
+\end{definition}
+
+\begin{itemize}
+\item pressure is force per unit area: $P = \frac{F}{A}$
+\item pressure is measured in Pascals: $1 Pa = \frac{1 N}{1 m^{2}}$
+\item the SAAMI spec has a .44 Remington Magnum running at a maximum pressure of  $250 MPa$ ($36000 psi$) 
+\item we're going to assume our rifle is running at that maximum pressure
+\footnote{In the real world, you're typically running loads significantly lower than the maximum load, hence you're running at lower than maximum pressure.}
+\item notice how this compares to STP ($273 k$ and $101.325 kPa$, see Definition \ref{defn:stp}): $250 MPa$ is $250,000 kPa$, or $2467 atm$
+\item that's a \emph{lot} of pressure
+\end{itemize}
+
+\section{Ideal Gases}
+
+\begin{definition}[Ideal Gas]\label{def:ideal-gas}
+An ideal gas has the following properties:\\
+\begin{enumerate}
+\item The molecules or atoms that make up the gas are very small compared to the total volume available to the gas.
+\item The molecules of atoms that make up the gas must be so far apart from one another that there is no attraction or repulsion between them.
+\item The collisions that occur between the gas molecules or atoms must be elastic. When they collide, no energy can be lost in the collision.
+Also, no energy can be lost when they collide with the walls of the container.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Standard Temperature and Pressure]\label{defn:stp}
+A temperature of 273k and a pressure of 1.00 atm.
+\end{definition}
+
+\begin{itemize}
+\item gases behave like ideal gases (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}) at high temperatures and low pressures
+\item we define the ``standard" temperature and pressure (STP) as 273k and 1.00 atm (see Definition \ref{defn:stp}, p, \pageref{defn:stp})
+\item so the gases in our rifle aren't really very ideal, but we're going to pretend they are pretty close (see ``lying to children")
+\footnote{In actual fact, the gun (and thus the gases in it) will heat up as we use it, so they'll be getting \emph{less} ideal.}
+\end{itemize}
+
+\pagebreak
+\section{Ideal Gas Law}
+
+\begin{law}[Ideal Gas Law]\label{law:ideal-gas}
+$$P V = n R T$$ \\
+$$ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$$
+\end{law}
+
+\begin{itemize}
+\item for an ideal gas (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}), we can related temperature, pressure, and volume by the Ideal Gas Law (Law \ref{law:ideal-gas}, p. \pageref{law:ideal-gas})
+\item in that law:
+\begin{itemize}
+\item $n$ refers to the number of moles of our ideal gas
+\item $R$ is a constant: $ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$
+\item $P$ is pressure
+\item $V$ is volume
+\item $T$ is temperature
+\end{itemize}
+\end{itemize}
+
+\section{Rifle Geometry}
+\begin{itemize}
+\item .44 Remington Magnum uses a $0.429 in$ bullet (typically $240 grains$)
+\item if our rifle has a $20.00 in$ barrel, then we can calculate its volume:\\
+\begin{equation} 
+\begin{split}
+ V &= \pi \cdot r^{2} \cdot h \\
+    &= \pi (\frac{0.429 in}{2})^{2} (20.00 in) \\
+    &= 2.8909 in^{3} \\
+    &= 4.737 \times 10^{-5} m^{3} \\
+    &= 4.437 \times 10^{-2} L \\
+    &= 44.37 mL\\
+\end{split}
+ \end{equation}
+\item so the lever-action rifle with a $20.00 in$ barrel has a barrel volume of $44 mL$
+\item from the point of view of our chemical reaction, that's the \emph{maximum} volume of our gun barrel
+\item the reaction occurs between the bullet and the cartridge base, so the starting volume is just the empty space in the cartridge
+\item but as the reaction occurs, the bullet moves down the barrel, and the volume increases
+\footnote{Really the only difference between a rifle and a pipe bomb is that the bullet moves down the barrel of the rifle: if the bullet stops, then the rifle becomes a pipe bomb.
+Many hunters have stories about this. Some now have nicknames like ``Lefty."}
+\item what's the theoretical maximum volume of the barrel for our cartridge?  it depends on $P V = n R T$
+\footnote{By ``maximum volume," I mean it's possible to make a rifle barrel so long that the bullet just sort of stops in there. 
+This is exactly what a squib load is: a load where the theoretical maximum volume of the rifle barrel is smaller than the actual rifle barrel.}
+\end{itemize}
+
+\section{Shooting our Gun}
+\begin{itemize}
+\item when we squeeze the trigger on our lever gun, several steps happen very quickly:
+\begin{enumerate}
+\item the sear disengages, releasing the hammer
+\item the hammer falls, striking the firing pin
+\item the firing pin surges forward, striking the primer
+\item the primer ignites, sending a spark/flame into the cartridge
+\item the powder in the cartridge ignites, increasing pressure in the cartridge
+\item the bullet moves forward into the barrel and hits the rifling
+\end{enumerate}
+\item things get interesting for us (as Chemists) when the powder ignites
+\item it's easiest to contemplate this in terms of \emph{changes} that are all occurring:
+\begin{enumerate}
+\item $\Delta P$ is a change in pressure: initially $\Delta P \gg 0$ 
+\item $\Delta V$ is a change in volume: $\Delta V > 0$ 
+\item $\Delta n$ is a change in the number of moles of the gas(es) in the chamber: $\Delta n > 0$
+\footnote{This isn't immediately obvious, but as the powder burns it consumes solids and produces gases. So $\Delta n > 0$ as long as our powder is burning.}
+\item $\Delta T$ is a change in temperature: $\Delta T > 0$
+\end{enumerate}
+\item the most interesting change is $\Delta P$, because the manufacturer builds guns to handle a given $P$
+\item \emph{question} What happens if $P$ gets too large?
+\item \emph{question} When would we expect $P$ to be the highest?
+\item \emph{question} What happens if $\Delta n$ is too large? 
+\item \emph{question} What happens if $\Delta T$ gets too large?
+\item \emph{question} Why do longer gun barrels generally\footnote{Not always, see ``squib load" above.} mean faster bullets?
+\end{itemize}
+
+\section{Burn Rate}
+\begin{itemize}
+\item one important factor in choosing a powder is \emph{burn rate}
+\item burn rate has a big effect on our $P$ because it's directly responsible for $\Delta n$
+\item if we choose too fast a powder, then we'll end up with a very large $\Delta n$, which can cause too high a $\Delta P$
+\item what do we mean by ``too high a $\Delta P$?" well, if the powder burns faster than the bullet can move, then we can get a ``pressure spike"
+\item in other words, if our bullet moves too slowly, we can end up with a pipe bomb instead of a rifle
+\footnote{Which is why every loading manual will have \emph{lower} powder charges for heavier bullets.}
+\item this is a big consideration when loading for a magnum rifle
+\item it's also a major difference between rifle and pistol powders
+\footnote{Pistol and shotgun powders burn more quickly than rifle powders, and \emph{much} more quickly than magnum rifle powders.}
+\item if you shoot a gun and you see a big ball of flame come out the muzzle there's a pretty good chance the powder charge is too large for that gun
+\footnote{Of course with factory loads, this is way more likely than with hand loads.}
+\end{itemize}
+
+
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+\end{document}  

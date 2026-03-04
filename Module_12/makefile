@@ -1,6 +1,6 @@
 include ../includes.mk
 
-all: Module_12_Notes.pdf Notes.dvi Notes.pdf LessonPlan_12_1.pdf LessonPlan_12_2.pdf Quiz.pdf ExamQ3.pdf
+all: Module_12_Notes.pdf Notes.dvi Notes.pdf LessonPlan_12_1.pdf LessonPlan_12_2.pdf Quiz.pdf ExamQ3.pdf 44_Notes.pdf
 
 Notes.dvi: Notes.tex 
 	$(LATEX) Notes
@@ -33,3 +33,9 @@ ExamQ3.pdf: ExamQ3.tex
 	$(PDFLATEX) ExamQ3
 	$(PDFLATEX) ExamQ3
 	$(PDFLATEX) ExamQ3
+
+44_Notes.pdf: 44_Notes.tex 
+	$(PDFLATEX) 44_Notes
+	$(BIBTEX) 44_Notes
+	$(PDFLATEX) 44_Notes
+	$(PDFLATEX) 44_Notes
