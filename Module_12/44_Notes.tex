@@ -29,7 +29,7 @@
 
 \title{Module 12 (Reprise)\\ Fun with Gases and a .44}
 \author{Mark Peever\\ \texttt{mpeever@gmail.com}}
-\date{March 6 -- 13, 2026}
+\date{March 6, 2026}
 
 \begin{document}
 \maketitle
@@ -38,6 +38,10 @@
 This is a short side-quest.
 Let's consider our Ideal Gas Law as it relates to one of the most American things ever: a lever-action rifle.
 
+In our case, the lever-action rifle is chambered in .44 Remington Magnum and has a $20.00 in$ barrel.
+
+This document refers to the  \href{https://drive.google.com/file/d/1JpZKagO_RQ2Az20Uw2yLxLpzfNrq7TlN/view?usp=sharing}{Module 12 Notes.pdf} document.
+
 
 \section{Combustion of Gunpowder}
 \begin{itemize}
@@ -45,50 +49,55 @@ Let's consider our Ideal Gas Law as it relates to one of the most American thing
  \ce{2KNO3 (s) + S (s) + 3C (s) -> 3CO2 (g) + 2N (g) + K2S (g) +\Delta Q} 
 \item see \cite{naval:gunpowder:combustion}
 \item the chemistry of smokeless powders isn't quite so well documented, partially because there's not just one smokeless powder
-\item so we're going to pretend this is the reaction fueling our test subject: a lever-action rifle in .44 Remington Magnum
+\item so we're going to pretend this is the reaction fueling our lever-action rifle in .44 Remington Magnum
 \footnote{Obviously loading a modern magnum cartridge with black powder isn't something you should try.}
 \end{itemize}
 
 \section{Pressure}
 
-\begin{definition}[Pressure]\label{def:pressure}
-The force per unit area exerted on an object.\\
-\end{definition}
-
 \begin{itemize}
+
 \item pressure is force per unit area: $P = \frac{F}{A}$
-\item pressure is measured in Pascals: $1 Pa = \frac{1 N}{1 m^{2}}$
+\item pressure is measured in Pascals ($1 Pa = \frac{1 N}{1 m^{2}}$), in p.s.i ($1 psi = \frac{1 lb}{1 in^{2}}$), in atmospheres ($1 atm = 101 kPa$), etc.
+\footnote{It honestly seems like everyone who has ever \emph{heard} of pressure has invented a new unit to measure it.}
 \item the SAAMI spec has a .44 Remington Magnum running at a maximum pressure of  $250 MPa$ ($36000 psi$) 
 \item we're going to assume our rifle is running at that maximum pressure
 \footnote{In the real world, you're typically running loads significantly lower than the maximum load, hence you're running at lower than maximum pressure.}
-\item notice how this compares to STP ($273 k$ and $101.325 kPa$, see Definition \ref{defn:stp}): $250 MPa$ is $250,000 kPa$, or $2467 atm$
+\item notice how this compares to STP ($273 k$ and $101.325 kPa$, see Definition \ref{defn:stp}):
+\begin{itemize}
+\item $250 MPa$ is $250,000 kPa$
+\item $250 MPa$ is $2467 atm$
+\end{itemize}
+
 \item that's a \emph{lot} of pressure
 \end{itemize}
 
-\section{Ideal Gases}
+%\section{Ideal Gases}
+%
+%\begin{definition}[Ideal Gas]\label{def:ideal-gas}
+%An ideal gas has the following properties:\\
+%\begin{enumerate}
+%\item The molecules or atoms that make up the gas are very small compared to the total volume available to the gas.
+%\item The molecules of atoms that make up the gas must be so far apart from one another that there is no attraction or repulsion between them.
+%\item The collisions that occur between the gas molecules or atoms must be elastic. When they collide, no energy can be lost in the collision.
+%Also, no energy can be lost when they collide with the walls of the container.
+%\end{enumerate}
+%\end{definition}
+%
+%\begin{definition}[Standard Temperature and Pressure]\label{defn:stp}
+%A temperature of 273k and a pressure of 1.00 atm.
+%\end{definition}
+%
+%\begin{itemize}
+%\item gases behave like ideal gases (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}) at high temperatures and low pressures
+%\item we define the ``standard" temperature and pressure (STP) as 273k and 1.00 atm (see Definition \ref{defn:stp}, p, \pageref{defn:stp})
+%\item so the gases in our rifle aren't really very ideal, but we're going to pretend they are pretty close (see ``lying to children")
+%\footnote{In actual fact, the gun (and thus the gases in it) will heat up as we use it, so they'll be getting \emph{less} ideal.}
+%\end{itemize}
+%
+%\pagebreak
 
-\begin{definition}[Ideal Gas]\label{def:ideal-gas}
-An ideal gas has the following properties:\\
-\begin{enumerate}
-\item The molecules or atoms that make up the gas are very small compared to the total volume available to the gas.
-\item The molecules of atoms that make up the gas must be so far apart from one another that there is no attraction or repulsion between them.
-\item The collisions that occur between the gas molecules or atoms must be elastic. When they collide, no energy can be lost in the collision.
-Also, no energy can be lost when they collide with the walls of the container.
-\end{enumerate}
-\end{definition}
 
-\begin{definition}[Standard Temperature and Pressure]\label{defn:stp}
-A temperature of 273k and a pressure of 1.00 atm.
-\end{definition}
-
-\begin{itemize}
-\item gases behave like ideal gases (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}) at high temperatures and low pressures
-\item we define the ``standard" temperature and pressure (STP) as 273k and 1.00 atm (see Definition \ref{defn:stp}, p, \pageref{defn:stp})
-\item so the gases in our rifle aren't really very ideal, but we're going to pretend they are pretty close (see ``lying to children")
-\footnote{In actual fact, the gun (and thus the gases in it) will heat up as we use it, so they'll be getting \emph{less} ideal.}
-\end{itemize}
-
-\pagebreak
 \section{Ideal Gas Law}
 
 \begin{law}[Ideal Gas Law]\label{law:ideal-gas}
@@ -97,7 +106,9 @@ $$ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$$
 \end{law}
 
 \begin{itemize}
-\item for an ideal gas (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}), we can related temperature, pressure, and volume by the Ideal Gas Law (Law \ref{law:ideal-gas}, p. \pageref{law:ideal-gas})
+%\item for an ideal gas (see Definition \ref{def:ideal-gas}, p. \pageref{def:ideal-gas}), we can related temperature, pressure, and volume by the Ideal Gas Law (Law \ref{law:ideal-gas}, p. \pageref{law:ideal-gas})
+\item the Ideal Gas Law (Law \ref{law:ideal-gas}, p. \pageref{law:ideal-gas}) relates temperature, pressure, and volume
+\footnote{The gases in a gun barrel aren't ideal gases -- not by a long shot -- and they'll become \emph{less} ideal as temperature increases as a result of shooting our gun. See ``lying to children."}
 \item in that law:
 \begin{itemize}
 \item $n$ refers to the number of moles of our ideal gas
@@ -128,7 +139,7 @@ $$ R = 0.0821 \frac{L \cdot atm}{mole \cdot K}$$
 \item as the reaction occurs, the bullet moves down the barrel, and the volume increases
 \footnote{Really the only difference between a rifle and a pipe bomb is that the bullet moves down the barrel of the rifle: if the bullet stops, then the rifle becomes a pipe bomb.
 Many hunters have stories about this. Some have nicknames like ``Lefty."}
-\item what's the theoretical maximum volume of the barrel for our cartridge?  it depends on $P V = n R T$
+\item what's the theoretical maximum volume of the barrel for our cartridge?  it depends on $P V = n R T$, but it needs to be bigger than $44 mL$ for our rifle to work.
 \footnote{By ``maximum volume," I mean it's possible to make a rifle barrel so long that the bullet just stops in there. 
 This is exactly what a squib load is: a load where the theoretical maximum volume of the rifle barrel is smaller than the actual rifle barrel.}
 \end{itemize}
@@ -153,7 +164,7 @@ This is exactly what a squib load is: a load where the theoretical maximum volum
 \footnote{This isn't immediately obvious, but as the powder burns it consumes solids and produces gases. So $\Delta n > 0$ as long as our powder is burning.}
 \item $\Delta T$ is a change in temperature: $\Delta T > 0$
 \end{enumerate}
-\item the most interesting change is $\Delta P$, because the manufacturer builds guns to handle a given $P$
+\item the most interesting change is $\Delta P$, because the manufacturer builds guns to handle a given pressure ($P$)
 \item \emph{question} What happens if $P$ gets too large?
 \item \emph{question} When would we expect $P$ to be the highest?
 \item \emph{question} What happens if $\Delta n$ is too large? 
@@ -215,20 +226,33 @@ F &= P \times A\\
 \end{equation}
  
 \item that's a whole lot of push!
+\footnote{There's a \emph{lot} of friction pushing back on the bullet from the barrel walls: $5000 lb$ seems like a lot of push (and it is), but there's a whole lot of resistance to overcome. }
 \item the bullet will accelerate down the barrel until the pressure drops, usually because it leaves the gun barrel
 \footnote{Again, see ``squib load" above.}
 \item as the bullet moves, three very important quantities are changing:
 \begin{enumerate}
 \item $\Delta V > 0$  as the the space \emph{behind} the bullet increases
+\item $\Delta T > 0$ as the powder burns (a highly exothermic reaction)
+\item $\Delta n > 0$ as the chemical reaction produces more gas
+\end{enumerate}
+
+\item all of those changes will tend to drive pressure either up or down:
+\begin{enumerate}
 \item $\Delta P < 0$  because $\Delta V > 0$
 \item $\Delta P > 0$  because $\Delta n > 0$
 \item $\Delta P > 0$ because $\Delta T > 0$
+\end{enumerate}
+
 \item so pressure will be pushed \emph{both} up and down: whether it actually increases or decreases depends on the relative sizes of the other measurements
 \footnote{With a low enough burn rate, for example, the pressure will \emph{decrease} as the bullet moves.}
-\end{enumerate}
+
 \item when the bullet exits the barrel, the pressure behind it exits the barrel with a loud ``POP!" that sounds remarkably like a gunshot
 \footnote{Because it \emph{is} a gunshot, obviously. Also, if the bullet is moving faster than sound there's a ``sonic boom" as well.}
 \end{itemize}
+
+
+
+
 
 \nocite{wile-chem-2}
 \bibliography{../Chemistry}
