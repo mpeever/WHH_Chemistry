@@ -1,4 +1,5 @@
 BIBTEX := /Library/Tex/texbin/bibtex
+BIBLATEX := /Library/Tex/texbin/biblatex
 LATEX := /Library/Tex/texbin/latex
 PDFLATEX := /Library/Tex/texbin/pdflatex
 
