@@ -1,0 +1,291 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cite}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+%\usepackage{urlbst}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 13: Thermodynamics}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{March 13 -- 27, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+\begin{enumerate}
+\item \textbf{Enthalpy} describes energy changes in chemical reactions
+\item \textbf{Entropy} describes how disordered a system is
+\item \textbf{Gibbs Free Energy} combines the concepts of enthalpy and entropy
+\end{enumerate}
+
+\section{Enthalpy}
+
+\begin{definition}[Enthalpy]\label{def:enthalpy}
+The energy stored in the chemical bonds of a substance.
+\end{definition}
+
+\begin{definition}[Change in Enthalpy]\label{def:delta-enthalpy}
+The energy change that accompanies a chemical reaction.
+\end{definition}
+
+\begin{hint}\label{hint:enthalpy-tip}
+For \emph{endothermic} reactions, $\Delta H > 0$.\\
+For \emph{exothermic} reactions, $\Delta H < 0$.
+\end{hint}
+
+\begin{itemize}
+\item we can think of energy as either a \emph{reactant} of a chemical reaction or one of its \emph{products}
+\begin{enumerate}
+\item when a reaction is exothermic, we think of energy as a product
+\item when a reaction is endothermic, we think of energy as a reactant
+\end{enumerate}
+\item in Chemistry, \emph{potential energy} is energy stored in chemical bonds
+\item \emph{kinetic energy} is heat
+\item enthalpy refers to the energy stored in chemical bonds (see Definition \ref{def:enthalpy}, p. \pageref{def:enthalpy})
+\item we abbreviate enthalpy as $H$
+\item because there is enthalpy on both sides of a chemical reaction, we think in terms of ``change in enthalpy" ($\Delta H$) which we put on the side with \emph{more} enthalpy
+\item \emph{e.g.} \ce{HCl + NaOH -> NaCl + H2O + \Delta H}
+\footnote{Notice we're using $\Delta H$ here for ``change in ethalpy." Hitherto I've used $\Delta Q$ for ``change in heat." We'll be using $\Delta H$ from now on.}
+\item we measure $\Delta H$ in the same units we use for heat (kJ or kcal)
+\item we think of changes in enthalpy in terms of \emph{energy absorbed} in a reaction, so if $\Delta H > 0$ for a given reaction, the reaction is \emph{endothermic} (see Hint \ref{hint:enthalpy-tip}, p. \pageref{hint:enthalpy-tip})
+\item conversely, if a change in enthalpy is negative ($\Delta H < 0$), then more energy is \emph{released} than absorbed
+\end{itemize}
+
+\begin{hint}[Enthalpy Units]\label{hint:enthalpy-units}
+We measure $\Delta H$ in the same units we use for heat (Joules or calories). 
+Because the numbers are large, we generally use kilojoules (kJ) or kilocalories (kcal).\\
+
+Because changes in enthalpy depend on quantities of reactants, we sometimes see $\Delta H$ measured in kJ \emph{per mole} or kcal \emph{per mole}.
+\end{hint}
+
+\section{Determining $\Delta H$}
+\subsection{Calorimetry}
+\begin{itemize}
+\item we can determine $\Delta H$ \emph{experimentally} using a calorimeter (see Module 2)
+\end{itemize}
+
+\subsection{Using Bond Energies}
+\begin{itemize}
+\item chemical bonds store energy (see Definition \ref{def:enthalpy} above)
+\item we can think of $H$ as the energy required to break existing bonds and make new ones
+\begin{itemize}
+\item energy is required to break bonds
+\item energy is released when new bonds are formed
+\footnote{This makes some sense if you think about it. If lone atoms were the lower-energy state, we wouldn't expect to see naturally-occurring compounds.}
+\end{itemize}
+\item so $\Delta H $ is the energy required to break old bonds, minus the energy released when new bonds form: $\Delta H = H_{breaking} - H_{formation}$
+\item we can predict the $\Delta H$ of a reaction by accounting for the bonds created and those destroyed, using the \emph{bond energies} given in Table 13.1 of your text \cite[p. 424]{wile-chem-2}
+\item notice this means we need to know what the correct Lewis Structures are
+\end{itemize}
+
+\subsection{Using Hess's Law}
+
+\begin{law}[Hess's Law]\label{def:law-hess}
+Enthalpy is a state function and is therefore independent of path.
+\end{law}
+
+\begin{law}[Hess's Law (Reprise)]\label{def:law-hess-math}
+$$\Delta H^{0} = \Sigma \Delta H^{0}_f (products) - \Sigma \Delta H^{0}_f (reactants) $$ 
+\end{law}
+
+\begin{definition}[Enthalpy of Formation]\label{def:enthalpy-formation}
+$\Delta H_f$ is the change in enthalpy ($\Delta H$) of a formation reaction.
+\end{definition}
+
+
+\begin{itemize}
+\item Hess's Law says that the enthalpy of a substance ($H$, not $\Delta H$) depends on what the substance is, not the chemical reaction(s) that formed it
+\item so if we say that the enthalpy of any element\footnote{``Any element" alone, not in a compound.} is $0$, then we can use the Enthalpy of Formation ($\Delta H_f$, see Definition \ref{def:enthalpy-formation}, p. \pageref{def:enthalpy-formation}) as a proxy for the enthalpy of a substance
+\item we can use Table 13.2 (\cite[p. 431]{wile-chem-2}) to find the ``standard enthalpies of formation" ($\Delta H_f  ^{0}$) for several substances
+\footnote{$\Delta H_f  ^{0}$ is $\Delta H_f$ under ``standard conditions," $25 ^{\circ} C$ and $1.00 atm$.}
+\item so if we have any reaction consisting of substances in Table 13.2, then we can calculate the change in enthalpy for that reaction using the values in the table as:
+$$\Delta H^{0} = \Sigma \Delta H^{0}_f (products) - \Sigma \Delta H^{0}_f (reactants) $$ 
+\end{itemize}
+
+
+\begin{hint}\label{enthalpy-formation-element}
+The standard enthalpy of formation of an element in its elemental form is zero
+\end{hint}
+
+\begin{hint}\label{enthalpy-formation-diatomic}
+The standard enthalpy of formation of a  homonuclear diatomic form is zero
+\end{hint}
+
+\begin{hint}[Calculating $\Delta H$]\label{hint:calculating-enthalpy-changes}
+If you know the phase of every substance in a reaction, you can calculate $\Delta H$ using Hess's Law and $\Delta H_f  ^{0}$.\\
+If you don't know the phase of every substance, you need to work from Lewis Structures.
+\end{hint}
+
+\section{Energy Diagrams}
+
+\begin{definition}[Activation Energy]\label{def:energy-activation}
+The energy necessary to start a chemical reaction
+\end{definition}
+
+\begin{itemize}
+\item we can use an \textbf{energy diagram} to describe enthalpy changes
+\footnote{Remember enthalpy is energy \emph{absorbed} by the chemicals, so $\Delta H > 0$ means the reaction \emph{absorbs} energy.} 
+in a chemical reaction
+\begin{itemize}
+\item Figure 13.1 (\cite[p. 436]{wile-chem-2}) is an example of an exothermic reaction
+\item Figure 13.2 (\cite[p. 438]{wile-chem-2}) is an example of an endothermic reaction
+\end{itemize}
+\item there are some good examples of energy diagrams on Libretexts \cite{2019Energy}
+\end{itemize}
+
+
+\pagebreak
+\section{Entropy}
+
+\begin{definition}[Entropy]\label{def:entropy}
+A measure of the disorder that exists in any system.
+\end{definition}
+
+\begin{definition}[Entropy (Reprise)]\label{def:entropy-reprise}
+$$\delta S = \frac{\delta Q_{rev}}{T}$$
+\end{definition}
+
+\begin{law}[Second Law of Thermodynamics]\label{law:thermodynamics-second}
+The entropy of the universe must always either increase or remain the same. It can never decrease.
+\end{law}
+
+\begin{law}[Second Law of Thermodynamics (Reprise)]\label{law:thermodynamics-second-reprise}
+$$\Delta S_{universe} \ge 0$$
+\end{law}
+
+\begin{itemize}
+\item \emph{entropy} exists in every branch of science, but how to calculate it depends on context
+\item in Physics, entropy is given as a small amount of heat entering a reversible process, divided by the temperature of the process (see Definition \ref{def:entropy-reprise}, p. \pageref{def:entropy-reprise})
+\item we generally define it as ``a measure of disorder" in a system, but that's not a very usable definition
+\item in high school Chemistry, we'll think of it in terms of particles and their distribution
+\item we'll measure entropy in $\frac{kJ}{mole \cdot K}$ or $\frac{kcal}{mole \cdot K}$
+\item entropy is higher in a gas than in a liquid, and higher in a liquid than in a solid
+\footnote{Because atoms and/or molecules move around more in a gas than in a liquid, and more in a liquid than in a solid.}
+\item entropy of a system increases with as temperature increases
+\footnote{Because atoms and/or molecules move around more quickly in a higher temperature.}
+\item entropy of a system increases as the matter in it increases
+\item we can approximate entropy in a chemical reaction by taking into account:
+\footnote{This will matter when we look at chemical equilibrium after Spring Break.}
+\begin{enumerate}
+\item the number of atoms or molecules in the gas phase of reactants compared to products
+\item the number of atoms or molecules in the liquid phase of reactants compared to products
+\item the number of atoms or molecules in the reactants compared to products
+\end{enumerate}
+\item we can calculate $\Delta S$ for any given reaction using the entropies of specific substances (see Table 13.3 \cite[p. 444]{wile-chem-2})
+\item we do this just like with enthalpy:
+\footnote{\emph{Unlike} in enthalpy calculations, atoms in an elemental state do \emph{not} have zero entropy!}
+$\Delta S^{0} = \Sigma  S^{0} (products) -  \Sigma  S^{0} (reactants)$
+\item \textbf{Beware} the Law \ref{law:thermodynamics-second} does \emph{not} say the entropy can never decrease! It says the total entropy \emph{of the universe} cannot decrease!
+\end{itemize}
+
+\begin{hint}\label{hint:entropy-by-state}
+Entropy is lower in a solid than in a liquid, and lower in a liquid than in a gas.
+\end{hint}
+
+\begin{hint}\label{hint:absolute-entropy}
+All substances (including elements) have an absolute entropy.
+\end{hint}
+
+\subsection{Examples of Entropy}
+
+\begin{itemize}
+\item entropy is a measure of \emph{disorder} (see Definition \ref{def:entropy}, p. \pageref{def:entropy})
+\item so more ordered systems have less entropy:
+\begin{itemize}
+\item a pool of liquid, half blue and half red has much less entropy than a pool of liquid that has blended to purple
+\item a pile of dirt sitting on a field has much less entropy than the same pile washed with rain, spread out over the dirt
+\item a dry towel and a wet hand have much less entropy than a damp towel and a damp hand (see \cite{feynman-entropy-lecture-video} )
+\end{itemize}
+\end{itemize}
+
+\section{Gibbs Free Energy}
+
+\begin{definition}[Gibbs Free Energy]\label{def:gibbs-free-energy}
+$$\Delta G = \Delta H - T \cdot \Delta S$$
+\end{definition}
+
+\begin{itemize}
+\item we can think of how easily a reaction can occur by balancing entropy and enthalpy changes in a reaction:
+\begin{itemize}
+\item \emph{exothermic} reactions are much more likely to occur than endothermic reactions
+\item reactions that \emph{increase} entropy are much more likely to occur than those which do not
+\end{itemize}
+\item we can relate entropy and enthalpy by Gibbs Free Energy (see Definition \ref{def:gibbs-free-energy})
+\item the idea is that chemical reactions are \emph{spontaneous} if $\Delta G < 0$ (see Hint \ref{hint:gibbs-free-energy:spontaneity})
+\item we can use Hess's Law the same way for Gibbs Free Energy as we do for enthalpy or entropy: $\Delta G^{0} = \Sigma  G^{0} (products) -  \Sigma  G^{0} (reactants)$
+\item and of course there is a table of Gibbs Free Energies of Formation (Table 13.4, \cite[p. 447]{wile-chem-2})
+\item and just like with $\Delta H_f$, $\Delta G_f = 0$ for elements in their elemental state 
+\item there are some caveats we ought to mention:
+\begin{itemize}
+\item the Second Law of Thermodynamics (Law \ref{law:thermodynamics-second}) does \emph{not} state that no system's entropy can ever decrease: it says $\Delta S_{universe}$ can never decrease
+\item our formula for Gibbs Free Energy is a bit simplified
+\end{itemize}
+\item but we notice that we can \emph{increase} the spontaneity of a reaction by \emph{decreasing} $\Delta G$, and we notice we can \emph{decrease} $\Delta G$ by \emph{increasing} $T$
+\item so we can alter $\Delta G$ and thus alter a reaction's spontaneity
+\end{itemize}
+
+\begin{hint}\label{hint:gibbs-free-energy:spontaneity}
+When $\Delta G < 0$, then the reaction is consistent with the Second Law and is thus spontaneous.\\
+If $\Delta G > 0$, then the reaction cannot proceed, because it violates the Second Law.
+\end{hint}
+
+\section{Homework}
+Review Problems: p. 456 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 457--458 \# 1--10 (due 2026-04-09)\\
+ 
+\nocite{feynman-entropy-lecture-video} 
+\nocite{reading-feynman-entropy}
+\nocite{2019Energy}
+\nocite{wile-chem-2}
+\bibliography{../Chemistry}
+\bibliographystyle{apalike}
+
+%\clearpage
+\section*{Answers to Practice Problems}
+Answers to Practice Problems p. 416 \# 1--10:
+\begin{enumerate}
+\item $- 110 \frac{kJ}{mol}$
+\item $- 6278 \frac{kJ}{mol}$
+\item $- 297 \frac{kJ}{mol}$
+\item $20090 kJ$
+\item $1160 kJ$
+\item 
+\begin{enumerate}
+\item $\Delta S > 0$
+\item $\Delta S < 0$
+\item $\Delta S < 0$
+\end{enumerate}
+\item $- 32.0 \frac{J}{mol \cdot K}$
+\item $T > 3016 K$
+\item
+\begin{enumerate}
+\item $E_{activation} \approx 1300 kJ$
+\item $\Delta H \approx 1000 kJ$
+\item $\Delta H > 0$ so the reaction is endothermic
+\end{enumerate}
+\item $\Delta G = -1300 \frac{kJ}{mol}$ therefore it is spontaneous
+\end{enumerate}
+\end{document}  
