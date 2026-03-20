@@ -6,7 +6,15 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
-\usepackage{cite}
+%\usepackage{cite}
+\usepackage[
+backend=biber,
+style=verbose,
+%style=nature,
+sorting=nyt
+]{biblatex}
+%\addbibresource{../Chemistry.bib}
+\bibliography{../Chemistry}
 
 % numbered examples
 \usepackage{gb4e}
@@ -16,7 +24,7 @@
 
 \usepackage{mhchem}
 \usepackage{lewis}
-%\usepackage{urlbst}
+
 \usepackage{url}
 \usepackage{hyperref}
 
@@ -261,12 +269,14 @@ Practice Problems: p. 457--458 \# 1--10 (due 2026-04-09)\\
  
 \nocite{feynman-entropy-lecture-video} 
 \nocite{reading-feynman-entropy}
-\nocite{2019Energy}
+\nocite{chem:libretexts:energy-diagrams}
 \nocite{wile-chem-2}
-\bibliography{../Chemistry}
-\bibliographystyle{apalike}
+%\bibliography{../Chemistry}
+%\bibliographystyle{apalike}
 
-%\clearpage
+\printbibliography
+
+\clearpage
 \section*{Answers to Practice Problems}
 Answers to Practice Problems p. 416 \# 1--10:
 \begin{enumerate}

@@ -4,7 +4,7 @@ all: Module_13_Notes.pdf Notes.dvi Notes.pdf LessonPlan_13_1.pdf LessonPlan_13_2
 
 Notes.dvi: Notes.tex 
 	$(LATEX) Notes
-	$(BIBTEX) Notes
+	$(BIBER) Notes
 	$(LATEX) Notes
 	$(LATEX) Notes
 
