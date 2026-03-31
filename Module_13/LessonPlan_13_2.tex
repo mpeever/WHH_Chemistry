@@ -9,82 +9,94 @@
 \usepackage{mhchem}
 \usepackage{hyperref}
 
-\title{Module 11, Part 2}
+\title{Module 13, Part 2}
 \author{Mark Peever\\ \texttt{mpeever@gmail.com}}
-\date{February 27, 2026}
+\date{March 27, 2026}
 
 \begin{document}
 \maketitle
 
 \section*{Objectives}
 \marginpar{0 minutes}
-Refer to \href{https://drive.google.com/file/d/1HwBnpMMAaghrcIhv391fhaqhtSwE00vL/view?usp=sharing}{Module 11 Notes}.\\
+Refer to \href{https://drive.google.com/file/d/1fjlyN9yBxzAyjC-e-0vPJIUG56TnYqO6/view?usp=sharing}{Module 13 Notes}.\\
 
 By the end of this class, the students should be able to\ldots
 \begin{itemize}
-\item describe the Perfect Map Paradox
-\item use the terms ``endothermic" and ``exothermic" correctly
-\item describe Molality
-\item describe Freezing Point Depression ($\Delta T = - i \cdot K_{f} \cdot m $)
-\item describe Boiling Point Elevation ($\Delta T =  i \cdot K_{b} \cdot m $)
+\item describe Enthalpy
+\item describe Hess's Law
+\item describe Entropy
+\item describe Gibbs Free Energy
 \end{itemize}
 
 \section*{Welcome \& Devotion}
 \marginpar{5 minutes}
 \begin{itemize}
-\item have one student read \href{https://www.biblegateway.com/passage/?search=titus\%203\%3A3-8\&version=LSB}{Titus 3:3--8}
+\item have one student read \href{https://www.biblegateway.com/passage/?search=psalm\%20107\&version=LSB}{Psalm 107:17--22}
 \end{itemize}
 
-\section*{Module 10 Quiz}
-\marginpar{20 minutes}
-\begin{itemize}
-\item have students complete the Module 10 Quiz
-\item go over the Quiz correct answers and take in the papers
-\end{itemize}
 
-\section*{Perfect Map Paradox}
+\section*{Review Enthalpy}
 \marginpar{15 minutes}
+
 \begin{itemize}
-\item discuss Perfect Map Paradox
-\item a perfect map is impossible
-\item if you \emph{could} make a perfect map, it wouldn't be usable as a map
-\item maps are useful \emph{because} they omit information
+\item \emph{enthalpy} $H$ is energy absorbed into a substance
+\item remember: $\Delta H > 0$ means endothermic
+\item remember: $\Delta H < 0$ means exothermic
 \end{itemize}
 
-\section*{Energy Changes in Dissolution}
+\begin{itemize}
+\item it's important to notice that bonded atoms have \emph{lower} energy than unbonded atoms
+\item so we measure enthalpy as ``energy absorbed" \emph{i.e.} $\Delta H > 0$
+\item we calculate entropy as $\Delta H = H_{breaking} - H_{forming}$
+\end{itemize}
+
+\begin{itemize}
+\item there is a baseline enthalpy ``enthalpy of formation" ($\Delta H_{f}^{0}$)
+\begin{enumerate}
+\item $\Delta H_{f}^{0} = 0$ for any element (in its elemental state)
+\item $\Delta H_{f}^{0} = 0$ for any homonuclear diatomic
+\item $\Delta H_{f}^{0} $ is \emph{some number} for any compound (see Table 13.2, p. 431)
+\end{enumerate}
+\item we can calculate enthalpy as $\Delta H^{0} = \Sigma \Delta H_{f} ^{0} (products) - \Sigma \Delta H_{f} ^{0} (reactants)$ 
+\end{itemize}
+
+\section*{Hess's Law}
 \marginpar{10 minutes}
+
 \begin{itemize}
-\item most dissolution is \emph{endothermic}
-\item some dissolution is \emph{exothermic}
-\item some dissolutions involve actual chemical changes, which can have way more thermal effect than the dissolution itself
+\item Hess's Law says Enthalpy (and Entropy) depends on state, not on the path to get to it
+\item so we don't need to know every step in a reaction to be able to calculate $\Delta H$ for a reaction or chain of reactions
 \end{itemize}
 
-\section*{Molality}
-\marginpar{10 minutes}
+\section*{Entropy}
+\marginpar{20 minutes}
+
 \begin{itemize}
-\item molality is like molarity, but using mass instead of volume
-\item $ b = \frac{n}{m} $
-\item $1 molal = \frac{1 mole}{1 kg} $
+\item Entropy ($S$) is a measure of disorder in a system
+\item entropy applies to every physical system, but we measure it differently in different systems
+\begin{enumerate}
+\item homogeneous systems have higher entropy than heterogenous systems
+\item gasses have higher entropy than liquids, liquids have higher entropy than solids
+\item we can estimate entropy with numbers of particles (more particles means more chaos)
+\end{enumerate}
+\item \emph{e.g.} which side has higher entropy? \ce{CH4 (g) + 2O2 (g) -> 2H2O (g) + CO2 (g) + \Delta H}
+%\item \emph{e.g.} which side has higher entropy? \ce{H2SO4 (aq) + 2H2O (l) -> 2H3O+ (aq) + SO4^{2-} (aq)}
+\item \emph{e.g.} which side has higher entropy? \ce{H2SO4 (aq) + NaOH (aq) -> 2H2O (l) + Na2SO4 (aq)}
+\item the Second Law says: $\Delta S_{universe} \ge 0$
+\item discuss the Second Law at length and relate to various things
 \end{itemize}
 
-\section*{Freezing Point Depression}
-\marginpar{5 minutes}
+\section*{Gibbs Free Energy}
+\marginpar{20 minutes}
+
 \begin{itemize}
-\item solutions generally have lower freezing points. 
-\item $\Delta T = - i \cdot K_{f} \cdot m $
-\item either two substances have to change phase \emph{or} there has to be a precipitation \emph{and} a phase shift
-\item this is why we salt roads 
-\item this is why the ocean doesn't generally freeze
+\item reactions want to be exothermic
+\item reactions want to increase entropy
+\item $\Delta G = \Delta H - T \cdot \Delta S$
+\item $\Delta G$ allows us to predict the spontaneity of a rection: if $\Delta G < 0$, a reaction is spontaneous
+\item notice we can change $\Delta G$ by doing things like changing temperature!
 \end{itemize}
 
-\section*{Boiling Point Elevation}
-\marginpar{5 minutes}
-\begin{itemize}
-\item solutions generally have higher boiling points 
-\item $\Delta T =  i \cdot K_{b} \cdot m $
-\item either two substances have to change phase \emph{or} there has to be a precipitation \emph{and} a phase shift
-\item this is why we use coolant in cars
-\end{itemize}
 
 \section*{Questions for me}
 \marginpar{5 minutes}
@@ -92,8 +104,9 @@ By the end of this class, the students should be able to\ldots
 \section*{Assignment}
 \marginpar{5 minutes}
 \begin{itemize}
-\item Review Problems: p. 381 \# 1--10 (not to be turned in)
-\item Practice Problems: p. 382 \# 1--10 (due 2026-03-06)
+\item Module 12 Practice Problems: p. 416 \#1--10 due 2026-04-10
+\item Module 13 Review Problems: p. 456 \# 1--10 (not to be turned in)
+\item Module 13 Practice Problems: pp. 457--458 \#1--10 due 2026-04-10
 \end{itemize}
 
 
