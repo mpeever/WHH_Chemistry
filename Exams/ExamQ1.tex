@@ -11,6 +11,37 @@
 \usepackage{multicol}
 \usepackage{mhchem}
 
+%% https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+\ExplSyntaxOff
+
+\getenv[\IsKey]{IS_KEY}
+\def\undefined{}
+
+
+\newcommand{\answerkey}[1]{
+  \if\IsKey\undefined
+  
+  \else
+	#1
+  \fi
+}
+
+
+
 \title{Quarter 1 Exam}
 \author{Mark Peever}
 \date{October 3, 2025}							% Activate to display a given date or no date
@@ -20,7 +51,7 @@
 
 \pointsinrightmargin
 %\marginpointname{ \points}
-\printanswers
+\answerkey{\printanswers}
 
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering
