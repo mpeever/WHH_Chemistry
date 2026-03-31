@@ -1,46 +1,40 @@
 include ../includes.mk
 
-all: Module_12_Notes.pdf Notes.dvi Notes.pdf LessonPlan_12_1.pdf LessonPlan_12_2.pdf Quiz.pdf ExamQ3.pdf ExamQ3_key.pdf 44_Notes.pdf
+CLEAN += "ExamQ3_key.tex"
 
-Notes.dvi: Notes.tex 
-	$(LATEX) Notes
-	$(BIBTEX) Notes
-	$(LATEX) Notes
-	$(LATEX) Notes
+all:  ExamQ1.pdf ExamQ2.pdf ExamQ3.pdf
 
-Notes.pdf: Notes.dvi Notes.tex 
-	$(PDFLATEX) Notes
+ExamQ1.pdf: ExamQ1.tex ExamQ1_key.pdf
+	$(PDFLATEX) ExamQ1
+	$(PDFLATEX) ExamQ1
+	$(PDFLATEX) ExamQ1
 
-Module_12_Notes.pdf: Notes.pdf
-	cp Notes.pdf Module_12_Notes.pdf
+ExamQ1_key.pdf: ExamQ1.tex
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ1
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ1
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ1
+	cp ExamQ1.pdf ExamQ1_key.pdf
 
-LessonPlan_12_1.pdf: LessonPlan_12_1.tex 
-	$(PDFLATEX) LessonPlan_12_1
-	$(PDFLATEX) LessonPlan_12_1
-	$(PDFLATEX) LessonPlan_12_1
+ExamQ2.pdf: ExamQ2.tex ExamQ2_key.pdf
+	$(PDFLATEX) ExamQ2
+	$(PDFLATEX) ExamQ2
+	$(PDFLATEX) ExamQ2
 
-LessonPlan_12_2.pdf: LessonPlan_12_2.tex 
-	$(PDFLATEX) LessonPlan_12_2
-	$(PDFLATEX) LessonPlan_12_2
-	$(PDFLATEX) LessonPlan_12_2
+ExamQ2_key.pdf: ExamQ2.tex
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ2
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ2
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ2
+	cp ExamQ2.pdf ExamQ2_key.pdf
 
-Quiz.pdf: Quiz.tex 
-	$(PDFLATEX) Quiz
-	$(PDFLATEX) Quiz
-	$(PDFLATEX) Quiz
-
-ExamQ3.pdf: ExamQ3.tex
+ExamQ3.pdf: ExamQ3.tex ExamQ3_key.pdf
 	$(PDFLATEX) ExamQ3
 	$(PDFLATEX) ExamQ3
 	$(PDFLATEX) ExamQ3
 
-ExamQ3_key.pdf: ExamQ3_key.tex
-	$(PDFLATEX) ExamQ3_key
-	$(PDFLATEX) ExamQ3_key
-	$(PDFLATEX) ExamQ3_key
+ExamQ3_key.pdf: ExamQ3.tex
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ3
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ3
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ3
+	cp ExamQ3.pdf ExamQ3_key.pdf
 
-44_Notes.pdf: 44_Notes.tex 
-	$(PDFLATEX) 44_Notes
-	$(BIBTEX) 44_Notes
-	$(PDFLATEX) 44_Notes
-	$(PDFLATEX) 44_Notes
+
