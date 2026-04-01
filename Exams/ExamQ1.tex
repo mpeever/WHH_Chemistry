@@ -10,6 +10,7 @@
 \usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{mhchem}
+\usepackage{etoolbox}
 
 %% https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
 \usepackage{xparse}
@@ -31,14 +32,18 @@
 \getenv[\IsKey]{IS_KEY}
 \def\undefined{}
 
+\newtoggle{answerkey}
+
+\if\IsKey\undefined
+  \togglefalse{answerkey}
+\else
+  \toggletrue{answerkey}
+\fi
 
 \newcommand{\answerkey}[1]{
-  \if\IsKey\undefined
-  
-  \else
-	#1
-  \fi
+  \iftoggle{answerkey} {#1} {}
 }
+
 
 
 
