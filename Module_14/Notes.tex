@@ -1,0 +1,190 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+%\usepackage{cite}
+\usepackage[
+backend=biber,
+style=verbose,
+%style=nature,
+sorting=nyt
+]{biblatex}
+%\addbibresource{../Chemistry.bib}
+\bibliography{../Chemistry}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 14: Kinetics}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{April 10, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+\begin{enumerate}
+\item a \textbf{rate} is a measure of how quickly something changes with respect to time
+\item a \textbf{reaction rate} measures how quickly a chemical reaction occurs
+\item the \textbf{Rate Equation} allows us to predict a rate for a given reaction
+\item chemical reactions \textbf{never actually finish} they just slow to an imperceptible rate
+\item \textbf{catalysts} are substances that can affect reaction rates without actually being part of a reaction
+\end{enumerate}
+
+\section{Reaction Kinetics}
+
+\begin{definition}[Reaction Rate]\label{def:reaction-rate}
+The rate of change of a product in a chemical reaction.
+\end{definition}
+
+\begin{definition}[Reaction Rate (reprise)]\label{def:reaction-rate:reprise}
+$R = \frac{\Delta [product]}{\Delta t} = - \frac{\Delta [reactant]}{\Delta t} $
+\end{definition}
+
+\begin{itemize}
+\item \emph{Reaction Rate} measures how quickly the concentration of a chemical reaction's \emph{products} changes with respect to time
+\item we'd measure this in $\frac{M}{s}$ or ``molar per second"
+\item notice it's the opposite of the rate in change of the concentration of \emph{reactants} (Question: \emph{why}?)
+\end{itemize}
+
+\begin{hint}\label{hint:particle-collision}
+Chemicals' atoms and/or molecules must collide with each other in order to react.
+\end{hint}
+
+\begin{hint}\label{hint:particle-collision-rate}
+Higher temperature indicates a substance's particles are moving more rapidly, and therefore collide more frequently.
+\end{hint}
+
+\begin{hint}\label{hint:reaction-concentration}
+Decreasing concentration decreases chemical reaction rate because there are fewer reactant atoms or molecules to collide with each other.
+\end{hint}
+
+\begin{hint}\label{hint:reaction-surface-area}
+Increasing surface area of a reactant increases reaction rate because the atoms or molecules of the reactants can more easily mix with each other
+\end{hint}
+
+\begin{itemize}
+\item chemical reactions generally occur at a greater rate at higher temperatures, because their particles are colliding more frequently at higher temperatures (see Hints \ref{hint:particle-collision} and \ref{hint:particle-collision-rate})
+\item chemical reactions generally occur at a greater rate in greater concentrations, because there are more particles to collide (see Hints \ref{hint:reaction-concentration})
+\item chemical reactions generally occur at a greater rate in finer substances because they have more surface area (see Hint \ref{hint:reaction-surface-area})
+\end{itemize}
+
+
+\section{The Rate Equation}
+
+\begin{hint}\label{hint:reaction-rate-order}
+The \emph{overall order of a chemical reaction} is given by $(x + y)$.
+\end{hint}
+
+\begin{hint}\label{hint:reactions-never-finish}
+Chemical reactions never actually finish: they just slow to an imperceptible rate.
+\end{hint}
+
+\begin{hint}\label{hint:reactions-constant-and-temperature}
+The rate of many chemical reactions doubles with every $10 K$ temperature increase.
+\end{hint}
+
+\begin{itemize}
+\item if we have a chemical reaction like: \ce{a A + b B -> c C + d D} \ldots
+\item then we can calculate the rate of the reaction as: $R = k [A]^{x} [B]^{y}$
+\footnote{Notice this is a differential equation. We might expect it to see something exponential pop out.}
+\item here:
+\begin{enumerate}
+\item $R$ is the rate of the reaction
+\item $k$ is the ``rate constant''
+\item $x$ and $y$ are exponents on the concentrations of the reactants
+\item $k$, $x$, and $y$ are all experimentally determined
+\end{enumerate}
+\item notice the reaction rate can vary with things like temperature
+\footnote{Notice how this mirrors Gibbs' Free Energy: $\Delta G = \Delta H - T \Delta S$.}
+\item in fact, the reaction ``constant" varies with temperature 
+\footnote{Which means it's not a constant at all, rather $k = k(T)$.}
+(see Hint \ref{hint:reactions-constant-and-temperature})
+\item we can add $x$ and $y$ together to get the ``overall order" of a chemical reaction (see Hint \ref{hint:reaction-rate-order})
+\item $k$ depends on the chemicals themselves, and is independent of $x$ and $y$
+\item we can work out what $k$, $x$, and $y$ are from empirical data
+\footnote{But of course, \emph{getting} that data is complicated, see \cite[p. 466]{wile-chem-2}. We'll always work from ``given" data.}
+\item if the concentration of a reactant doesn't affect the rate, then we make it's exponent $0$.
+\footnote{Because $n^{0} = 1 \forall n \in \mathbb{R} $.}
+\item because reactions have the greatest rate when the concentrations of the reactants are the greatest, we expect a reaction to start strong and taper off
+\item so reactions tend to have asymptotic behavior (see Hint \ref{hint:reactions-never-finish})
+\end{itemize}
+
+\section{Catalysts}
+
+\begin{definition}[Reaction Mechanism]\label{def:reaction-mechanism}
+A series of chemical equations that lay out the step-by-step process by which a chemical reaction occurs.
+\end{definition}
+
+\begin{definition}[Catalyst]\label{def:catalyst}
+A substance that speeds up the rate of a reaction without being used up in the reaction.
+\end{definition}
+
+\begin{definition}[Heterogeneous Catalyst]\label{def:catalyst-hetero}
+A catalyst in a different phase than the reactants.
+\end{definition}
+
+\begin{definition}[Homogeneous Catalyst]\label{def:catalyst-homo}
+A catalyst in the same phase as at least one of the reactants.
+\end{definition}
+
+\begin{itemize}
+\item a \emph{catalyst} is a substance that can be added to a chemical reaction that's not actually a reactant
+\item catalysts lower the activation energy of a reaction
+\item lowering the activation energy of a reaction increases the rate of the reaction
+\item heterogeneous catalysts (see Definition \ref{def:catalyst-hetero}) force reactants together and thus lower activation energy
+\item homogeneous catalysts (see Definition \ref{def:catalyst-homo}) participate in a chemical reaction both as a reactant and a product, and alter the reaction mechanism (see Definition \ref{def:reaction-mechanism})
+\end{itemize}
+
+
+\section{Homework}
+Review Problems: p. 488 \# 1--10 (not to be turned in)\\
+Practice Problems: pp. 489--490 \# 1--10 (due 2026-04-17)\\
+ 
+\nocite{wile-chem-2}
+%\bibliography{../Chemistry}
+%\bibliographystyle{apalike}
+
+\printbibliography
+
+
+\section*{Answers to Practice Problems}
+Answers to Practice Problems pp. 489--490 \# 1--10:
+\begin{enumerate}
+\item milk left on the counter has a higher temperature, therefore the reaction rate is higher
+\item $R = (7110 \frac{1}{M^{2} s}) [NO]^{2} [O_{2}]$
+\item $R = (8.1 \times 10^{-2} \frac{1}{s}) [C_{4} Cl_{9} OH]$
+\item $R = 1 \times 10^{-4} \frac{M}{s}$
+\item $R = 5.22 \times 10^{-4} \frac{M}{s}$
+\item $T_{2} = 65 ^{\circ} C$
+\item III
+\item heterogeneous, because it is a solid and the reactants are gases
+\item 
+\begin{enumerate}
+\item $3 R$
+\item $10 R$
+\item no catalyst
+\end{enumerate}
+\item \ce{Cl} is the \emph{homogeneous} catalyst
+\end{enumerate}
+\end{document}  
