@@ -9,3 +9,5 @@
 *.out
 *.dvi
 *.pdf
+.bcf
+.run.xml
