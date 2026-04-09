@@ -2,7 +2,7 @@ include ../includes.mk
 
 CLEAN += "ExamQ3_key.tex"
 
-all:  ExamQ1.pdf ExamQ2.pdf ExamQ3.pdf
+all:  ExamQ1.pdf ExamQ2.pdf ExamQ3.pdf ExamQ4.pdf
 
 ExamQ1.pdf: ExamQ1.tex ExamQ1_key.pdf
 	$(PDFLATEX) ExamQ1
@@ -36,5 +36,16 @@ ExamQ3_key.pdf: ExamQ3.tex
 	IS_KEY="TRUE" $(PDFLATEX) ExamQ3
 	IS_KEY="TRUE" $(PDFLATEX) ExamQ3
 	cp ExamQ3.pdf ExamQ3_key.pdf
+
+ExamQ4.pdf: ExamQ4.tex ExamQ4_key.pdf
+	$(PDFLATEX) ExamQ4
+	$(PDFLATEX) ExamQ4
+	$(PDFLATEX) ExamQ4
+
+ExamQ4_key.pdf: ExamQ4.tex
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ4
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ4
+	IS_KEY="TRUE" $(PDFLATEX) ExamQ4
+	cp ExamQ4.pdf ExamQ4_key.pdf
 
 
