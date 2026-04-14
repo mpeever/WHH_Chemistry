@@ -1,0 +1,241 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+%\usepackage{cite}
+\usepackage[
+backend=biber,
+style=verbose,
+%style=nature,
+sorting=nyt
+]{biblatex}
+%\addbibresource{../Chemistry.bib}
+\bibliography{../Chemistry}
+
+% numbered examples
+\usepackage{gb4e}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{lewis}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+
+% Scientific Laws
+\newtheorem{definition}{Definition}
+\newtheorem{law}{Law}
+\newtheorem{theory}{Theory}
+\newtheorem{hint}{Hint}
+
+\title{Module 15: Chemical Equilibrium}
+\author{Mark Peever\\ \texttt{mpeever@gmail.com}}
+\date{April 17 -- 24, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+\begin{enumerate}
+\item chemical reactions can occur both ``forwards" and ``backwards"
+\item eventually reactions settle into an \textbf{Equilibrium} where the ``forward" and ``backward" reactions are in a balance
+\item we can describe the balance mathematically using the concept of \textbf{Reaction Rate} from Module 14
+\item \textbf{Le Chatelier's Principle} tells us how \textbf{stresses} will affect Chemical Equilibrium
+\item \textbf{pH} is a way to quantify Chemical Equilibrium in Acid/Base reactions
+\end{enumerate}
+
+\section{Chemical Equilibrium}
+\begin{definition}[Chemical Equilibrium]\label{defn:chemical-equilibrium}
+The point at which both the forward and reverse reactions in a chemical equation have equal reaction rates:
+When this occurs the amount of each substance in the chemical reaction will not change, despite the fact that both reactions still proceed.
+\end{definition}
+
+\begin{itemize}
+\item it turns out chemical reactions can happen both ``forward" and ``backward":
+\begin{itemize}
+\item \ce{NH3 (aq) + H2O (l) -> NH4+ (aq) + OH- (aq)}
+\item \ce{NH3 (aq) + H2O (l) <- NH4+ (aq) + OH- (aq)}
+\end{itemize}
+\item we combine both reactions into a single ``bi-directional" reaction:
+\begin{itemize}
+\item  \ce{NH3 (aq) + H2O (l) <=> NH4+ (aq) + OH- (aq)}
+\end{itemize}
+\item when we first combine the reactants (in this case \ce{NH3} and  \ce{H2O}), the reaction will run ``forwards"
+\item but it will eventually\footnote{By ``eventually" I mean ``after some non-zero period of time."}
+begin to run ``backwards" too
+\item at some point the left-to-right and right-to-left reactions will be occurring at the same rate, so that we'll have a constant amount of each reactant and/or product
+\item when the reaction rates stabilize, we say our reaction as reached \textbf{Chemical Equilibrium} (see Definition \ref{defn:chemical-equilibrium}, page \pageref{defn:chemical-equilibrium}) 
+\item reactions rates \emph{in both directions} are driven by \emph{concentrations} of the reactants, just like in Module 14
+\item it takes time for a reaction\footnote{Really, a \emph{pair} of reactions.} to achieve equilibrium
+\item once a reaction reaches equilibrium, it will tend to stay there until some external ``stress" acts on it
+\footnote{Whoa! This sounds almost exactly like Newton's Second, doesn't it?}
+\end{itemize}
+
+\section{The Equilibrium Constant}
+
+\begin{definition}[Equilibrium Constant]\label{defn:equilibrium-constant}
+For some Chemical Reaction:
+ 
+ \begin{center}
+ \ce{aA + bB <=> cC + dD}
+ \end{center}
+ 
+the Equilibrium Constant is calculated as:\\
+$$K = \frac{[C]^{c}_{eq} \times [D]^{d}_{eq}} {[A]^{a}_{eq} \times [B]^{b}_{eq}}$$
+\end{definition}
+
+
+
+\begin{itemize}
+\item we quantify Chemical Equilibrium with an \emph{Equilibrium Constant} (see Defintion \ref{defn:equilibrium-constant}, page \pageref{defn:equilibrium-constant}))
+\item notice this constant will be inverted if we write the equations right-to-left instead of left-to-right
+\item $K$ here will depend on the specific reaction \emph{and} the environment
+\footnote{For example, altering temperature will alter $K$, but don't let's get into that quite yet\ldots}
+\item notice that the exponents on the concentrations are the \emph{stoichiometric coefficients}, so this isn't quite the same thing we saw in Module 14
+\item we can make some helpful generalizations about a chemical reaction just looking at the equilibrium constant (see Hint \ref{hint:equilibrium-constant-generaiizations}, page \pageref{hint:equilibrium-constant-generaiizations}):
+\begin{itemize}
+\item when $K$ is large, the equilibrium is weighted to the products (the right-hand-side)
+\item when $K$ is small, the equilibrium is weighted to the reactants (the left-hand-side)
+\item when $K$ is near $1$, the equilibrium is balanced between the two sides
+\end{itemize}
+\item again, notice if we write the equation ``backwards" we'll \emph{flip} the Equilibrium Constant
+\item our Chemical Equilibrium Constant is only for concentrations, \emph{i.e.} it's only for chemicals in solution:
+\begin{itemize}
+\item it doesn't apply to solids
+\item it doesn't apply to liquids\footnote{But \emph{do} include \emph{aqueous} substances!}
+\end{itemize}
+\end{itemize}
+
+\begin{hint}[Equilibrium Constant Generalizations]\label{hint:equilibrium-constant-generaiizations}
+We can generalize that:\\
+\begin{itemize}
+\item when $K$ is large, the equilibrium is weighted to the products (the right-hand-side)
+\item when $K$ is small, the equilibrium is weighted to the reactants (the left-hand-side)
+\item when $K$ is near $1$, the equilibrium is balanced between the two sides
+\end{itemize}
+\end{hint}
+
+\section{What the Chemical Equilibrium Constant Tells Us}
+\begin{itemize}
+\item we can use an \emph{Equilibrium Constant} (see Defintion \ref{defn:equilibrium-constant}, page \pageref{defn:equilibrium-constant}) to determine whether a reaction is at equilibrium
+\item we can also predict where the equilibrium will be
+\end{itemize}
+
+\section{Le Chatelier's Principle}
+
+\begin{definition}[Le Chatelier's Principle]\label{defn:le-chatelier}
+When a \emph{stress} (such as a change in concentration, pressure, or temperature) is applied to an equilibrium,
+the reaction will shift in a way that relieves the stress and restores equilibrium.
+\end{definition}
+
+\begin{itemize}
+\item once chemical equilibrium is reached, a reaction will tend to stay at equilibrium indefinitely
+\item if we alter the reaction by changing something (\emph{e.g.} we add more of a given substance, or maybe take some away), then it will adjust to a new equilibrium
+\item for example:
+\begin{enumerate}
+\item if we start with our favorite reaction:\\ \begin{center}\ce{NH3 (aq) + H2O (l) <=> NH4+ (aq) + OH- (aq)}\end{center}
+\item and if we pour in more \ce{NH3}
+\item then our reaction will shift \emph{right} to use up the additional \ce{NH3}
+\item it will eventually settle into a new equilibrium
+\end{enumerate}
+\item we can use Le Chatelier to force reactions to run ``to completion" by adding stresses to reactions at equilibrium
+\item \emph{e.g.} we could remove \ce{OH-} from our equilibrium so that more \ce{NH3} is used by ``trying" to replace it
+\item Le Chatelier treats enthalpy and entropy as stresses, see Hint \ref{hint:le-chatelier-pressure} and Hint \ref{hint:le-chatelier-temperature}
+\end{itemize}
+
+\begin{hint}\label{hint:le-chatelier}
+Le Chatelier's Principle ignores solids and liquids as a source of stress to the equilibrium.
+\end{hint}
+
+\begin{hint}\label{hint:le-chatelier-pressure}
+When an equilibrium is subjected to an increase in pressure, it will shift away from the side with the largest number of gas molecules.
+If pressure decreases, the equilibrium will shift toward the side with the largest number of gas molecules.
+If there are no gases in the equation or if the number of gas molecules is equal on both sides, nothing will happen.
+\end{hint}
+
+\begin{hint}\label{hint:le-chatelier-temperature}
+When temperature is raised, an equilibrium will shift away from the side of the equation that contains energy.
+When temperature is lowered, an equilibrium will shift toward the side of the equation that contains energy.
+\end{hint}
+
+\section{Acid/Base Equilibria}
+
+\begin{definition}[Acid Ionization Reaction]\label{def:acid-ionization}
+The reaction in which an \ce{H+} separates from an acid molecule so that it can be donated in another reaction.
+\end{definition}
+
+\begin{definition}[Acid Ionization Constant]\label{def:acid-ionization-constant}
+The equilibrium constant for an acid's ionization reaction.
+\end{definition}
+
+\begin{definition}[Base Ionization Constant]\label{def:base-ionization-constant}
+The equilibrium constant for an base's ionization reaction.
+\end{definition}
+
+\begin{itemize}
+\item remember that an acids and bases \emph{ionize} so in aqueous solution:
+\begin{itemize}
+\item \ce{HCl (aq) + H2O (l) <=> H3O+ (aq) + Cl-} (see Definition \ref{def:acid-ionization}, p. \pageref{def:acid-ionization})
+\item \ce{NH3 (aq) + H2O (l) <=> NH4+ (aq) + OH- (aq)}
+\end{itemize}
+\item for acids, we refer to $K_{a}$, which is a special case of $K$
+\item $K_{a}$ is the \emph{Acid Ionization Constant}, see Definition \ref{def:acid-ionization-constant}, page \pageref{def:acid-ionization-constant}
+\item well, it turns out that ionization reactions can be classified as \emph{strong} or \emph{weak} based on their $K_{a}$ values
+\item strong acids include:
+\begin{itemize}
+\item \ce{HCl}
+\item \ce{H2SO4}
+\item \ce{HNO3}
+\end{itemize}
+\item weak acids include:
+\begin{itemize}
+\item \ce{C2H4O2} (acetic acid)
+\item \ce{C6H8O6} (ascorbic acid, Vitamin C)
+\item \ce{H3PO4} (phosphoric acid)
+\end{itemize} 
+\item we can bases the same way, with $K_{b}$ (see Definition \ref{def:base-ionization-constant}, page \pageref{def:base-ionization-constant})
+\end{itemize}
+
+\section{The pH Scale}
+
+\begin{itemize}
+\item we can measure the acidity or alkalinity\footnote{``Alkaline" is the older term for ``basic."} of a solution with the \emph{pH} scale
+\footnote{\emph{pH} means ``potential hydrogen"}
+\item we calculate pH as: $pH = - \log_{10} [H^{+}]$
+\item pH is measured on a scale from $0$ --- $14$
+\item higher numbers are more basic
+\item lower numbers are more acidic
+\item pure water has a pH of $7$
+\end{itemize}
+
+
+
+
+
+\section{Homework}
+Review Problems: p. 522 \# 1--10 (not to be turned in)\\
+Practice Problems: p. 523--524 \# 1--10 (due 2026-05-01)\\
+ 
+\nocite{feynman-entropy-lecture-video} 
+\nocite{reading-feynman-entropy}
+\nocite{chem:libretexts:energy-diagrams}
+\nocite{wile-chem-2}
+%\bibliography{../Chemistry}
+%\bibliographystyle{apalike}
+
+\printbibliography
+
+%\clearpage
+%\section*{Answers to Practice Problems}
+%Answers to Practice Problems p. 416 \# 1--10:
+%\begin{enumerate}
+%\item 
+%\end{enumerate}
+\end{document}  

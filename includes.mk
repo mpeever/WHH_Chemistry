@@ -10,6 +10,8 @@ clean:
 	rm -f *.blg
 	rm -f *.log
 	rm -f *.out
+	rm -f *.bcf
+	rm -f *.run.xml
 	rm -f $(CLEAN)
 
 realclean: clean
